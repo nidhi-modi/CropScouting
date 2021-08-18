@@ -64,6 +64,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-    fontFamily: Platform.OS == 'ios'? null : "times_new_roman",  },
+   },
 
 });
