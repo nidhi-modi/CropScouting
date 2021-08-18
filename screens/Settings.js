@@ -248,7 +248,7 @@ export default class Settings extends Component {
                                     fontSize: 14,
                                     textAlign: 'left',
                                     color: '#000000',
-                                    fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
+                                  
 
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
@@ -438,7 +438,6 @@ const styles = StyleSheet.create({
 
         color: 'black',
         fontSize: 17,
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
         textAlign: 'center',
 
@@ -448,7 +447,6 @@ const styles = StyleSheet.create({
 
         color: '#000000',
         fontSize: 17,
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
 
     },
@@ -457,7 +455,6 @@ const styles = StyleSheet.create({
 
         color: '#7DBD5C',
         fontSize: 24,
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
         textAlign: 'center',
         fontWeight: 'bold',
@@ -547,7 +544,6 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 16,
         color: '#ffffff',
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
 
     },
 
@@ -555,14 +551,12 @@ const styles = StyleSheet.create({
 
     weekText1: {
         fontSize: 18,
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         color: '#87B26A'
     },
 
     weekText2: {
         fontSize: 20,
         fontWeight: 'bold',
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         textDecorationLine: 'underline',
 
     },

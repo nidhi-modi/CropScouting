@@ -1222,13 +1222,24 @@ const styles = StyleSheet.create({
     textLineItem: {
 
         color: "#000000",
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
+    },
+
+    textLineItemIOS: {
+
+        color: "#000000",
     },
 
     textLineItemGreen: {
 
         color: "#87B26A",
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",        
+        flexShrink: 1,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+
+    textLineItemGreenIOS: {
+
+        color: "#87B26A",
         flexShrink: 1,
         fontWeight: 'bold',
         textAlign: 'center',
@@ -1296,7 +1307,16 @@ const styles = StyleSheet.create({
 
         color: 'black',
         fontSize: 17,
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
+        flexShrink: 1,
+        textAlign: 'center',
+
+    },
+
+    
+    titleHeadingTextIOS: {
+
+        color: 'black',
+        fontSize: 17,
         flexShrink: 1,
         textAlign: 'center',
 
@@ -1306,7 +1326,15 @@ const styles = StyleSheet.create({
 
         color: '#000000',
         fontSize: 17,
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
+        flexShrink: 1,
+
+    },
+
+
+    titleBlackTextIOS: {
+
+        color: '#000000',
+        fontSize: 17,
         flexShrink: 1,
 
     },
@@ -1315,7 +1343,17 @@ const styles = StyleSheet.create({
 
         color: '#7DBD5C',
         fontSize: 24,
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
+        flexShrink: 1,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        textDecorationLine: 'underline'
+
+    },
+
+    titleGreenTextIOS: {
+
+        color: '#7DBD5C',
+        fontSize: 24,
         flexShrink: 1,
         textAlign: 'center',
         fontWeight: 'bold',
@@ -1337,7 +1375,17 @@ const styles = StyleSheet.create({
         marginRight: 10,
         height: 60,
         backgroundColor: "transparent",
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
+
+
+    },
+
+    textInputStyleIOS: {
+        fontSize: 14,
+        color: 'black',
+        marginLeft: 10,
+        marginRight: 10,
+        height: 60,
+        backgroundColor: "transparent",
 
 
     },
@@ -1384,16 +1432,6 @@ const styles = StyleSheet.create({
 
     },
 
-
-
-
-
-
-
-
-
-
-
     buttonContainer: {
         backgroundColor: '#7DBD5C',
         borderRadius: 10,
@@ -1408,7 +1446,12 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 16,
         color: '#ffffff',
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
+
+    },
+
+    buttonTextIOS: {
+        fontSize: 16,
+        color: '#ffffff',
 
     },
 
@@ -1416,14 +1459,25 @@ const styles = StyleSheet.create({
 
     weekText1: {
         fontSize: 18,
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
+        color: '#87B26A'
+    },
+
+    weekText1IOS: {
+        fontSize: 18,
         color: '#87B26A'
     },
 
     weekText2: {
         fontSize: 20,
         fontWeight: 'bold',
-        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
+        textDecorationLine: 'underline',
+
+    },
+
+
+    weekText2Ios: {
+        fontSize: 20,
+        fontWeight: 'bold',
         textDecorationLine: 'underline',
 
     },
