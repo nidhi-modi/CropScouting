@@ -64,11 +64,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-<<<<<<< HEAD
-    fontFamily: Platform.OS == 'android'? "times_new_roman" : null
-  },
-=======
-   },
->>>>>>> 226c8f4b7dfcfe6a20307aeb7476f01f57a59908
+    fontFamily: Platform.OS == 'ios'? null : "times_new_roman",  },
 
 });

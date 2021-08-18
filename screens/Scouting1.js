@@ -1260,13 +1260,13 @@ const styles = StyleSheet.create({
     textLineItem: {
 
         color: "#000000",
-        fontFamily: Platform.OS == 'android'? "times_new_roman" : null,
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
     },
 
     textLineItemGreen: {
 
         color: "#87B26A",
-        fontFamily: Platform.OS == 'android'? "times_new_roman" : null,        
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
         fontWeight: 'bold',
         textAlign: 'center',
@@ -1334,7 +1334,7 @@ const styles = StyleSheet.create({
 
         color: 'black',
         fontSize: 17,
-        fontFamily: Platform.OS == 'android'? "times_new_roman" : null,
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
         textAlign: 'center',
 
@@ -1344,7 +1344,7 @@ const styles = StyleSheet.create({
 
         color: '#000000',
         fontSize: 17,
-        fontFamily: Platform.OS == 'android'? "times_new_roman" : null,
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
 
     },
@@ -1353,7 +1353,7 @@ const styles = StyleSheet.create({
 
         color: '#7DBD5C',
         fontSize: 24,
-        fontFamily: Platform.OS == 'android'? "times_new_roman" : null,
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
         textAlign: 'center',
         fontWeight: 'bold',
@@ -1375,7 +1375,7 @@ const styles = StyleSheet.create({
         marginRight: 10,
         height: 60,
         backgroundColor: "transparent",
-        fontFamily: Platform.OS == 'android'? "times_new_roman" : null,
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
 
 
     },
@@ -1424,6 +1424,14 @@ const styles = StyleSheet.create({
 
 
 
+
+
+
+
+
+
+
+
     buttonContainer: {
         backgroundColor: '#7DBD5C',
         borderRadius: 10,
@@ -1438,7 +1446,7 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 16,
         color: '#ffffff',
-        fontFamily: Platform.OS == 'android'? "times_new_roman" : null,
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
 
     },
 
@@ -1446,14 +1454,14 @@ const styles = StyleSheet.create({
 
     weekText1: {
         fontSize: 18,
-        fontFamily: Platform.OS == 'android'? "times_new_roman" : null,
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         color: '#87B26A'
     },
 
     weekText2: {
         fontSize: 20,
         fontWeight: 'bold',
-        fontFamily: Platform.OS == 'android'? "times_new_roman" : null,
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         textDecorationLine: 'underline',
 
     },
