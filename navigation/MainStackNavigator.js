@@ -40,8 +40,6 @@ function MainStackNavigator() {
                     },
                     headerTitleStyle: {
                         fontWeight: 'bold',
-                        
-                        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
                         fontSize: 20,
 
                     },
