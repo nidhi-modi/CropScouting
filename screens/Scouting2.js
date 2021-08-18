@@ -14,7 +14,8 @@ import {
     Dimensions,
     BackHandler,
     TouchableOpacity,
-    TextInput
+    TextInput,
+    Platform
 
 } from 'react-native';
 
@@ -1258,13 +1259,13 @@ const styles = StyleSheet.create({
     textLineItem: {
 
         color: "#000000",
-        fontFamily: "Montserrat-Regular",
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
     },
 
     textLineItemGreen: {
 
         color: "#87B26A",
-        fontFamily: "Montserrat-Regular",
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
         fontWeight: 'bold',
         textAlign: 'center',
@@ -1332,7 +1333,7 @@ const styles = StyleSheet.create({
 
         color: 'black',
         fontSize: 17,
-        fontFamily: "Montserrat-Regular",
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
         textAlign: 'center',
 
@@ -1342,7 +1343,7 @@ const styles = StyleSheet.create({
 
         color: '#000000',
         fontSize: 17,
-        fontFamily: "Montserrat-Regular",
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
 
     },
@@ -1351,7 +1352,7 @@ const styles = StyleSheet.create({
 
         color: '#7DBD5C',
         fontSize: 24,
-        fontFamily: "Montserrat-Regular",
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         flexShrink: 1,
         textAlign: 'center',
         fontWeight: 'bold',
@@ -1373,7 +1374,7 @@ const styles = StyleSheet.create({
         marginRight: 10,
         height: 60,
         backgroundColor: "transparent",
-        fontFamily: "Montserrat-Regular",
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
 
 
     },
@@ -1444,7 +1445,7 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 16,
         color: '#ffffff',
-        fontFamily: "Montserrat-Regular",
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
 
     },
 
@@ -1452,14 +1453,14 @@ const styles = StyleSheet.create({
 
     weekText1: {
         fontSize: 18,
-        fontFamily: "Montserrat-Regular",
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         color: '#87B26A'
     },
 
     weekText2: {
         fontSize: 20,
         fontWeight: 'bold',
-        fontFamily: "Montserrat-Regular",
+        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
         textDecorationLine: 'underline',
 
     },

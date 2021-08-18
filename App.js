@@ -12,7 +12,7 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
+  Platform,
   useColorScheme,
   View,
 } from 'react-native';
@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-    fontFamily: "times_new_roman"
-  },
+    fontFamily: Platform.OS == 'ios'? null : "times_new_roman",  },
 
 });

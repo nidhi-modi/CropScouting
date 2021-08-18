@@ -31,6 +31,7 @@ function MainStackNavigator() {
             <Stack.Navigator
                 initialRouteName='Home'
 
+            
                 screenOptions={{
                     //gestureEnabled: true,
                     headerStyle: {
@@ -39,7 +40,8 @@ function MainStackNavigator() {
                     },
                     headerTitleStyle: {
                         fontWeight: 'bold',
-                        fontFamily: "times_new_roman",
+                        
+                        fontFamily: Platform.OS == 'ios'? null : "times_new_roman",
                         fontSize: 20,
 
                     },

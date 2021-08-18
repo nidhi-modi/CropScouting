@@ -167,7 +167,8 @@ export default class Home extends Component {
 
                             }}
                         >
-                            <DropDownPicker
+
+                            {Platform.OS == 'ios' ? <DropDownPicker
                                 items={[
                                     { label: 'A', value: 'A' },
                                     { label: 'B', value: 'B' },
@@ -188,7 +189,7 @@ export default class Home extends Component {
                                     fontSize: 14,
                                     textAlign: 'left',
                                     color: '#000000',
-                                    fontFamily: "Montserrat-Regular",
+
 
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
@@ -196,7 +197,38 @@ export default class Home extends Component {
                                 value={this.state.scoutersName}
 
 
-                            />
+                            /> :
+                                <DropDownPicker
+                                    items={[
+                                        { label: 'A', value: 'A' },
+                                        { label: 'B', value: 'B' },
+                                        { label: 'C', value: 'C' },
+                                        { label: 'D', value: 'D' },
+
+                                    ]}
+                                    placeholder=""
+                                    containerStyle={{ height: 50 }}
+                                    style={{
+                                        borderColor: '#F1EEEC',
+                                        borderWidth: 1
+                                    }}
+                                    itemStyle={{
+                                        justifyContent: 'flex-start'
+                                    }}
+                                    labelStyle={{
+                                        fontSize: 14,
+                                        textAlign: 'left',
+                                        color: '#000000',
+                                        fontFamily: "times_new_roman",
+
+                                    }}
+                                    dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                    onChangeItem={(item) => this.updateTextInput(item.value, 'scoutersName')}
+                                    value={this.state.scoutersName}
+
+
+                                />}
+
                         </View>
 
                         <View style={styles.marginContainerTop}></View>
@@ -216,7 +248,8 @@ export default class Home extends Component {
 
                             }}
                         >
-                            <DropDownPicker
+
+                            {Platform.OS == 'ios' ? <DropDownPicker
                                 items={[
                                     { label: 'REP 1', value: 'REP 1' },
 
@@ -234,7 +267,7 @@ export default class Home extends Component {
                                     fontSize: 14,
                                     textAlign: 'left',
                                     color: '#000000',
-                                    fontFamily: "Montserrat-Regular",
+
 
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
@@ -242,7 +275,35 @@ export default class Home extends Component {
                                 value={this.state.location}
 
 
-                            />
+                            /> :
+                                <DropDownPicker
+                                    items={[
+                                        { label: 'REP 1', value: 'REP 1' },
+
+                                    ]}
+                                    placeholder=""
+                                    containerStyle={{ height: 50 }}
+                                    style={{
+                                        borderColor: '#F1EEEC',
+                                        borderWidth: 1
+                                    }}
+                                    itemStyle={{
+                                        justifyContent: 'flex-start'
+                                    }}
+                                    labelStyle={{
+                                        fontSize: 14,
+                                        textAlign: 'left',
+                                        color: '#000000',
+                                        fontFamily: "times_new_roman",
+
+                                    }}
+                                    dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                    onChangeItem={(item) => this.updateTextInput(item.value, 'location')}
+                                    value={this.state.location}
+
+
+                                />}
+
                         </View>
 
                         <View style={styles.marginContainerTop}></View>
@@ -262,7 +323,8 @@ export default class Home extends Component {
 
                             }}
                         >
-                            <DropDownPicker
+
+                            {Platform.OS == 'ios' ? <DropDownPicker
                                 items={[
                                     { label: 'Psyllid', value: 'Psyllid' },
                                     { label: 'Whitefly Adults', value: 'Whitefly Adults' },
@@ -291,7 +353,7 @@ export default class Home extends Component {
                                     fontSize: 14,
                                     textAlign: 'left',
                                     color: '#000000',
-                                    fontFamily: "Montserrat-Regular",
+
 
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
@@ -299,7 +361,45 @@ export default class Home extends Component {
                                 value={this.state.scoutType}
 
 
-                            />
+                            /> : <DropDownPicker
+                                items={[
+                                    { label: 'Psyllid', value: 'Psyllid' },
+                                    { label: 'Whitefly Adults', value: 'Whitefly Adults' },
+                                    { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
+                                    { label: 'Encarsia Scale', value: 'Encarsia Scale' },
+                                    { label: 'Engytatus', value: 'Engytatus' },
+                                    { label: 'Lacewing', value: 'Lacewing' },
+                                    { label: 'Yellow Heads', value: 'Yellow Heads' },
+                                    { label: 'Botrytis', value: 'Botrytise' },
+                                    { label: 'Disease Plants', value: 'Disease Plants' },
+                                    { label: 'Russet Mite', value: 'Russet Mite' },
+                                    { label: 'Caterpillar', value: 'Caterpillar' },
+                                    { label: 'Butterfly', value: 'Butterfly' },
+
+                                ]}
+                                placeholder=""
+                                containerStyle={{ height: 50 }}
+                                style={{
+                                    borderColor: '#F1EEEC',
+                                    borderWidth: 1
+                                }}
+                                itemStyle={{
+                                    justifyContent: 'flex-start'
+                                }}
+                                labelStyle={{
+                                    fontSize: 14,
+                                    textAlign: 'left',
+                                    color: '#000000',
+                                    fontFamily: "times_new_roman",
+
+                                }}
+                                dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                onChangeItem={(item) => this.updateTextInput(item.value, 'scoutType')}
+                                value={this.state.scoutType}
+
+
+                            />}
+
                         </View>
 
                         <View style={styles.marginContainerTop}></View>
@@ -370,7 +470,13 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 16,
         color: '#ffffff',
-        fontFamily: "Montserrat-Regular",
+        fontFamily: "times_new_roman",
+
+    },
+
+    buttonTextIOS: {
+        fontSize: 16,
+        color: '#ffffff',
 
     },
 
@@ -400,14 +506,26 @@ const styles = StyleSheet.create({
 
     weekText1: {
         fontSize: 18,
-        fontFamily: "Montserrat-Regular",
+        fontFamily: "times_new_roman",
+        color: '#87B26A'
+    },
+
+    weekText1IOS: {
+        fontSize: 18,
         color: '#87B26A'
     },
 
     weekText2: {
         fontSize: 20,
         fontWeight: 'bold',
-        fontFamily: "Montserrat-Regular",
+        fontFamily: "times_new_roman",
+        textDecorationLine: 'underline',
+
+    },
+
+    weekText2IOS: {
+        fontSize: 20,
+        fontWeight: 'bold',
         textDecorationLine: 'underline',
 
     },
@@ -432,8 +550,16 @@ const styles = StyleSheet.create({
 
         color: 'black',
         fontSize: 16,
-        fontFamily: "Montserrat-Regular",
+        fontFamily: "times_new_roman",
 
+
+    },
+
+
+    titleHeadingTextIOS: {
+
+        color: 'black',
+        fontSize: 16,
 
     },
 
@@ -441,7 +567,18 @@ const styles = StyleSheet.create({
 
         color: '#87B26A',
         fontSize: 18,
-        fontFamily: "Montserrat-Regular",
+        fontFamily: "times_new_roman",
+        flexShrink: 1,
+        textAlign: 'center',
+        fontWeight: 'bold',
+
+
+    },
+
+    titleGreenTextIOS: {
+
+        color: '#87B26A',
+        fontSize: 18,
         flexShrink: 1,
         textAlign: 'center',
         fontWeight: 'bold',
@@ -453,7 +590,19 @@ const styles = StyleSheet.create({
 
         color: '#000000',
         fontSize: 15,
-        fontFamily: "Montserrat-Regular",
+        fontFamily: "times_new_roman",
+        flexShrink: 1,
+        textAlign: 'center',
+        marginRight: 30,
+        marginLeft: 30
+
+
+    },
+
+    titleBlackTextIOS: {
+
+        color: '#000000',
+        fontSize: 15,
         flexShrink: 1,
         textAlign: 'center',
         marginRight: 30,
