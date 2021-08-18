@@ -188,7 +188,7 @@ export default class Home extends Component {
                                     fontSize: 14,
                                     textAlign: 'left',
                                     color: '#000000',
-                                    fontFamily: "times_new_roman",
+                                    fontFamily: "Montserrat-Regular",
 
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
@@ -234,7 +234,7 @@ export default class Home extends Component {
                                     fontSize: 14,
                                     textAlign: 'left',
                                     color: '#000000',
-                                    fontFamily: "times_new_roman",
+                                    fontFamily: "Montserrat-Regular",
 
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
@@ -291,7 +291,7 @@ export default class Home extends Component {
                                     fontSize: 14,
                                     textAlign: 'left',
                                     color: '#000000',
-                                    fontFamily: "times_new_roman",
+                                    fontFamily: "Montserrat-Regular",
 
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
@@ -370,7 +370,7 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 16,
         color: '#ffffff',
-        fontFamily: "times_new_roman",
+        fontFamily: "Montserrat-Regular",
 
     },
 
@@ -432,7 +432,7 @@ const styles = StyleSheet.create({
 
         color: 'black',
         fontSize: 16,
-        fontFamily: "times_new_roman",
+        fontFamily: "Montserrat-Regular",
 
 
     },
@@ -441,7 +441,7 @@ const styles = StyleSheet.create({
 
         color: '#87B26A',
         fontSize: 18,
-        fontFamily: "times_new_roman",
+        fontFamily: "Montserrat-Regular",
         flexShrink: 1,
         textAlign: 'center',
         fontWeight: 'bold',
@@ -453,7 +453,7 @@ const styles = StyleSheet.create({
 
         color: '#000000',
         fontSize: 15,
-        fontFamily: "times_new_roman",
+        fontFamily: "Montserrat-Regular",
         flexShrink: 1,
         textAlign: 'center',
         marginRight: 30,
