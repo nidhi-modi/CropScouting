@@ -400,14 +400,14 @@ const styles = StyleSheet.create({
 
     weekText1: {
         fontSize: 18,
-        fontFamily: "times_new_roman",
+        fontFamily: "Montserrat-Regular",
         color: '#87B26A'
     },
 
     weekText2: {
         fontSize: 20,
         fontWeight: 'bold',
-        fontFamily: "times_new_roman",
+        fontFamily: "Montserrat-Regular",
         textDecorationLine: 'underline',
 
     },
