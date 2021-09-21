@@ -44,7 +44,7 @@ function MainStackNavigator() {
                     //gestureEnabled: true,
                     headerStyle: {
                         backgroundColor: '#7DBD5C',
-                        height: 68
+                        //height: 70
                     },
                     headerTitleStyle: {
                         fontWeight: 'bold',

@@ -31,6 +31,9 @@
     "react-native-vector-icons": "^8.1.0",
     "react-navigation": "^4.4.4"
   },
+  "resolutions": {
+    "react-native-status-bar-height": "2.6.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/runtime": "^7.14.8",
