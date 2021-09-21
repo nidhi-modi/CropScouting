@@ -35,7 +35,6 @@ function MainStackNavigator() {
         <NavigationContainer independent={true}>
 
 
-
             <Stack.Navigator
                 initialRouteName='Home'
 
@@ -45,24 +44,23 @@ function MainStackNavigator() {
                 
                     headerStyle: {
                         backgroundColor: '#7DBD5C',
-                        height: Platform.OS === 'android'? 68 : null
+                        //height: Platform.OS === 'android'? 68 : null
                     },
                     headerTitleStyle: {
                         fontWeight: 'bold',
                         fontSize: 20,
 
                     },
+                    
                     headerTintColor: 'white',
                     headerBackTitleVisible: false,
                     headerTitleAlign: 'center',
                     headerMode: 'float'
 
-
                 }
 
-
                 }
-            >
+                 >
 
 
                 <Stack.Screen name='SiteSelection' component={SiteSelection} options={{ headerShown: false, title: 'T&G Global' }} />
