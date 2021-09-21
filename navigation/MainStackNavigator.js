@@ -14,6 +14,14 @@ import Scouting from '../screens/Scouting'
 import Scouting1 from '../screens/Scouting1'
 import Scouting2 from '../screens/Scouting2'
 import Scouting3 from '../screens/Scouting3'
+import Scouting4 from '../screens/Scouting4'
+import Scouting5 from '../screens/Scouting5'
+import Scouting6 from '../screens/Scouting6'
+import Scouting7 from '../screens/Scouting7'
+import Scouting8 from '../screens/Scouting8'
+import Scouting9 from '../screens/Scouting9'
+import Scouting10 from '../screens/Scouting10'
+import ViewScoutingDetails from '../screens/ViewScoutingDetails'
 
 
 const Stack = createStackNavigator();
@@ -24,14 +32,14 @@ function MainStackNavigator() {
     return (
 
 
-        <NavigationContainer>
+        <NavigationContainer independent={true}>
 
 
 
             <Stack.Navigator
                 initialRouteName='Home'
 
-            
+
                 screenOptions={{
                     //gestureEnabled: true,
                     headerStyle: {
@@ -138,6 +146,103 @@ function MainStackNavigator() {
 
                         </TouchableOpacity>
                 })} />
+
+                <Stack.Screen name='Scouting4' component={Scouting4} options={({ navigation }) => ({
+                    headerRight: () => null, title: 'Crop Scouting', headerLeft: () =>
+
+                        <TouchableOpacity
+                            activeOpacity={0.5}
+                            style={styles.TouchableOpacityLeftStyle2}
+                            onPress={() => navigation.navigate('Home')}>
+
+                            <Image source={require('../assets/back.png')} style={styles.FloatingButtonLeftStyle2} />
+
+                        </TouchableOpacity>
+                })} />
+
+                <Stack.Screen name='Scouting5' component={Scouting5} options={({ navigation }) => ({
+                    headerRight: () => null, title: 'Crop Scouting', headerLeft: () =>
+
+                        <TouchableOpacity
+                            activeOpacity={0.5}
+                            style={styles.TouchableOpacityLeftStyle2}
+                            onPress={() => navigation.navigate('Home')}>
+
+                            <Image source={require('../assets/back.png')} style={styles.FloatingButtonLeftStyle2} />
+
+                        </TouchableOpacity>
+                })} />
+
+
+                <Stack.Screen name='Scouting6' component={Scouting6} options={({ navigation }) => ({
+                    headerRight: () => null, title: 'Crop Scouting', headerLeft: () =>
+
+                        <TouchableOpacity
+                            activeOpacity={0.5}
+                            style={styles.TouchableOpacityLeftStyle2}
+                            onPress={() => navigation.navigate('Home')}>
+
+                            <Image source={require('../assets/back.png')} style={styles.FloatingButtonLeftStyle2} />
+
+                        </TouchableOpacity>
+                })} />
+
+                <Stack.Screen name='Scouting7' component={Scouting7} options={({ navigation }) => ({
+                    headerRight: () => null, title: 'Crop Scouting', headerLeft: () =>
+
+                        <TouchableOpacity
+                            activeOpacity={0.5}
+                            style={styles.TouchableOpacityLeftStyle2}
+                            onPress={() => navigation.navigate('Home')}>
+
+                            <Image source={require('../assets/back.png')} style={styles.FloatingButtonLeftStyle2} />
+
+                        </TouchableOpacity>
+                })} />
+
+
+                <Stack.Screen name='Scouting8' component={Scouting8} options={({ navigation }) => ({
+                    headerRight: () => null, title: 'Crop Scouting', headerLeft: () =>
+
+                        <TouchableOpacity
+                            activeOpacity={0.5}
+                            style={styles.TouchableOpacityLeftStyle2}
+                            onPress={() => navigation.navigate('Home')}>
+
+                            <Image source={require('../assets/back.png')} style={styles.FloatingButtonLeftStyle2} />
+
+                        </TouchableOpacity>
+                })} />
+
+                <Stack.Screen name='Scouting9' component={Scouting9} options={({ navigation }) => ({
+                    headerRight: () => null, title: 'Crop Scouting', headerLeft: () =>
+
+                        <TouchableOpacity
+                            activeOpacity={0.5}
+                            style={styles.TouchableOpacityLeftStyle2}
+                            onPress={() => navigation.navigate('Home')}>
+
+                            <Image source={require('../assets/back.png')} style={styles.FloatingButtonLeftStyle2} />
+
+                        </TouchableOpacity>
+                })} />
+
+                <Stack.Screen name='Scouting10' component={Scouting10} options={({ navigation }) => ({
+                    headerRight: () => null, title: 'Crop Scouting', headerLeft: () =>
+
+                        <TouchableOpacity
+                            activeOpacity={0.5}
+                            style={styles.TouchableOpacityLeftStyle2}
+                            onPress={() => navigation.navigate('Home')}>
+
+                            <Image source={require('../assets/back.png')} style={styles.FloatingButtonLeftStyle2} />
+
+                        </TouchableOpacity>
+                })} />
+
+                <Stack.Screen name='ViewScoutingDetails' component={ViewScoutingDetails} options={{ headerShown: false, headerLeft: false }} />
+
+
 
 
 

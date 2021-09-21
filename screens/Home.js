@@ -14,7 +14,9 @@ import {
     Image,
     BackHandler,
     Platform,
-    TouchableOpacity
+    TouchableOpacity,
+    Dimensions,
+    Alert
 
 } from 'react-native';
 
@@ -22,8 +24,13 @@ import DropDownPicker from '@nectr-rn/react-native-dropdown-picker';
 import { ScrollView } from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-community/async-storage';
 import moment from 'moment'
+import Database from '../screens/Database'
+import NetInfo from "@react-native-community/netinfo";
 
 
+
+var screenWidth = (Dimensions.get('window').width) / 1.6;
+const db = new Database();
 
 
 
@@ -40,6 +47,8 @@ export default class Home extends Component {
             open: false,
             buttonCondition: true,
             weekNumber: '',
+            listScoutingData: [],
+            isItConnected: '',
 
 
         };
@@ -53,10 +62,97 @@ export default class Home extends Component {
         });
     }
 
+    CheckConnectivity = () => {
+        // For Android devices
+        if (Platform.OS === "android") {
+          NetInfo.isConnected.fetch().then(isConnected => {
+            if (isConnected) {
+              Alert.alert("You are online!");
+            } else {
+              Alert.alert("You are offline!");
+            }
+          });
+        } else {
+          // For iOS devices
+          NetInfo.isConnected.addEventListener(
+            "connectionChange",
+            this.handleFirstConnectivityChange
+          );
+        }
+      };
+    
+      handleFirstConnectivityChange = isConnected => {
+        NetInfo.isConnected.removeEventListener(
+          "connectionChange",
+          this.handleFirstConnectivityChange
+        );
+    
+        if (isConnected === false) {
+          Alert.alert("You are offline!");
+        } else {
+          Alert.alert("You are online!");
+        }
+      };
+    
+      handleConnectivityChange = state => {
+        if (state.isConnected) {
+    
+          this.setState({ isItConnected: 'Online' });
+    
+        } else {
+    
+          this.setState({ isItConnected: 'Offline' });
+        }
+      };
+    
+      checkInternetConnection = () => {
+    
+        if (this.state.isItConnected == 'Online') {
+    
+            this.setState({
+                scoutersName: null,
+                location: null,
+                scoutType: null
+            })
+    
+            this.props.navigation.navigate('ViewScoutingDetails')
+    
+    
+        } else {
+    
+          this.errorMessage();
+    
+        }
+      }
+    
+      errorMessage = () => {
+    
+        Alert.alert(
+          'No Internet Connection',
+          'Make sure your device is connected to the internet',
+          [
+    
+            { text: 'OK', onPress: () => console.log('No button clicked'), style: 'cancel' },
+    
+          ],
+          {
+            cancelable: true
+          }
+        );
+    
+    
+      }
 
     componentDidMount() {
 
         BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+        NetInfo.addEventListener(this.handleConnectivityChange);
+
+        this.focusListener = this.props.navigation.addListener('focus',
+            () => {
+                this.getDatabase();
+            }
+        );
 
         var weekNumber = moment().week() - 1;
         var yearNumber = moment().year();
@@ -69,7 +165,7 @@ export default class Home extends Component {
 
         this.setState({ weekNumber: completeWeekNumber })
 
-        //this.getAsyncItem();
+        this.getAsyncItem();
 
 
     }
@@ -79,6 +175,50 @@ export default class Home extends Component {
         BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
     }
 
+    getDatabase = () => {
+
+        db.listScoutData()
+            .then(data => {
+
+                this.setState({ listScoutingData: data })
+                console.log('data from local database', this.state.listScoutingData.length);
+
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+
+    getAsyncItem = () => {
+
+        try {
+            AsyncStorage.getItem('scoutersName').then((text1Value) => {
+
+                console.log("Name : " + JSON.parse(text1Value));
+                this.setState({ scoutersName: JSON.parse(text1Value) });
+
+            }).done();
+        } catch (error) {
+
+        }
+
+        try {
+            AsyncStorage.getItem('location').then((text2Value) => {
+                this.setState({ location: JSON.parse(text2Value) });
+
+            }).done();
+        } catch (error) {
+        }
+
+        try {
+            AsyncStorage.getItem('scoutType').then((text3Value) => {
+                this.setState({ scoutType: JSON.parse(text3Value) });
+
+
+            }).done();
+        } catch (error) {
+        }
+    }
 
     //ASYNC METHOD
 
@@ -107,7 +247,6 @@ export default class Home extends Component {
         var loc = this.state.location;
         var type = this.state.scoutType;
 
-
         if (name != '' && loc != '' && type != '') {
 
             this.props.navigation.navigate("Scouting")
@@ -116,7 +255,6 @@ export default class Home extends Component {
 
 
         }
-
 
     }
 
@@ -133,8 +271,7 @@ export default class Home extends Component {
         this.setState(state);
     }
 
-
-
+  
     render() {
 
         return (
@@ -168,7 +305,8 @@ export default class Home extends Component {
                             }}
                         >
 
-                            {Platform.OS == 'ios' ? <DropDownPicker
+
+                            <DropDownPicker
                                 items={[
                                     { label: 'A', value: 'A' },
                                     { label: 'B', value: 'B' },
@@ -194,40 +332,10 @@ export default class Home extends Component {
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
                                 onChangeItem={(item) => this.updateTextInput(item.value, 'scoutersName')}
-                                value={this.state.scoutersName}
+                                defaultValue={this.state.scoutersName}
 
 
-                            /> :
-                                <DropDownPicker
-                                    items={[
-                                        { label: 'A', value: 'A' },
-                                        { label: 'B', value: 'B' },
-                                        { label: 'C', value: 'C' },
-                                        { label: 'D', value: 'D' },
-
-                                    ]}
-                                    placeholder=""
-                                    containerStyle={{ height: 50 }}
-                                    style={{
-                                        borderColor: '#F1EEEC',
-                                        borderWidth: 1
-                                    }}
-                                    itemStyle={{
-                                        justifyContent: 'flex-start'
-                                    }}
-                                    labelStyle={{
-                                        fontSize: 14,
-                                        textAlign: 'left',
-                                        color: '#000000',
-                                        
-
-                                    }}
-                                    dropDownStyle={{ backgroundColor: '#fafafa' }}
-                                    onChangeItem={(item) => this.updateTextInput(item.value, 'scoutersName')}
-                                    value={this.state.scoutersName}
-
-
-                                />}
+                            />
 
                         </View>
 
@@ -249,7 +357,7 @@ export default class Home extends Component {
                             }}
                         >
 
-                            {Platform.OS == 'ios' ? <DropDownPicker
+                            <DropDownPicker
                                 items={[
                                     { label: 'REP 1', value: 'REP 1' },
 
@@ -272,37 +380,10 @@ export default class Home extends Component {
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
                                 onChangeItem={(item) => this.updateTextInput(item.value, 'location')}
-                                value={this.state.location}
+                                defaultValue={this.state.location}
 
 
-                            /> :
-                                <DropDownPicker
-                                    items={[
-                                        { label: 'REP 1', value: 'REP 1' },
-
-                                    ]}
-                                    placeholder=""
-                                    containerStyle={{ height: 50 }}
-                                    style={{
-                                        borderColor: '#F1EEEC',
-                                        borderWidth: 1
-                                    }}
-                                    itemStyle={{
-                                        justifyContent: 'flex-start'
-                                    }}
-                                    labelStyle={{
-                                        fontSize: 14,
-                                        textAlign: 'left',
-                                        color: '#000000',
-                                      
-
-                                    }}
-                                    dropDownStyle={{ backgroundColor: '#fafafa' }}
-                                    onChangeItem={(item) => this.updateTextInput(item.value, 'location')}
-                                    value={this.state.location}
-
-
-                                />}
+                            />
 
                         </View>
 
@@ -323,8 +404,7 @@ export default class Home extends Component {
 
                             }}
                         >
-
-                            {Platform.OS == 'ios' ? <DropDownPicker
+                            <DropDownPicker
                                 items={[
                                     { label: 'Psyllid', value: 'Psyllid' },
                                     { label: 'Whitefly Adults', value: 'Whitefly Adults' },
@@ -358,47 +438,10 @@ export default class Home extends Component {
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
                                 onChangeItem={(item) => this.updateTextInput(item.value, 'scoutType')}
-                                value={this.state.scoutType}
+                                defaultValue={this.state.scoutType}
 
 
-                            /> : <DropDownPicker
-                                items={[
-                                    { label: 'Psyllid', value: 'Psyllid' },
-                                    { label: 'Whitefly Adults', value: 'Whitefly Adults' },
-                                    { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
-                                    { label: 'Encarsia Scale', value: 'Encarsia Scale' },
-                                    { label: 'Engytatus', value: 'Engytatus' },
-                                    { label: 'Lacewing', value: 'Lacewing' },
-                                    { label: 'Yellow Heads', value: 'Yellow Heads' },
-                                    { label: 'Botrytis', value: 'Botrytise' },
-                                    { label: 'Disease Plants', value: 'Disease Plants' },
-                                    { label: 'Russet Mite', value: 'Russet Mite' },
-                                    { label: 'Caterpillar', value: 'Caterpillar' },
-                                    { label: 'Butterfly', value: 'Butterfly' },
-
-                                ]}
-                                placeholder=""
-                                containerStyle={{ height: 50 }}
-                                style={{
-                                    borderColor: '#F1EEEC',
-                                    borderWidth: 1
-                                }}
-                                itemStyle={{
-                                    justifyContent: 'flex-start'
-                                }}
-                                labelStyle={{
-                                    fontSize: 14,
-                                    textAlign: 'left',
-                                    color: '#000000',
-                                   
-
-                                }}
-                                dropDownStyle={{ backgroundColor: '#fafafa' }}
-                                onChangeItem={(item) => this.updateTextInput(item.value, 'scoutType')}
-                                value={this.state.scoutType}
-
-
-                            />}
+                            />
 
                         </View>
 
@@ -415,12 +458,13 @@ export default class Home extends Component {
 
                         <View style={styles.marginBetweenTop}></View>
 
-                        {(this.state.scoutersName != '' && this.state.location != '' && this.state.scoutType != '') ? <TouchableOpacity
-                            style={styles.buttonContainer}
-                            disabled={false}
-                            onPress={() => this.handleButtonPress()}>
-                            <Text style={styles.buttonText}>Start Crop Scouting</Text>
-                        </TouchableOpacity> :
+                        {(this.state.scoutersName !== null && this.state.location !== null && this.state.scoutType !== null) ?
+                            <TouchableOpacity
+                                style={styles.buttonContainer}
+                                disabled={false}
+                                onPress={() => this.handleButtonPress()}>
+                                <Text style={styles.buttonText}>Start Crop Scouting</Text>
+                            </TouchableOpacity> :
                             <TouchableOpacity
                                 style={styles.buttonContainer}
                                 disabled={true}
@@ -428,9 +472,27 @@ export default class Home extends Component {
                                 <Text style={styles.buttonText}>Start Crop Scouting</Text>
                             </TouchableOpacity>}
 
-
-
                         <View style={styles.marginBetweenTop}></View>
+
+                        {this.state.listScoutingData.length !== 0 ?
+
+                            <View>
+                                <View style={styles.marginTopStyle}></View>
+
+                                <View style={styles.borderStyle}>
+                                    <Text style={styles.titleBlackText}>Press submit button to send scouting data to the server</Text>
+                                    <View style={styles.marginBetweenTop}></View>
+
+                                    <TouchableOpacity
+                                        style={styles.buttonContainerRed}
+                                        disabled={false}
+                                        onPress={() => this.checkInternetConnection()}>
+                                        <Text style={styles.buttonText}>Submit</Text>
+                                    </TouchableOpacity>
+                                </View>
+                                <View style={styles.marginBetweenTop}></View>
+                            </View>
+                            : null}
 
 
 
@@ -448,12 +510,48 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff'
     },
 
+    borderStyle: {
+
+        borderColor: '#F1EEEC',
+        borderWidth: 1,
+        padding: 8,
+        borderRadius: 8
+
+    },
+
+    textBottom: {
+
+        fontSize: 20,
+        width: screenWidth,
+        color: '#2C3E50',
+        fontWeight: 'bold',
+        alignSelf: 'center',
+        justifyContent: 'center',
+        alignContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center'
+
+
+
+    },
+
+
     mainPageContainer: {
 
         flex: 1,
         marginRight: 20,
         marginLeft: 20,
         marginTop: 40
+
+    },
+
+    headerImage2: {
+
+        resizeMode: 'cover',
+        justifyContent: 'center',
+        alignContent: 'center',
+        alignItems: 'center',
+        marginTop: 18,
 
     },
 
@@ -467,10 +565,20 @@ const styles = StyleSheet.create({
 
     },
 
+    buttonContainerRed: {
+        backgroundColor: '#B11B0A',
+        borderRadius: 10,
+        padding: 10,
+        height: 50,
+        justifyContent: 'center',
+        alignItems: 'center'
+
+    },
+
     buttonText: {
         fontSize: 16,
         color: '#ffffff',
-       
+
 
     },
 
@@ -506,7 +614,7 @@ const styles = StyleSheet.create({
 
     weekText1: {
         fontSize: 18,
-       
+
         color: '#87B26A'
     },
 
@@ -518,7 +626,7 @@ const styles = StyleSheet.create({
     weekText2: {
         fontSize: 20,
         fontWeight: 'bold',
-      
+
         textDecorationLine: 'underline',
 
     },
@@ -550,7 +658,7 @@ const styles = StyleSheet.create({
 
         color: 'black',
         fontSize: 16,
-      
+
 
     },
 

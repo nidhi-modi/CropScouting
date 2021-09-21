@@ -27,6 +27,7 @@ import moment from 'moment'
 import Database from '../screens/Database'
 
 const db = new Database();
+
 var widthText = Dimensions.get('window').width/1.3;
 
 
@@ -34,98 +35,97 @@ var intervalsOffline, startRowsOffline
 
 
 
-export default class Scouting3 extends Component {
+export default class Scouting4 extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
 
-            rowNumberScouting3: '',
+            rowNumberScouting10: '',
             intervals: '',
             startingRowNumber: '',
             scoutingType: '',
-            header1Scouting3: '',
-            header2Scouting3: '',
-            header3Scouting3: '',
-            header4Scouting3: '',
+            header1Scouting10: '',
+            header2Scouting10: '',
+            header3Scouting10: '',
+            header4Scouting10: '',
 
-            miniBay1Scouting3: 'A',
-            bay1Text1Scouting3: '',
-            bay1Text2Scouting3: '',
-            bay1Text3Scouting3: '',
-            bay1Text4Scouting3: '',
+            miniBay1Scouting10: 'A',
+            bay1Text1Scouting10: '',
+            bay1Text2Scouting10: '',
+            bay1Text3Scouting10: '',
+            bay1Text4Scouting10: '',
 
-            miniBay2Scouting3: 'B-D',
-            bay2Text1Scouting3: '',
-            bay2Text2Scouting3: '',
-            bay2Text3Scouting3: '',
-            bay2Text4Scouting3: '',
+            miniBay2Scouting10: 'B-D',
+            bay2Text1Scouting10: '',
+            bay2Text2Scouting10: '',
+            bay2Text3Scouting10: '',
+            bay2Text4Scouting10: '',
 
-            miniBay3Scouting3: 'E-G',
-            bay3Text1Scouting3: '',
-            bay3Text2Scouting3: '',
-            bay3Text3Scouting3: '',
-            bay3Text4Scouting3: '',
+            miniBay3Scouting10: 'E-G',
+            bay3Text1Scouting10: '',
+            bay3Text2Scouting10: '',
+            bay3Text3Scouting10: '',
+            bay3Text4Scouting10: '',
 
-            miniBay4Scouting3: 'H-J',
-            bay4Text1Scouting3: '',
-            bay4Text2Scouting3: '',
-            bay4Text3Scouting3: '',
-            bay4Text4Scouting3: '',
+            miniBay4Scouting10: 'H-J',
+            bay4Text1Scouting10: '',
+            bay4Text2Scouting10: '',
+            bay4Text3Scouting10: '',
+            bay4Text4Scouting10: '',
 
-            miniBay5Scouting3: 'K-M',
-            bay5Text1Scouting3: '',
-            bay5Text2Scouting3: '',
-            bay5Text3Scouting3: '',
-            bay5Text4Scouting3: '',
+            miniBay5Scouting10: 'K-M',
+            bay5Text1Scouting10: '',
+            bay5Text2Scouting10: '',
+            bay5Text3Scouting10: '',
+            bay5Text4Scouting10: '',
 
-            miniBay6Scouting3: 'N-P',
-            bay6Text1Scouting3: '',
-            bay6Text2Scouting3: '',
-            bay6Text3Scouting3: '',
-            bay6Text4Scouting3: '',
+            miniBay6Scouting10: 'N-P',
+            bay6Text1Scouting10: '',
+            bay6Text2Scouting10: '',
+            bay6Text3Scouting10: '',
+            bay6Text4Scouting10: '',
 
-            miniBay7Scouting3: 'Q-T',
-            bay7Text1Scouting3: '',
-            bay7Text2Scouting3: '',
-            bay7Text3Scouting3: '',
-            bay7Text4Scouting3: '',
-
-
-            miniBay8Scouting3: 'U-V',
-            bay8Text1Scouting3: '',
-            bay8Text2Scouting3: '',
-            bay8Text3Scouting3: '',
-            bay8Text4Scouting3: '',
+            miniBay7Scouting10: 'Q-T',
+            bay7Text1Scouting10: '',
+            bay7Text2Scouting10: '',
+            bay7Text3Scouting10: '',
+            bay7Text4Scouting10: '',
 
 
-            miniBay9Scouting3: 'W',
-            bay9Text1Scouting3: '',
-            bay9Text2Scouting3: '',
-            bay9Text3Scouting3: '',
-            bay9Text4Scouting3: '',
+            miniBay8Scouting10: 'U-V',
+            bay8Text1Scouting10: '',
+            bay8Text2Scouting10: '',
+            bay8Text3Scouting10: '',
+            bay8Text4Scouting10: '',
 
 
-            miniBay10Scouting3: 'X',
-            bay10Text1Scouting3: '',
-            bay10Text2Scouting3: '',
-            bay10Text3Scouting3: '',
-            bay10Text4Scouting3: '',
+            miniBay9Scouting10: 'W',
+            bay9Text1Scouting10: '',
+            bay9Text2Scouting10: '',
+            bay9Text3Scouting10: '',
+            bay9Text4Scouting10: '',
 
 
-            miniBay11Scouting3: 'Y-Z',
-            bay11Text1Scouting3: '',
-            bay11Text2Scouting3: '',
-            bay11Text3Scouting3: '',
-            bay11Text4Scouting3: '',
+            miniBay10Scouting10: 'X',
+            bay10Text1Scouting10: '',
+            bay10Text2Scouting10: '',
+            bay10Text3Scouting10: '',
+            bay10Text4Scouting10: '',
+
+
+            miniBay11Scouting10: 'Y-Z',
+            bay11Text1Scouting10: '',
+            bay11Text2Scouting10: '',
+            bay11Text3Scouting10: '',
+            bay11Text4Scouting10: '',
 
 
             scoutersName: '',
             location: '',
             weekNum: '',
             dataEntered: '',
-
 
         };
 
@@ -219,7 +219,7 @@ export default class Scouting3 extends Component {
 
                     AsyncStorage.getItem("column1" + opt1).then((text3Value) => {
                         var opt3 = JSON.parse(text3Value);
-                        this.setState({ header1Scouting3: opt3 });
+                        this.setState({ header1Scouting10: opt3 });
 
                     }).done();
                 } catch (error) {
@@ -231,7 +231,7 @@ export default class Scouting3 extends Component {
 
                     AsyncStorage.getItem("column2" + opt1).then((text4Value) => {
                         var opt4 = JSON.parse(text4Value);
-                        this.setState({ header2Scouting3: opt4 });
+                        this.setState({ header2Scouting10: opt4 });
 
                     }).done();
                 } catch (error) {
@@ -242,7 +242,7 @@ export default class Scouting3 extends Component {
 
                     AsyncStorage.getItem("column3" + opt1).then((text5Value) => {
                         var opt5 = JSON.parse(text5Value);
-                        this.setState({ header3Scouting3: opt5 });
+                        this.setState({ header3Scouting10: opt5 });
 
                     }).done();
                 } catch (error) {
@@ -253,7 +253,7 @@ export default class Scouting3 extends Component {
 
                     AsyncStorage.getItem("column4" + opt1).then((text6Value) => {
                         var opt6 = JSON.parse(text6Value);
-                        this.setState({ header4Scouting3: opt6 });
+                        this.setState({ header4Scouting10: opt6 });
 
                     }).done();
                 } catch (error) {
@@ -262,7 +262,7 @@ export default class Scouting3 extends Component {
 
                 try {
 
-                    AsyncStorage.getItem(opt1 + "" + "Scouting3Yes").then((dataEntered) => {
+                    AsyncStorage.getItem(opt1 + "" + "Scouting10Yes").then((dataEntered) => {
 
                         var opt7 = JSON.parse(dataEntered);
 
@@ -273,7 +273,6 @@ export default class Scouting3 extends Component {
                 } catch (error) {
 
                 }
-
                 this.getAsyncData(opt1);
 
             }).done();
@@ -294,7 +293,7 @@ export default class Scouting3 extends Component {
 
         var finalRowNumber = '' + actualRowNumber;
 
-        this.setState({ rowNumberScouting3: finalRowNumber })
+        this.setState({ rowNumberScouting10: actualRowNumber })
 
     }
 
@@ -302,16 +301,17 @@ export default class Scouting3 extends Component {
 
 
         try {
-            AsyncStorage.getItem(this.state.scoutingType + "" + 'rowNumberScouting3').then((text1Value) => {
+            AsyncStorage.getItem(this.state.scoutingType + "" + 'rowNumberScouting10').then((text1Value) => {
 
                 if (JSON.parse(text1Value) !== null) {
 
                     console.log("Row number : " + JSON.parse(text1Value));
-                    this.setState({ rowNumberScouting3: JSON.parse(text1Value) });
+                    this.setState({ rowNumberScouting10: JSON.parse(text1Value) });
+
 
                     if (this.state.dataEntered == 'Yes') {
 
-                        this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                        this.props.navigation.navigate('Home');
 
                     } else {
 
@@ -326,11 +326,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'header1Scouting3').then((text2Value) => {
+            AsyncStorage.getItem(type1 + "" + 'header1Scouting10').then((text2Value) => {
 
                 if (JSON.parse(text2Value) !== null) {
 
-                    this.setState({ header1Scouting3: JSON.parse(text2Value) });
+                    this.setState({ header1Scouting10: JSON.parse(text2Value) });
 
                 }
 
@@ -342,11 +342,11 @@ export default class Scouting3 extends Component {
 
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'header2Scouting3').then((text3Value) => {
+            AsyncStorage.getItem(type1 + "" + 'header2Scouting10').then((text3Value) => {
 
                 if (JSON.parse(text3Value) !== null) {
 
-                    this.setState({ header2Scouting3: JSON.parse(text3Value) });
+                    this.setState({ header2Scouting10: JSON.parse(text3Value) });
 
                 }
 
@@ -357,11 +357,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'header3Scouting3').then((text4Value) => {
+            AsyncStorage.getItem(type1 + "" + 'header3Scouting10').then((text4Value) => {
 
                 if (JSON.parse(text4Value) !== null) {
 
-                    this.setState({ header3Scouting3: JSON.parse(text4Value) });
+                    this.setState({ header3Scouting10: JSON.parse(text4Value) });
 
                 }
 
@@ -373,11 +373,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'header4Scouting3').then((text5Value) => {
+            AsyncStorage.getItem(type1 + "" + 'header4Scouting10').then((text5Value) => {
 
                 if (JSON.parse(text5Value) !== null) {
 
-                    this.setState({ header4Scouting3: JSON.parse(text5Value) });
+                    this.setState({ header4Scouting10: JSON.parse(text5Value) });
 
                 }
 
@@ -390,11 +390,11 @@ export default class Scouting3 extends Component {
         //BAY 1
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay1Scouting3').then((text6Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay1Scouting10').then((text6Value) => {
 
                 if (JSON.parse(text6Value) !== null) {
 
-                    this.setState({ miniBay1Scouting3: JSON.parse(text6Value) });
+                    this.setState({ miniBay1Scouting10: JSON.parse(text6Value) });
 
                 }
 
@@ -406,11 +406,11 @@ export default class Scouting3 extends Component {
 
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay1Text1Scouting3').then((text7Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay1Text1Scouting10').then((text7Value) => {
 
                 if (JSON.parse(text7Value) !== null) {
 
-                    this.setState({ bay1Text1Scouting3: JSON.parse(text7Value) });
+                    this.setState({ bay1Text1Scouting10: JSON.parse(text7Value) });
 
                 }
 
@@ -421,11 +421,11 @@ export default class Scouting3 extends Component {
 
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay1Text2Scouting3').then((text8Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay1Text2Scouting10').then((text8Value) => {
 
                 if (JSON.parse(text8Value) !== null) {
 
-                    this.setState({ bay1Text2Scouting3: JSON.parse(text8Value) });
+                    this.setState({ bay1Text2Scouting10: JSON.parse(text8Value) });
 
                 }
 
@@ -436,11 +436,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay1Text3Scouting3').then((text9Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay1Text3Scouting10').then((text9Value) => {
 
                 if (JSON.parse(text9Value) !== null) {
 
-                    this.setState({ bay1Text3Scouting3: JSON.parse(text9Value) });
+                    this.setState({ bay1Text3Scouting10: JSON.parse(text9Value) });
 
                 }
 
@@ -452,11 +452,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay1Text4Scouting3').then((text10Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay1Text4Scouting10').then((text10Value) => {
 
                 if (JSON.parse(text10Value) !== null) {
 
-                    this.setState({ bay1Text4Scouting3: JSON.parse(text10Value) });
+                    this.setState({ bay1Text4Scouting10: JSON.parse(text10Value) });
 
                 }
 
@@ -472,11 +472,11 @@ export default class Scouting3 extends Component {
         //BAY 1
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay2Scouting3').then((text11Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay2Scouting10').then((text11Value) => {
 
                 if (JSON.parse(text11Value) !== null) {
 
-                    this.setState({ miniBay2Scouting3: JSON.parse(text11Value) });
+                    this.setState({ miniBay2Scouting10: JSON.parse(text11Value) });
 
                 }
 
@@ -486,11 +486,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay2Text1Scouting3').then((text12Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay2Text1Scouting10').then((text12Value) => {
 
                 if (JSON.parse(text12Value) !== null) {
 
-                    this.setState({ bay2Text1Scouting3: JSON.parse(text12Value) });
+                    this.setState({ bay2Text1Scouting10: JSON.parse(text12Value) });
 
                 }
 
@@ -501,11 +501,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay2Text2Scouting3').then((text13Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay2Text2Scouting10').then((text13Value) => {
 
                 if (JSON.parse(text13Value) !== null) {
 
-                    this.setState({ bay2Text2Scouting3: JSON.parse(text13Value) });
+                    this.setState({ bay2Text2Scouting10: JSON.parse(text13Value) });
 
                 }
 
@@ -515,11 +515,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay2Text3Scouting3').then((text60Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay2Text3Scouting10').then((text60Value) => {
 
                 if (JSON.parse(text60Value) !== null) {
 
-                    this.setState({ bay2Text3Scouting3: JSON.parse(text60Value) });
+                    this.setState({ bay2Text3Scouting10: JSON.parse(text60Value) });
 
                 }
 
@@ -529,11 +529,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay2Text4Scouting3').then((text61Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay2Text4Scouting10').then((text61Value) => {
 
                 if (JSON.parse(text61Value) !== null) {
 
-                    this.setState({ bay2Text4Scouting3: JSON.parse(text61Value) });
+                    this.setState({ bay2Text4Scouting10: JSON.parse(text61Value) });
 
                 }
 
@@ -548,11 +548,11 @@ export default class Scouting3 extends Component {
         //BAY 2
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay3Scouting3').then((text14Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay3Scouting10').then((text14Value) => {
 
                 if (JSON.parse(text14Value) !== null) {
 
-                    this.setState({ miniBay3Scouting3: JSON.parse(text14Value) });
+                    this.setState({ miniBay3Scouting10: JSON.parse(text14Value) });
 
                 }
 
@@ -564,11 +564,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay3Text1Scouting3').then((text15Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay3Text1Scouting10').then((text15Value) => {
 
                 if (JSON.parse(text15Value) !== null) {
 
-                    this.setState({ bay3Text1Scouting3: JSON.parse(text15Value) });
+                    this.setState({ bay3Text1Scouting10: JSON.parse(text15Value) });
 
                 }
 
@@ -580,11 +580,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay3Text2Scouting3').then((text16Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay3Text2Scouting10').then((text16Value) => {
 
                 if (JSON.parse(text16Value) !== null) {
 
-                    this.setState({ bay3Text2Scouting3: JSON.parse(text16Value) });
+                    this.setState({ bay3Text2Scouting10: JSON.parse(text16Value) });
 
 
                 }
@@ -596,11 +596,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay3Text3Scouting3').then((text17Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay3Text3Scouting10').then((text17Value) => {
 
                 if (JSON.parse(text17Value) !== null) {
 
-                    this.setState({ bay3Text3Scouting3: JSON.parse(text17Value) });
+                    this.setState({ bay3Text3Scouting10: JSON.parse(text17Value) });
 
                 }
 
@@ -610,11 +610,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay3Text4Scouting3').then((text18Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay3Text4Scouting10').then((text18Value) => {
 
                 if (JSON.parse(text18Value) !== null) {
 
-                    this.setState({ bay3Text4Scouting3: JSON.parse(text18Value) });
+                    this.setState({ bay3Text4Scouting10: JSON.parse(text18Value) });
 
                 }
 
@@ -629,12 +629,12 @@ export default class Scouting3 extends Component {
         //BAY 3
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay4Scouting3').then((text19Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay4Scouting10').then((text19Value) => {
 
                 if (JSON.parse(text19Value) !== null) {
 
 
-                    this.setState({ miniBay4Scouting3: JSON.parse(text19Value) });
+                    this.setState({ miniBay4Scouting10: JSON.parse(text19Value) });
 
                 }
 
@@ -646,11 +646,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay4Text1Scouting3').then((text20Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay4Text1Scouting10').then((text20Value) => {
 
                 if (JSON.parse(text20Value) !== null) {
 
-                    this.setState({ bay4Text1Scouting3: JSON.parse(text20Value) });
+                    this.setState({ bay4Text1Scouting10: JSON.parse(text20Value) });
 
                 }
 
@@ -661,11 +661,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay4Text2Scouting3').then((text21Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay4Text2Scouting10').then((text21Value) => {
 
                 if (JSON.parse(text21Value) !== null) {
 
-                    this.setState({ bay4Text2Scouting3: JSON.parse(text21Value) });
+                    this.setState({ bay4Text2Scouting10: JSON.parse(text21Value) });
 
                 }
 
@@ -676,11 +676,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay4Text3Scouting3').then((text22Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay4Text3Scouting10').then((text22Value) => {
 
                 if (JSON.parse(text22Value) !== null) {
 
-                    this.setState({ bay4Text3Scouting3: JSON.parse(text22Value) });
+                    this.setState({ bay4Text3Scouting10: JSON.parse(text22Value) });
 
                 }
 
@@ -690,11 +690,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay4Text4Scouting3').then((text23Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay4Text4Scouting10').then((text23Value) => {
 
                 if (JSON.parse(text23Value) !== null) {
 
-                    this.setState({ bay4Text4Scouting3: JSON.parse(text23Value) });
+                    this.setState({ bay4Text4Scouting10: JSON.parse(text23Value) });
 
                 }
 
@@ -708,11 +708,11 @@ export default class Scouting3 extends Component {
         //BAY 4
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay5Scouting3').then((text24Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay5Scouting10').then((text24Value) => {
 
                 if (JSON.parse(text24Value) !== null) {
 
-                    this.setState({ miniBay5Scouting3: JSON.parse(text24Value) });
+                    this.setState({ miniBay5Scouting10: JSON.parse(text24Value) });
 
                 }
 
@@ -723,12 +723,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay5Text1Scouting3').then((text25Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay5Text1Scouting10').then((text25Value) => {
 
 
                 if (JSON.parse(text25Value) !== null) {
 
-                    this.setState({ bay5Text1Scouting3: JSON.parse(text25Value) });
+                    this.setState({ bay5Text1Scouting10: JSON.parse(text25Value) });
 
                 }
 
@@ -738,11 +738,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay5Text2Scouting3').then((text26Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay5Text2Scouting10').then((text26Value) => {
 
                 if (JSON.parse(text26Value) !== null) {
 
-                    this.setState({ bay5Text2Scouting3: JSON.parse(text26Value) });
+                    this.setState({ bay5Text2Scouting10: JSON.parse(text26Value) });
 
                 }
 
@@ -752,12 +752,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay5Text3Scouting3').then((text27Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay5Text3Scouting10').then((text27Value) => {
 
 
                 if (JSON.parse(text27Value) !== null) {
 
-                    this.setState({ bay5Text3Scouting3: JSON.parse(text27Value) });
+                    this.setState({ bay5Text3Scouting10: JSON.parse(text27Value) });
 
                 }
 
@@ -767,12 +767,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay5Text4Scouting3').then((text28Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay5Text4Scouting10').then((text28Value) => {
 
 
                 if (JSON.parse(text28Value) !== null) {
 
-                    this.setState({ bay5Text4Scouting3: JSON.parse(text28Value) });
+                    this.setState({ bay5Text4Scouting10: JSON.parse(text28Value) });
 
                 }
 
@@ -786,11 +786,11 @@ export default class Scouting3 extends Component {
         //BAY 5
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay6Scouting3').then((text29Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay6Scouting10').then((text29Value) => {
 
                 if (JSON.parse(text29Value) !== null) {
 
-                    this.setState({ miniBay6Scouting3: JSON.parse(text29Value) });
+                    this.setState({ miniBay6Scouting10: JSON.parse(text29Value) });
 
                 }
 
@@ -800,12 +800,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay6Text1Scouting3').then((text30Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay6Text1Scouting10').then((text30Value) => {
 
 
                 if (JSON.parse(text30Value) !== null) {
 
-                    this.setState({ bay6Text1Scouting3: JSON.parse(text30Value) });
+                    this.setState({ bay6Text1Scouting10: JSON.parse(text30Value) });
 
                 }
 
@@ -815,12 +815,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay6Text2Scouting3').then((text31Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay6Text2Scouting10').then((text31Value) => {
 
 
                 if (JSON.parse(text31Value) !== null) {
 
-                    this.setState({ bay6Text2Scouting3: JSON.parse(text31Value) });
+                    this.setState({ bay6Text2Scouting10: JSON.parse(text31Value) });
 
                 }
 
@@ -830,12 +830,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay6Text3Scouting3').then((text32Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay6Text3Scouting10').then((text32Value) => {
 
 
                 if (JSON.parse(text32Value) !== null) {
 
-                    this.setState({ bay6Text3Scouting3: JSON.parse(text32Value) });
+                    this.setState({ bay6Text3Scouting10: JSON.parse(text32Value) });
 
                 }
 
@@ -845,11 +845,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay6Text4Scouting3').then((text33Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay6Text4Scouting10').then((text33Value) => {
 
                 if (JSON.parse(text33Value) !== null) {
 
-                    this.setState({ bay6Text4Scouting3: JSON.parse(text33Value) });
+                    this.setState({ bay6Text4Scouting10: JSON.parse(text33Value) });
 
                 }
 
@@ -863,12 +863,12 @@ export default class Scouting3 extends Component {
         //BAY 6
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay7Scouting3').then((text34Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay7Scouting10').then((text34Value) => {
 
 
                 if (JSON.parse(text34Value) !== null) {
 
-                    this.setState({ miniBay7Scouting3: JSON.parse(text34Value) });
+                    this.setState({ miniBay7Scouting10: JSON.parse(text34Value) });
 
                 }
 
@@ -879,9 +879,9 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay7Text1Scouting3').then((text35Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay7Text1Scouting10').then((text35Value) => {
 
-                this.setState({ bay7Text1Scouting3: JSON.parse(text35Value) });
+                this.setState({ bay7Text1Scouting10: JSON.parse(text35Value) });
 
             }).done();
         } catch (error) {
@@ -889,12 +889,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay7Text2Scouting3').then((text36Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay7Text2Scouting10').then((text36Value) => {
 
 
                 if (JSON.parse(text36Value) !== null) {
 
-                    this.setState({ bay7Text2Scouting3: JSON.parse(text36Value) });
+                    this.setState({ bay7Text2Scouting10: JSON.parse(text36Value) });
 
                 }
 
@@ -904,12 +904,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay7Text3Scouting3').then((text37Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay7Text3Scouting10').then((text37Value) => {
 
 
                 if (JSON.parse(text37Value) !== null) {
 
-                    this.setState({ bay7Text3Scouting3: JSON.parse(text37Value) });
+                    this.setState({ bay7Text3Scouting10: JSON.parse(text37Value) });
 
                 }
 
@@ -919,12 +919,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay7Text4Scouting3').then((text38Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay7Text4Scouting10').then((text38Value) => {
 
 
                 if (JSON.parse(text38Value) !== null) {
 
-                    this.setState({ bay7Text4Scouting3: JSON.parse(text38Value) });
+                    this.setState({ bay7Text4Scouting10: JSON.parse(text38Value) });
 
                 }
 
@@ -938,12 +938,12 @@ export default class Scouting3 extends Component {
         //BAY 7
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay8Scouting3').then((text39Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay8Scouting10').then((text39Value) => {
 
 
                 if (JSON.parse(text39Value) !== null) {
 
-                    this.setState({ miniBay8Scouting3: JSON.parse(text39Value) });
+                    this.setState({ miniBay8Scouting10: JSON.parse(text39Value) });
 
                 }
 
@@ -954,11 +954,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay8Text1Scouting3').then((text40Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay8Text1Scouting10').then((text40Value) => {
 
                 if (JSON.parse(text40Value) !== null) {
 
-                    this.setState({ bay8Text1Scouting3: JSON.parse(text40Value) });
+                    this.setState({ bay8Text1Scouting10: JSON.parse(text40Value) });
 
                 }
 
@@ -968,11 +968,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay8Text2Scouting3').then((text41Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay8Text2Scouting10').then((text41Value) => {
 
                 if (JSON.parse(text41Value) !== null) {
 
-                    this.setState({ bay8Text2Scouting3: JSON.parse(text41Value) });
+                    this.setState({ bay8Text2Scouting10: JSON.parse(text41Value) });
 
                 }
 
@@ -982,12 +982,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay8Text3Scouting3').then((text42Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay8Text3Scouting10').then((text42Value) => {
 
 
                 if (JSON.parse(text42Value) !== null) {
 
-                    this.setState({ bay8Text3Scouting3: JSON.parse(text42Value) });
+                    this.setState({ bay8Text3Scouting10: JSON.parse(text42Value) });
 
                 }
 
@@ -997,12 +997,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay8Text4Scouting3').then((text43Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay8Text4Scouting10').then((text43Value) => {
 
 
                 if (JSON.parse(text43Value) !== null) {
 
-                    this.setState({ bay8Text4Scouting3: JSON.parse(text43Value) });
+                    this.setState({ bay8Text4Scouting10: JSON.parse(text43Value) });
 
                 }
 
@@ -1017,12 +1017,12 @@ export default class Scouting3 extends Component {
         //BAY 8
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay9Scouting3').then((text44Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay9Scouting10').then((text44Value) => {
 
 
                 if (JSON.parse(text44Value) !== null) {
 
-                    this.setState({ miniBay9Scouting3: JSON.parse(text44Value) });
+                    this.setState({ miniBay9Scouting10: JSON.parse(text44Value) });
 
                 }
 
@@ -1033,12 +1033,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay9Text1Scouting3').then((text45Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay9Text1Scouting10').then((text45Value) => {
 
 
                 if (JSON.parse(text45Value) !== null) {
 
-                    this.setState({ bay9Text1Scouting3: JSON.parse(text45Value) });
+                    this.setState({ bay9Text1Scouting10: JSON.parse(text45Value) });
 
                 }
 
@@ -1048,12 +1048,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay9Text2Scouting3').then((text46Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay9Text2Scouting10').then((text46Value) => {
 
 
                 if (JSON.parse(text46Value) !== null) {
 
-                    this.setState({ bay9Text2Scouting3: JSON.parse(text46Value) });
+                    this.setState({ bay9Text2Scouting10: JSON.parse(text46Value) });
 
                 }
 
@@ -1063,12 +1063,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay9Text3Scouting3').then((text47Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay9Text3Scouting10').then((text47Value) => {
 
 
                 if (JSON.parse(text47Value) !== null) {
 
-                    this.setState({ bay9Text3Scouting3: JSON.parse(text47Value) });
+                    this.setState({ bay9Text3Scouting10: JSON.parse(text47Value) });
 
                 }
 
@@ -1078,12 +1078,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay9Text4Scouting3').then((text48Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay9Text4Scouting10').then((text48Value) => {
 
 
                 if (JSON.parse(text48Value) !== null) {
 
-                    this.setState({ bay9Text4Scouting3: JSON.parse(text48Value) });
+                    this.setState({ bay9Text4Scouting10: JSON.parse(text48Value) });
 
                 }
 
@@ -1097,12 +1097,12 @@ export default class Scouting3 extends Component {
         //BAY 9
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay10Scouting3').then((text49Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay10Scouting10').then((text49Value) => {
 
 
                 if (JSON.parse(text49Value) !== null) {
 
-                    this.setState({ miniBay10Scouting3: JSON.parse(text49Value) });
+                    this.setState({ miniBay10Scouting10: JSON.parse(text49Value) });
 
                 }
 
@@ -1113,12 +1113,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay10Text1Scouting3').then((text50Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay10Text1Scouting10').then((text50Value) => {
 
 
                 if (JSON.parse(text50Value) !== null) {
 
-                    this.setState({ bay10Text1Scouting3: JSON.parse(text50Value) });
+                    this.setState({ bay10Text1Scouting10: JSON.parse(text50Value) });
 
                 }
 
@@ -1128,12 +1128,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay10Text2Scouting3').then((text51Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay10Text2Scouting10').then((text51Value) => {
 
 
                 if (JSON.parse(text51Value) !== null) {
 
-                    this.setState({ bay10Text2Scouting3: JSON.parse(text51Value) });
+                    this.setState({ bay10Text2Scouting10: JSON.parse(text51Value) });
 
                 }
 
@@ -1143,12 +1143,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay10Text3Scouting3').then((text52Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay10Text3Scouting10').then((text52Value) => {
 
 
                 if (JSON.parse(text52Value) !== null) {
 
-                    this.setState({ bay10Text3Scouting3: JSON.parse(text52Value) });
+                    this.setState({ bay10Text3Scouting10: JSON.parse(text52Value) });
 
                 }
 
@@ -1158,12 +1158,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay10Text4Scouting3').then((text53Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay10Text4Scouting10').then((text53Value) => {
 
 
                 if (JSON.parse(text53Value) !== null) {
 
-                    this.setState({ bay10Text4Scouting3: JSON.parse(text53Value) });
+                    this.setState({ bay10Text4Scouting10: JSON.parse(text53Value) });
 
                 }
 
@@ -1177,12 +1177,12 @@ export default class Scouting3 extends Component {
         //BAY 10
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'miniBay11Scouting3').then((text54Value) => {
+            AsyncStorage.getItem(type1 + "" + 'miniBay11Scouting10').then((text54Value) => {
 
 
                 if (JSON.parse(text54Value) !== null) {
 
-                    this.setState({ miniBay11Scouting3: JSON.parse(text54Value) });
+                    this.setState({ miniBay11Scouting10: JSON.parse(text54Value) });
 
                 }
 
@@ -1193,12 +1193,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay11Text1Scouting3').then((text55Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay11Text1Scouting10').then((text55Value) => {
 
 
                 if (JSON.parse(text55Value) !== null) {
 
-                    this.setState({ bay11Text1Scouting3: JSON.parse(text55Value) });
+                    this.setState({ bay11Text1Scouting10: JSON.parse(text55Value) });
 
                 }
 
@@ -1208,12 +1208,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay11Text2Scouting3').then((text56Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay11Text2Scouting10').then((text56Value) => {
 
 
                 if (JSON.parse(text56Value) !== null) {
 
-                    this.setState({ bay11Text2Scouting3: JSON.parse(text56Value) });
+                    this.setState({ bay11Text2Scouting10: JSON.parse(text56Value) });
 
                 }
 
@@ -1223,12 +1223,12 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay11Text3Scouting3').then((text57Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay11Text3Scouting10').then((text57Value) => {
 
 
                 if (JSON.parse(text57Value) !== null) {
 
-                    this.setState({ bay11Text3Scouting3: JSON.parse(text57Value) });
+                    this.setState({ bay11Text3Scouting10: JSON.parse(text57Value) });
 
                 }
 
@@ -1238,11 +1238,11 @@ export default class Scouting3 extends Component {
         }
 
         try {
-            AsyncStorage.getItem(type1 + "" + 'bay11Text4Scouting3').then((text58Value) => {
+            AsyncStorage.getItem(type1 + "" + 'bay11Text4Scouting10').then((text58Value) => {
 
                 if (JSON.parse(text58Value) !== null) {
 
-                    this.setState({ bay11Text4Scouting3: JSON.parse(text58Value) });
+                    this.setState({ bay11Text4Scouting10: JSON.parse(text58Value) });
 
                 }
 
@@ -1274,377 +1274,6 @@ export default class Scouting3 extends Component {
         navigate('NewScreen');
     }
 
-    
-    handleEmptyCells = () => {
-
-        //BAY 1
-        if(this.state.bay1Text1Scouting3 === null || this.state.bay1Text1Scouting3 === ""){
-
-            this.setState({bay1Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay1Text2Scouting3 === null || this.state.bay1Text2Scouting3 === ""){
-
-            this.setState({bay1Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay1Text3Scouting3 === null || this.state.bay1Text3Scouting3 === ""){
-
-            this.setState({bay1Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay1Text4Scouting3 === null || this.state.bay1Text4Scouting3 === ""){
-
-            this.setState({bay1Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay1Text4Scouting3", '0')
-
-        }
-
-        //BAY 2
-        if(this.state.bay2Text1Scouting3 === null || this.state.bay2Text1Scouting3 === ""){
-
-            this.setState({bay2Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay2Text2Scouting3 === null || this.state.bay2Text2Scouting3 === ""){
-
-            this.setState({bay2Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay2Text3Scouting3 === null || this.state.bay2Text3Scouting3 === ""){
-
-            this.setState({bay2Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay2Text4Scouting3 === null || this.state.bay2Text4Scouting3 === ""){
-
-            this.setState({bay2Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay2Text4Scouting3", '0')
-
-        }
-
-        //BAY 3
-        if(this.state.bay3Text1Scouting3 === null || this.state.bay3Text1Scouting3 === ""){
-
-            this.setState({bay3Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay3Text2Scouting3 === null || this.state.bay3Text2Scouting3 === ""){
-
-            this.setState({bay3Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay3Text3Scouting3 === null || this.state.bay3Text3Scouting3 === ""){
-
-            this.setState({bay3Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay3Text4Scouting3 === null || this.state.bay3Text4Scouting3 === ""){
-
-            this.setState({bay3Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay3Text4Scouting3", '0')
-
-        }
-
-        //BAY 4
-        if(this.state.bay4Text1Scouting3 === null || this.state.bay4Text1Scouting3 === ""){
-
-            this.setState({bay4Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay4Text2Scouting3 === null || this.state.bay4Text2Scouting3 === ""){
-
-            this.setState({bay4Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay4Text3Scouting3 === null || this.state.bay4Text3Scouting3 === ""){
-
-            this.setState({bay4Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay4Text4Scouting3 === null || this.state.bay4Text4Scouting3 === ""){
-
-            this.setState({bay4Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay4Text4Scouting3", '0')
-
-        }
-
-
-        //BAY 5
-        if(this.state.bay5Text1Scouting3 === null || this.state.bay5Text1Scouting3 === ""){
-
-            this.setState({bay5Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay5Text2Scouting3 === null || this.state.bay5Text2Scouting3 === ""){
-
-            this.setState({bay5Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay5Text3Scouting3 === null || this.state.bay5Text3Scouting3 === ""){
-
-            this.setState({bay5Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay5Text4Scouting3 === null || this.state.bay5Text4Scouting3 === ""){
-
-            this.setState({bay5Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay5Text4Scouting3", '0')
-
-        }
-
-
-        //BAY 6
-        if(this.state.bay6Text1Scouting3 === null || this.state.bay6Text1Scouting3 === ""){
-
-            this.setState({bay6Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay6Text2Scouting3 === null || this.state.bay6Text2Scouting3 === ""){
-
-            this.setState({bay6Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay6Text3Scouting3 === null || this.state.bay6Text3Scouting3 === ""){
-
-            this.setState({bay6Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay6Text4Scouting3 === null || this.state.bay6Text4Scouting3 === ""){
-
-            this.setState({bay6Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay6Text4Scouting3", '0')
-
-        }
-
-
-         //BAY 7
-         if(this.state.bay7Text1Scouting3 === null || this.state.bay7Text1Scouting3 === ""){
-
-            this.setState({bay7Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay7Text2Scouting3 === null || this.state.bay7Text2Scouting3 === ""){
-
-            this.setState({bay7Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay7Text3Scouting3 === null || this.state.bay7Text3Scouting3 === ""){
-
-            this.setState({bay7Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay7Text4Scouting3 === null || this.state.bay7Text4Scouting3 === ""){
-
-            this.setState({bay7Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay7Text4Scouting3", '0')
-
-        }
-
-        
-         //BAY 8
-         if(this.state.bay8Text1Scouting3 === null || this.state.bay8Text1Scouting3 === ""){
-
-            this.setState({bay8Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay8Text2Scouting3 === null || this.state.bay8Text2Scouting3 === ""){
-
-            this.setState({bay8Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay8Text3Scouting3 === null || this.state.bay8Text3Scouting3 === ""){
-
-            this.setState({bay8Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay8Text4Scouting3 === null || this.state.bay8Text4Scouting3 === ""){
-
-            this.setState({bay8Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay8Text4Scouting3", '0')
-
-        }
-
-         //BAY 9
-         if(this.state.bay9Text1Scouting3 === null || this.state.bay9Text1Scouting3 === ""){
-
-            this.setState({bay9Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay9Text2Scouting3 === null || this.state.bay9Text2Scouting3 === ""){
-
-            this.setState({bay9Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay9Text3Scouting3 === null || this.state.bay9Text3Scouting3 === ""){
-
-            this.setState({bay9Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay9Text4Scouting3 === null || this.state.bay9Text4Scouting3 === ""){
-
-            this.setState({bay9Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay9Text4Scouting3", '0')
-
-        }
-
-        //BAY 10
-        if(this.state.bay10Text1Scouting3 === null || this.state.bay10Text1Scouting3 === ""){
-
-            this.setState({bay10Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay10Text2Scouting3 === null || this.state.bay10Text2Scouting3 === ""){
-
-            this.setState({bay10Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay10Text3Scouting3 === null || this.state.bay10Text3Scouting3 === ""){
-
-            this.setState({bay10Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay10Text4Scouting3 === null || this.state.bay10Text4Scouting3 === ""){
-
-            this.setState({bay10Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay10Text4Scouting3", '0')
-
-        }
-
-         //BAY 11
-         if(this.state.bay11Text1Scouting3 === null || this.state.bay11Text1Scouting3 === ""){
-
-            this.setState({bay11Text1Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting3", '0')
-
-        }
-
-        if(this.state.bay11Text2Scouting3 === null || this.state.bay11Text2Scouting3 === ""){
-
-            this.setState({bay11Text2Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting3", '0')
-
-        }
-
-        if(this.state.bay11Text3Scouting3 === null || this.state.bay11Text3Scouting3 === ""){
-
-            this.setState({bay11Text3Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting3", '0')
-
-        }
-
-        if(this.state.bay11Text4Scouting3 === null || this.state.bay11Text4Scouting3 === ""){
-
-            this.setState({bay11Text4Scouting3: '0'})
-
-            this.setItem(this.state.scoutingType + "" + "bay11Text4Scouting3", '0')
-
-        }
-    }
-
     updateTextInput = (text, field) => {
         this.setItem(this.state.scoutingType + "" + field, text)
         const state = this.state
@@ -1652,14 +1281,383 @@ export default class Scouting3 extends Component {
         this.setState(state);
     }
 
-    
+    handleEmptyCells = () => {
+
+        //BAY 1
+        if(this.state.bay1Text1Scouting10 === null || this.state.bay1Text1Scouting10 === ""){
+
+            this.setState({bay1Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay1Text2Scouting10 === null || this.state.bay1Text2Scouting10 === ""){
+
+            this.setState({bay1Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay1Text3Scouting10 === null || this.state.bay1Text3Scouting10 === ""){
+
+            this.setState({bay1Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay1Text4Scouting10 === null || this.state.bay1Text4Scouting10 === ""){
+
+            this.setState({bay1Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay1Text4Scouting10", '0')
+
+        }
+
+        //BAY 2
+        if(this.state.bay2Text1Scouting10 === null || this.state.bay2Text1Scouting10 === ""){
+
+            this.setState({bay2Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay2Text2Scouting10 === null || this.state.bay2Text2Scouting10 === ""){
+
+            this.setState({bay2Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay2Text3Scouting10 === null || this.state.bay2Text3Scouting10 === ""){
+
+            this.setState({bay2Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay2Text4Scouting10 === null || this.state.bay2Text4Scouting10 === ""){
+
+            this.setState({bay2Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay2Text4Scouting10", '0')
+
+        }
+
+        //BAY 3
+        if(this.state.bay3Text1Scouting10 === null || this.state.bay3Text1Scouting10 === ""){
+
+            this.setState({bay3Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay3Text2Scouting10 === null || this.state.bay3Text2Scouting10 === ""){
+
+            this.setState({bay3Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay3Text3Scouting10 === null || this.state.bay3Text3Scouting10 === ""){
+
+            this.setState({bay3Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay3Text4Scouting10 === null || this.state.bay3Text4Scouting10 === ""){
+
+            this.setState({bay3Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay3Text4Scouting10", '0')
+
+        }
+
+        //BAY 4
+        if(this.state.bay4Text1Scouting10 === null || this.state.bay4Text1Scouting10 === ""){
+
+            this.setState({bay4Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay4Text2Scouting10 === null || this.state.bay4Text2Scouting10 === ""){
+
+            this.setState({bay4Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay4Text3Scouting10 === null || this.state.bay4Text3Scouting10 === ""){
+
+            this.setState({bay4Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay4Text4Scouting10 === null || this.state.bay4Text4Scouting10 === ""){
+
+            this.setState({bay4Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay4Text4Scouting10", '0')
+
+        }
+
+
+        //BAY 5
+        if(this.state.bay5Text1Scouting10 === null || this.state.bay5Text1Scouting10 === ""){
+
+            this.setState({bay5Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay5Text2Scouting10 === null || this.state.bay5Text2Scouting10 === ""){
+
+            this.setState({bay5Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay5Text3Scouting10 === null || this.state.bay5Text3Scouting10 === ""){
+
+            this.setState({bay5Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay5Text4Scouting10 === null || this.state.bay5Text4Scouting10 === ""){
+
+            this.setState({bay5Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay5Text4Scouting10", '0')
+
+        }
+
+
+        //BAY 6
+        if(this.state.bay6Text1Scouting10 === null || this.state.bay6Text1Scouting10 === ""){
+
+            this.setState({bay6Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay6Text2Scouting10 === null || this.state.bay6Text2Scouting10 === ""){
+
+            this.setState({bay6Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay6Text3Scouting10 === null || this.state.bay6Text3Scouting10 === ""){
+
+            this.setState({bay6Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay6Text4Scouting10 === null || this.state.bay6Text4Scouting10 === ""){
+
+            this.setState({bay6Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay6Text4Scouting10", '0')
+
+        }
+
+
+         //BAY 7
+         if(this.state.bay7Text1Scouting10 === null || this.state.bay7Text1Scouting10 === ""){
+
+            this.setState({bay7Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay7Text2Scouting10 === null || this.state.bay7Text2Scouting10 === ""){
+
+            this.setState({bay7Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay7Text3Scouting10 === null || this.state.bay7Text3Scouting10 === ""){
+
+            this.setState({bay7Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay7Text4Scouting10 === null || this.state.bay7Text4Scouting10 === ""){
+
+            this.setState({bay7Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay7Text4Scouting10", '0')
+
+        }
+
+        
+         //BAY 8
+         if(this.state.bay8Text1Scouting10 === null || this.state.bay8Text1Scouting10 === ""){
+
+            this.setState({bay8Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay8Text2Scouting10 === null || this.state.bay8Text2Scouting10 === ""){
+
+            this.setState({bay8Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay8Text3Scouting10 === null || this.state.bay8Text3Scouting10 === ""){
+
+            this.setState({bay8Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay8Text4Scouting10 === null || this.state.bay8Text4Scouting10 === ""){
+
+            this.setState({bay8Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay8Text4Scouting10", '0')
+
+        }
+
+         //BAY 9
+         if(this.state.bay9Text1Scouting10 === null || this.state.bay9Text1Scouting10 === ""){
+
+            this.setState({bay9Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay9Text2Scouting10 === null || this.state.bay9Text2Scouting10 === ""){
+
+            this.setState({bay9Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay9Text3Scouting10 === null || this.state.bay9Text3Scouting10 === ""){
+
+            this.setState({bay9Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay9Text4Scouting10 === null || this.state.bay9Text4Scouting10 === ""){
+
+            this.setState({bay9Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay9Text4Scouting10", '0')
+
+        }
+
+        //BAY 10
+        if(this.state.bay10Text1Scouting10 === null || this.state.bay10Text1Scouting10 === ""){
+
+            this.setState({bay10Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay10Text2Scouting10 === null || this.state.bay10Text2Scouting10 === ""){
+
+            this.setState({bay10Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay10Text3Scouting10 === null || this.state.bay10Text3Scouting10 === ""){
+
+            this.setState({bay10Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay10Text4Scouting10 === null || this.state.bay10Text4Scouting10 === ""){
+
+            this.setState({bay10Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay10Text4Scouting10", '0')
+
+        }
+
+         //BAY 11
+         if(this.state.bay11Text1Scouting10 === null || this.state.bay11Text1Scouting10 === ""){
+
+            this.setState({bay11Text1Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting10", '0')
+
+        }
+
+        if(this.state.bay11Text2Scouting10 === null || this.state.bay11Text2Scouting10 === ""){
+
+            this.setState({bay11Text2Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting10", '0')
+
+        }
+
+        if(this.state.bay11Text3Scouting10 === null || this.state.bay11Text3Scouting10 === ""){
+
+            this.setState({bay11Text3Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting10", '0')
+
+        }
+
+        if(this.state.bay11Text4Scouting10 === null || this.state.bay11Text4Scouting10 === ""){
+
+            this.setState({bay11Text4Scouting10: '0'})
+
+            this.setItem(this.state.scoutingType + "" + "bay11Text4Scouting10", '0')
+
+        }
+    }
+
     checkRowNumber = () => {
 
         var that = this;
 
-        const { rowNumberScouting3 } = this.state;
+        const { rowNumberScouting10 } = this.state;
 
-        if(rowNumberScouting3){
+        if(rowNumberScouting10){
 
             this.handleNextButtonPress();
 
@@ -1672,9 +1670,9 @@ export default class Scouting3 extends Component {
 
     handleNextButtonPress = () => {
 
-        this.setItem(this.state.scoutingType + "" + "Scouting3Yes", 'Yes')
+        this.setItem(this.state.scoutingType + "" + "Scouting10Yes", 'Yes')
 
-        if (this.state.miniBay1Scouting3 !== null) {
+        if (this.state.miniBay1Scouting10 !== null) {
 
             let data = {
                 weekNumber: this.state.weekNum,
@@ -1682,16 +1680,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay1Text1Scouting3,
-                text2: this.state.bay1Text2Scouting3,
-                text3: this.state.bay1Text3Scouting3,
-                text4: this.state.bay1Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay1Text1Scouting10,
+                text2: this.state.bay1Text2Scouting10,
+                text3: this.state.bay1Text3Scouting10,
+                text4: this.state.bay1Text4Scouting10,
 
 
             }
@@ -1701,14 +1699,13 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                if (this.state.miniBay2Scouting3 !== '' && this.state.miniBay2Scouting3 !== null) {
+                if (this.state.miniBay2Scouting10 !== '' && this.state.miniBay2Scouting10 !== null) {
 
                     this.saveScoutingDetails2();
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
-
+                    this.props.navigation.navigate('Home');
                 }
 
 
@@ -1723,7 +1720,7 @@ export default class Scouting3 extends Component {
     saveScoutingDetails2 = () => {
 
 
-        if (this.state.miniBay2Scouting3 !== null) {
+        if (this.state.miniBay2Scouting10 !== null) {
 
             let data2 = {
                 weekNumber: this.state.weekNum,
@@ -1731,16 +1728,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay2Text1Scouting3,
-                text2: this.state.bay2Text2Scouting3,
-                text3: this.state.bay2Text3Scouting3,
-                text4: this.state.bay2Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay2Text1Scouting10,
+                text2: this.state.bay2Text2Scouting10,
+                text3: this.state.bay2Text3Scouting10,
+                text4: this.state.bay2Text4Scouting10,
 
 
             }
@@ -1750,13 +1747,13 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                if (this.state.miniBay3Scouting3 !== '' && this.state.miniBay3Scouting3 !== null) {
+                if (this.state.miniBay3Scouting10 !== '' && this.state.miniBay3Scouting10 !== null) {
 
                     this.saveScoutingDetails3();
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Home');
 
                 }
 
@@ -1772,7 +1769,7 @@ export default class Scouting3 extends Component {
 
     saveScoutingDetails3 = () => {
 
-        if (this.state.miniBay3Scouting3 !== null) {
+        if (this.state.miniBay3Scouting10 !== null) {
 
             let data3 = {
                 weekNumber: this.state.weekNum,
@@ -1780,16 +1777,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay3Text1Scouting3,
-                text2: this.state.bay3Text2Scouting3,
-                text3: this.state.bay3Text3Scouting3,
-                text4: this.state.bay3Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay3Text1Scouting10,
+                text2: this.state.bay3Text2Scouting10,
+                text3: this.state.bay3Text3Scouting10,
+                text4: this.state.bay3Text4Scouting10,
 
 
             }
@@ -1799,13 +1796,13 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                if (this.state.miniBay4Scouting3 !== '' && this.state.miniBay4Scouting3 !== null) {
+                if (this.state.miniBay4Scouting10 !== '' && this.state.miniBay4Scouting10 !== null) {
 
                     this.saveScoutingDetails4();
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Home');
 
                 }
 
@@ -1822,7 +1819,7 @@ export default class Scouting3 extends Component {
 
     saveScoutingDetails4 = () => {
 
-        if (this.state.miniBay4Scouting3 !== null) {
+        if (this.state.miniBay4Scouting10 !== null) {
 
             let data4 = {
                 weekNumber: this.state.weekNum,
@@ -1830,16 +1827,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay4Text1Scouting3,
-                text2: this.state.bay4Text2Scouting3,
-                text3: this.state.bay4Text3Scouting3,
-                text4: this.state.bay4Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay4Text1Scouting10,
+                text2: this.state.bay4Text2Scouting10,
+                text3: this.state.bay4Text3Scouting10,
+                text4: this.state.bay4Text4Scouting10,
 
 
             }
@@ -1849,13 +1846,13 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                if (this.state.miniBay5Scouting3 !== '' && this.state.miniBay5Scouting3 !== null) {
+                if (this.state.miniBay5Scouting10 !== '' && this.state.miniBay5Scouting10 !== null) {
 
                     this.saveScoutingDetails5();
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Home');
 
                 }
 
@@ -1871,7 +1868,7 @@ export default class Scouting3 extends Component {
 
     saveScoutingDetails5 = () => {
 
-        if (this.state.miniBay5Scouting3 !== null) {
+        if (this.state.miniBay5Scouting10 !== null) {
 
             let data5 = {
                 weekNumber: this.state.weekNum,
@@ -1879,16 +1876,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay5Text1Scouting3,
-                text2: this.state.bay5Text2Scouting3,
-                text3: this.state.bay5Text3Scouting3,
-                text4: this.state.bay5Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay5Text1Scouting10,
+                text2: this.state.bay5Text2Scouting10,
+                text3: this.state.bay5Text3Scouting10,
+                text4: this.state.bay5Text4Scouting10,
 
 
             }
@@ -1898,13 +1895,13 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                if (this.state.miniBay6Scouting3 !== '' && this.state.miniBay6Scouting3 !== null) {
+                if (this.state.miniBay6Scouting10 !== '' && this.state.miniBay6Scouting10 !== null) {
 
                     this.saveScoutingDetails6();
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Home');
 
                 }
 
@@ -1921,7 +1918,7 @@ export default class Scouting3 extends Component {
 
     saveScoutingDetails6 = () => {
 
-        if (this.state.miniBay6Scouting3 !== null) {
+        if (this.state.miniBay6Scouting10 !== null) {
 
             let data6 = {
                 weekNumber: this.state.weekNum,
@@ -1929,16 +1926,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay6Text1Scouting3,
-                text2: this.state.bay6Text2Scouting3,
-                text3: this.state.bay6Text3Scouting3,
-                text4: this.state.bay6Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay6Text1Scouting10,
+                text2: this.state.bay6Text2Scouting10,
+                text3: this.state.bay6Text3Scouting10,
+                text4: this.state.bay6Text4Scouting10,
 
 
             }
@@ -1948,13 +1945,13 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                if (this.state.miniBay7Scouting3 !== '' && this.state.miniBay7Scouting3 !== null) {
+                if (this.state.miniBay7Scouting10 !== '' && this.state.miniBay7Scouting10 !== null) {
 
                     this.saveScoutingDetails7();
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Home');
 
                 }
 
@@ -1971,7 +1968,7 @@ export default class Scouting3 extends Component {
 
     saveScoutingDetails7 = () => {
 
-        if (this.state.miniBay7Scouting3 !== null) {
+        if (this.state.miniBay7Scouting10 !== null) {
 
             let data7 = {
                 weekNumber: this.state.weekNum,
@@ -1979,16 +1976,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay7Text1Scouting3,
-                text2: this.state.bay7Text2Scouting3,
-                text3: this.state.bay7Text3Scouting3,
-                text4: this.state.bay7Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay7Text1Scouting10,
+                text2: this.state.bay7Text2Scouting10,
+                text3: this.state.bay7Text3Scouting10,
+                text4: this.state.bay7Text4Scouting10,
 
 
             }
@@ -1998,13 +1995,13 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                if (this.state.miniBay8Scouting3 !== '' && this.state.miniBay8Scouting3 !== null) {
+                if (this.state.miniBay8Scouting10 !== '' && this.state.miniBay8Scouting10 !== null) {
 
                     this.saveScoutingDetails8();
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Home');
 
                 }
 
@@ -2020,7 +2017,7 @@ export default class Scouting3 extends Component {
 
     saveScoutingDetails8 = () => {
 
-        if (this.state.miniBay8Scouting3 !== null) {
+        if (this.state.miniBay8Scouting10 !== null) {
 
             let data8 = {
                 weekNumber: this.state.weekNum,
@@ -2028,16 +2025,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay8Text1Scouting3,
-                text2: this.state.bay8Text2Scouting3,
-                text3: this.state.bay8Text3Scouting3,
-                text4: this.state.bay8Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay8Text1Scouting10,
+                text2: this.state.bay8Text2Scouting10,
+                text3: this.state.bay8Text3Scouting10,
+                text4: this.state.bay8Text4Scouting10,
 
 
             }
@@ -2047,13 +2044,13 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                if (this.state.miniBay9Scouting3 !== '' && this.state.miniBay9Scouting3 !== null) {
+                if (this.state.miniBay9Scouting10 !== '' && this.state.miniBay9Scouting10 !== null) {
 
                     this.saveScoutingDetails9();
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Home');
 
                 }
 
@@ -2069,7 +2066,7 @@ export default class Scouting3 extends Component {
 
     saveScoutingDetails9 = () => {
 
-        if (this.state.miniBay9Scouting3 !== null) {
+        if (this.state.miniBay9Scouting10 !== null) {
 
             let data9 = {
                 weekNumber: this.state.weekNum,
@@ -2077,16 +2074,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay9Text1Scouting3,
-                text2: this.state.bay9Text2Scouting3,
-                text3: this.state.bay9Text3Scouting3,
-                text4: this.state.bay9Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay9Text1Scouting10,
+                text2: this.state.bay9Text2Scouting10,
+                text3: this.state.bay9Text3Scouting10,
+                text4: this.state.bay9Text4Scouting10,
 
 
             }
@@ -2096,13 +2093,13 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                if (this.state.miniBay10Scouting3 !== '' && this.state.miniBay10Scouting3 !== null) {
+                if (this.state.miniBay10Scouting10 !== '' && this.state.miniBay10Scouting10 !== null) {
 
                     this.saveScoutingDetails10();
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Home');
 
                 }
 
@@ -2119,7 +2116,7 @@ export default class Scouting3 extends Component {
 
     saveScoutingDetails10 = () => {
 
-        if (this.state.miniBay10Scouting3 !== null) {
+        if (this.state.miniBay10Scouting10 !== null) {
 
             let data10 = {
                 weekNumber: this.state.weekNum,
@@ -2127,16 +2124,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay10Text1Scouting3,
-                text2: this.state.bay10Text2Scouting3,
-                text3: this.state.bay10Text3Scouting3,
-                text4: this.state.bay10Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay10Text1Scouting10,
+                text2: this.state.bay10Text2Scouting10,
+                text3: this.state.bay10Text3Scouting10,
+                text4: this.state.bay10Text4Scouting10,
 
 
             }
@@ -2146,13 +2143,13 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                if (this.state.miniBay11Scouting3 !== '' && this.state.miniBay11Scouting3 !== null) {
+                if (this.state.miniBay11Scouting10 !== '' && this.state.miniBay11Scouting10 !== null) {
 
                     this.saveScoutingDetails11();
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Home');
 
                 }
 
@@ -2169,7 +2166,7 @@ export default class Scouting3 extends Component {
 
     saveScoutingDetails11 = () => {
 
-        if (this.state.miniBay11Scouting3 !== null) {
+        if (this.state.miniBay11Scouting10 !== null) {
 
             let data11 = {
                 weekNumber: this.state.weekNum,
@@ -2177,16 +2174,16 @@ export default class Scouting3 extends Component {
                 siteName: 'REP',
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
-                rowNumber: this.state.rowNumberScouting3,
-                header1: this.state.header1Scouting3,
-                header2: this.state.header2Scouting3,
-                header3: this.state.header3Scouting3,
-                header4: this.state.header4Scouting3,
-                miniBay: this.state.miniBay1Scouting3,
-                text1: this.state.bay11Text1Scouting3,
-                text2: this.state.bay11Text2Scouting3,
-                text3: this.state.bay11Text3Scouting3,
-                text4: this.state.bay11Text4Scouting3,
+                rowNumber: this.state.rowNumberScouting10,
+                header1: this.state.header1Scouting10,
+                header2: this.state.header2Scouting10,
+                header3: this.state.header3Scouting10,
+                header4: this.state.header4Scouting10,
+                miniBay: this.state.miniBay1Scouting10,
+                text1: this.state.bay11Text1Scouting10,
+                text2: this.state.bay11Text2Scouting10,
+                text3: this.state.bay11Text3Scouting10,
+                text4: this.state.bay11Text4Scouting10,
 
 
             }
@@ -2196,7 +2193,7 @@ export default class Scouting3 extends Component {
 
                 console.log(result);
 
-                this.props.navigation.navigate('Scouting4', { startNumber2: this.state.rowNumberScouting3, inter2: this.state.intervals })
+                this.props.navigation.navigate('Home');
 
 
             })
@@ -2209,7 +2206,6 @@ export default class Scouting3 extends Component {
 
 
     }
-
 
     //ASYNC METHOD
 
@@ -2253,9 +2249,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'rowNumberScouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'rowNumberScouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.rowNumberScouting3}
+                                            value={this.state.rowNumberScouting10}
 
                                         />
 
@@ -2281,7 +2277,7 @@ export default class Scouting3 extends Component {
                                     }}></View>
 
                                     <View style={styles.tableColumnTotals}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.header1Scouting3}</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.header1Scouting10}</Text>
                                     </View>
 
                                     <View style={{
@@ -2290,7 +2286,7 @@ export default class Scouting3 extends Component {
                                     }}></View>
 
                                     <View style={styles.tableColumnTotals}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.header2Scouting3}</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.header2Scouting10}</Text>
                                     </View>
 
                                     <View style={{
@@ -2299,7 +2295,7 @@ export default class Scouting3 extends Component {
                                     }}></View>
 
                                     <View style={styles.tableColumnTotals}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.header3Scouting3}</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.header3Scouting10}</Text>
                                     </View>
 
                                     <View style={{
@@ -2308,7 +2304,7 @@ export default class Scouting3 extends Component {
                                     }}></View>
 
                                     <View style={styles.tableColumnTotals}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.header4Scouting3}</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.header4Scouting10}</Text>
                                     </View>
 
                                 </View>
@@ -2336,9 +2332,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay1Text1Scouting3}
+                                            value={this.state.bay1Text1Scouting10}
                                         />
                                     </View>
 
@@ -2354,9 +2350,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay1Text2Scouting3}
+                                            value={this.state.bay1Text2Scouting10}
                                         />
                                     </View>
 
@@ -2372,9 +2368,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay1Text3Scouting3}
+                                            value={this.state.bay1Text3Scouting10}
                                         />
                                     </View>
 
@@ -2390,9 +2386,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay1Text4Scouting3}
+                                            value={this.state.bay1Text4Scouting10}
                                         />
                                     </View>
 
@@ -2423,9 +2419,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay2Text1Scouting3}
+                                            value={this.state.bay2Text1Scouting10}
                                         />
                                     </View>
 
@@ -2441,9 +2437,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay2Text2Scouting3}
+                                            value={this.state.bay2Text2Scouting10}
                                         />
                                     </View>
 
@@ -2459,9 +2455,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay2Text3Scouting3}
+                                            value={this.state.bay2Text3Scouting10}
                                         />
                                     </View>
 
@@ -2477,9 +2473,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay2Text4Scouting3}
+                                            value={this.state.bay2Text4Scouting10}
                                         />
                                     </View>
 
@@ -2509,9 +2505,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay3Text1Scouting3}
+                                            value={this.state.bay3Text1Scouting10}
                                         />
                                     </View>
 
@@ -2527,9 +2523,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay3Text2Scouting3}
+                                            value={this.state.bay3Text2Scouting10}
                                         />
                                     </View>
 
@@ -2545,9 +2541,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay3Text3Scouting3}
+                                            value={this.state.bay3Text3Scouting10}
                                         />
                                     </View>
 
@@ -2563,9 +2559,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay3Text4Scouting3}
+                                            value={this.state.bay3Text4Scouting10}
                                         />
                                     </View>
 
@@ -2597,9 +2593,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay4Text1Scouting3}
+                                            value={this.state.bay4Text1Scouting10}
                                         />
                                     </View>
 
@@ -2615,9 +2611,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay4Text2Scouting3}
+                                            value={this.state.bay4Text2Scouting10}
                                         />
                                     </View>
 
@@ -2633,9 +2629,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay4Text3Scouting3}
+                                            value={this.state.bay4Text3Scouting10}
 
                                         />
                                     </View>
@@ -2652,9 +2648,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay4Text4Scouting3}
+                                            value={this.state.bay4Text4Scouting10}
                                         />
                                     </View>
 
@@ -2685,9 +2681,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay5Text1Scouting3}
+                                            value={this.state.bay5Text1Scouting10}
                                         />
                                     </View>
 
@@ -2703,9 +2699,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay5Text2Scouting3}
+                                            value={this.state.bay5Text2Scouting10}
                                         />
                                     </View>
 
@@ -2721,9 +2717,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay5Text3Scouting3}
+                                            value={this.state.bay5Text3Scouting10}
                                         />
                                     </View>
 
@@ -2739,9 +2735,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay5Text4Scouting3}
+                                            value={this.state.bay5Text4Scouting10}
                                         />
                                     </View>
 
@@ -2772,9 +2768,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay6Text1Scouting3}
+                                            value={this.state.bay6Text1Scouting10}
                                         />
                                     </View>
 
@@ -2790,9 +2786,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay6Text2Scouting3}
+                                            value={this.state.bay6Text2Scouting10}
                                         />
                                     </View>
 
@@ -2808,9 +2804,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay6Text3Scouting3}
+                                            value={this.state.bay6Text3Scouting10}
                                         />
                                     </View>
 
@@ -2826,9 +2822,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay6Text4Scouting3}
+                                            value={this.state.bay6Text4Scouting10}
                                         />
                                     </View>
 
@@ -2860,9 +2856,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay7Text1Scouting3}
+                                            value={this.state.bay7Text1Scouting10}
                                         />
                                     </View>
 
@@ -2878,9 +2874,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay7Text2Scouting3}
+                                            value={this.state.bay7Text2Scouting10}
                                         />
                                     </View>
 
@@ -2896,9 +2892,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay7Text3Scouting3}
+                                            value={this.state.bay7Text3Scouting10}
                                         />
                                     </View>
 
@@ -2914,9 +2910,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay7Text4Scouting3}
+                                            value={this.state.bay7Text4Scouting10}
                                         />
                                     </View>
 
@@ -2949,9 +2945,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay8Text1Scouting3}
+                                            value={this.state.bay8Text1Scouting10}
                                         />
                                     </View>
 
@@ -2967,9 +2963,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay8Text2Scouting3}
+                                            value={this.state.bay8Text2Scouting10}
                                         />
                                     </View>
 
@@ -2985,9 +2981,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay8Text3Scouting3}
+                                            value={this.state.bay8Text3Scouting10}
                                         />
                                     </View>
 
@@ -3003,9 +2999,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay8Text4Scouting3}
+                                            value={this.state.bay8Text4Scouting10}
                                         />
                                     </View>
 
@@ -3036,9 +3032,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay9Text1Scouting3}
+                                            value={this.state.bay9Text1Scouting10}
                                         />
                                     </View>
 
@@ -3054,9 +3050,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay9Text2Scouting3}
+                                            value={this.state.bay9Text2Scouting10}
                                         />
                                     </View>
 
@@ -3072,9 +3068,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay9Text3Scouting3}
+                                            value={this.state.bay9Text3Scouting10}
                                         />
                                     </View>
 
@@ -3090,9 +3086,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay9Text4Scouting3}
+                                            value={this.state.bay9Text4Scouting10}
                                         />
                                     </View>
 
@@ -3124,9 +3120,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay10Text1Scouting3}
+                                            value={this.state.bay10Text1Scouting10}
                                         />
                                     </View>
 
@@ -3142,9 +3138,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay10Text2Scouting3}
+                                            value={this.state.bay10Text2Scouting10}
                                         />
                                     </View>
 
@@ -3160,9 +3156,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay10Text3Scouting3}
+                                            value={this.state.bay10Text3Scouting10}
                                         />
                                     </View>
 
@@ -3178,9 +3174,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay10Text4Scouting3}
+                                            value={this.state.bay10Text4Scouting10}
                                         />
                                     </View>
 
@@ -3209,9 +3205,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text1Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text1Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay11Text1Scouting3}
+                                            value={this.state.bay11Text1Scouting10}
                                         />
                                     </View>
 
@@ -3227,9 +3223,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text2Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text2Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay11Text2Scouting3}
+                                            value={this.state.bay11Text2Scouting10}
                                         />
                                     </View>
 
@@ -3245,9 +3241,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text3Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text3Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay11Text3Scouting3}
+                                            value={this.state.bay11Text3Scouting10}
                                         />
                                     </View>
 
@@ -3263,9 +3259,9 @@ export default class Scouting3 extends Component {
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text4Scouting3')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text4Scouting10')}
                                             blurOnSubmit={true}
-                                            value={this.state.bay11Text4Scouting3}
+                                            value={this.state.bay11Text4Scouting10}
                                         />
                                     </View>
 
@@ -3273,7 +3269,6 @@ export default class Scouting3 extends Component {
                             </View>
 
                             <View style={styles.marginBetweenTop}></View>
-
                             <TouchableOpacity  onPress={() => this.handleEmptyCells()}>
                                 <Text style={styles.copyText}>Click here to set empty cells with 0(zero)</Text>
                             </TouchableOpacity>
@@ -3292,8 +3287,8 @@ export default class Scouting3 extends Component {
                             <View style={styles.marginBetweenTop}></View>
 
                         </View>
-                    </View>
 
+                    </View>
                 </ScrollView>
             </View>
         );
@@ -3325,6 +3320,7 @@ const styles = StyleSheet.create({
         color: '#ff0000',
 
     },
+
     textLineItemGreen: {
 
         color: "#87B26A",

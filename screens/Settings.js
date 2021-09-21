@@ -14,7 +14,8 @@ import {
     Dimensions,
     BackHandler,
     Platform,
-    TextInput
+    TextInput,
+    
 
 } from 'react-native';
 
@@ -22,6 +23,7 @@ import DropDownPicker from '@nectr-rn/react-native-dropdown-picker';
 import { ScrollView } from 'react-native-gesture-handler';
 var width = Dimensions.get('window').width / 2.5; //full width
 import AsyncStorage from '@react-native-community/async-storage';
+import { TouchableOpacity } from 'react-native';
 
 
 
@@ -76,6 +78,8 @@ export default class Settings extends Component {
         // then navigate
         navigate('NewScreen');
     }
+
+    
 
     updateTextInput = (text, field) => {
         console.log(field + "" + this.state.settingType);
@@ -163,7 +167,7 @@ export default class Settings extends Component {
             } catch (error) {
 
             }
-            
+
             try {
                 AsyncStorage.getItem("intervals" + this.state.settingType).then((text8Value) => {
                     var opt8 = JSON.parse(text8Value);
@@ -248,7 +252,7 @@ export default class Settings extends Component {
                                     fontSize: 14,
                                     textAlign: 'left',
                                     color: '#000000',
-                                  
+
 
                                 }}
                                 dropDownStyle={{ backgroundColor: '#fafafa' }}
@@ -337,7 +341,7 @@ export default class Settings extends Component {
 
                                 </View>
 
-                            
+
                                 <View style={styles.marginContainerTop}></View>
 
                                 <View style={{ flexDirection: 'row' }}>
@@ -368,7 +372,14 @@ export default class Settings extends Component {
 
                                 </View>
 
-                                <View style={styles.marginBetweenTop}></View>
+                                <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 8, marginTop: 4 }}>
+                                    <TouchableOpacity>
+                                        <Text style={styles.titleRedText}>Set as default</Text>
+                                    </TouchableOpacity>
+
+                                </View>
+
+                                <View style={styles.marginBetweenTextTop}></View>
 
                                 <View style={{ flexDirection: 'row' }}>
 
@@ -448,6 +459,15 @@ const styles = StyleSheet.create({
         color: '#000000',
         fontSize: 17,
         flexShrink: 1,
+
+    },
+
+    titleRedText: {
+
+        color: '#ff0000',
+        fontSize: 15,
+        flexShrink: 1,
+        fontWeight: 'bold',
 
     },
 
