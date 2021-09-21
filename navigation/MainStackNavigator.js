@@ -41,10 +41,11 @@ function MainStackNavigator() {
 
 
                 screenOptions={{
-                    //gestureEnabled: true,
+                    gestureEnabled: false,
+                
                     headerStyle: {
                         backgroundColor: '#7DBD5C',
-                        //height: 70
+                        height: Platform.OS === 'android'? 68 : null
                     },
                     headerTitleStyle: {
                         fontWeight: 'bold',
