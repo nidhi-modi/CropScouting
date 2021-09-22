@@ -27,7 +27,7 @@ import moment from 'moment'
 import Database from '../screens/Database'
 
 const db = new Database();
-var widthText = Dimensions.get('window').width/1.3;
+var widthText = Dimensions.get('window').width / 1.3;
 
 
 var intervalsOffline, startRowsOffline
@@ -200,7 +200,6 @@ export default class Scouting4 extends Component {
                 var opt1 = JSON.parse(text1Value);
                 this.setState({ scoutingType: opt1 });
 
-                this.getAsyncData(opt1);
 
                 try {
 
@@ -268,6 +267,17 @@ export default class Scouting4 extends Component {
                         this.setState({ dataEntered: opt7 })
 
 
+                       /* if (this.state.dataEntered == 'Yes') {
+
+                            this.props.navigation.navigate('Scouting6', { startNumber2: this.state.rowNumberScouting5, inter2: this.state.intervals })
+
+                        } else {
+
+                            console.log("Data not submitted");
+
+                        }*/
+
+
                     }).done();
                 } catch (error) {
 
@@ -308,15 +318,6 @@ export default class Scouting4 extends Component {
                     this.setState({ rowNumberScouting5: JSON.parse(text1Value) });
 
 
-                    if (this.state.dataEntered == 'Yes') {
-
-                        this.props.navigation.navigate('Scouting6', { startNumber2: this.state.rowNumberScouting5, inter2: this.state.intervals })
-
-                    } else {
-
-                        console.log("Data not submitted");
-
-                    }
                 }
 
             }).done();
@@ -1284,132 +1285,132 @@ export default class Scouting4 extends Component {
     handleEmptyCells = () => {
 
         //BAY 1
-        if(this.state.bay1Text1Scouting5 === null || this.state.bay1Text1Scouting5 === ""){
+        if (this.state.bay1Text1Scouting5 === null || this.state.bay1Text1Scouting5 === "") {
 
-            this.setState({bay1Text1Scouting5: '0'})
+            this.setState({ bay1Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay1Text2Scouting5 === null || this.state.bay1Text2Scouting5 === ""){
+        if (this.state.bay1Text2Scouting5 === null || this.state.bay1Text2Scouting5 === "") {
 
-            this.setState({bay1Text2Scouting5: '0'})
+            this.setState({ bay1Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay1Text3Scouting5 === null || this.state.bay1Text3Scouting5 === ""){
+        if (this.state.bay1Text3Scouting5 === null || this.state.bay1Text3Scouting5 === "") {
 
-            this.setState({bay1Text3Scouting5: '0'})
+            this.setState({ bay1Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay1Text4Scouting5 === null || this.state.bay1Text4Scouting5 === ""){
+        if (this.state.bay1Text4Scouting5 === null || this.state.bay1Text4Scouting5 === "") {
 
-            this.setState({bay1Text4Scouting5: '0'})
+            this.setState({ bay1Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay1Text4Scouting5", '0')
 
         }
 
         //BAY 2
-        if(this.state.bay2Text1Scouting5 === null || this.state.bay2Text1Scouting5 === ""){
+        if (this.state.bay2Text1Scouting5 === null || this.state.bay2Text1Scouting5 === "") {
 
-            this.setState({bay2Text1Scouting5: '0'})
+            this.setState({ bay2Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay2Text2Scouting5 === null || this.state.bay2Text2Scouting5 === ""){
+        if (this.state.bay2Text2Scouting5 === null || this.state.bay2Text2Scouting5 === "") {
 
-            this.setState({bay2Text2Scouting5: '0'})
+            this.setState({ bay2Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay2Text3Scouting5 === null || this.state.bay2Text3Scouting5 === ""){
+        if (this.state.bay2Text3Scouting5 === null || this.state.bay2Text3Scouting5 === "") {
 
-            this.setState({bay2Text3Scouting5: '0'})
+            this.setState({ bay2Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay2Text4Scouting5 === null || this.state.bay2Text4Scouting5 === ""){
+        if (this.state.bay2Text4Scouting5 === null || this.state.bay2Text4Scouting5 === "") {
 
-            this.setState({bay2Text4Scouting5: '0'})
+            this.setState({ bay2Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay2Text4Scouting5", '0')
 
         }
 
         //BAY 3
-        if(this.state.bay3Text1Scouting5 === null || this.state.bay3Text1Scouting5 === ""){
+        if (this.state.bay3Text1Scouting5 === null || this.state.bay3Text1Scouting5 === "") {
 
-            this.setState({bay3Text1Scouting5: '0'})
+            this.setState({ bay3Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay3Text2Scouting5 === null || this.state.bay3Text2Scouting5 === ""){
+        if (this.state.bay3Text2Scouting5 === null || this.state.bay3Text2Scouting5 === "") {
 
-            this.setState({bay3Text2Scouting5: '0'})
+            this.setState({ bay3Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay3Text3Scouting5 === null || this.state.bay3Text3Scouting5 === ""){
+        if (this.state.bay3Text3Scouting5 === null || this.state.bay3Text3Scouting5 === "") {
 
-            this.setState({bay3Text3Scouting5: '0'})
+            this.setState({ bay3Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay3Text4Scouting5 === null || this.state.bay3Text4Scouting5 === ""){
+        if (this.state.bay3Text4Scouting5 === null || this.state.bay3Text4Scouting5 === "") {
 
-            this.setState({bay3Text4Scouting5: '0'})
+            this.setState({ bay3Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay3Text4Scouting5", '0')
 
         }
 
         //BAY 4
-        if(this.state.bay4Text1Scouting5 === null || this.state.bay4Text1Scouting5 === ""){
+        if (this.state.bay4Text1Scouting5 === null || this.state.bay4Text1Scouting5 === "") {
 
-            this.setState({bay4Text1Scouting5: '0'})
+            this.setState({ bay4Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay4Text2Scouting5 === null || this.state.bay4Text2Scouting5 === ""){
+        if (this.state.bay4Text2Scouting5 === null || this.state.bay4Text2Scouting5 === "") {
 
-            this.setState({bay4Text2Scouting5: '0'})
+            this.setState({ bay4Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay4Text3Scouting5 === null || this.state.bay4Text3Scouting5 === ""){
+        if (this.state.bay4Text3Scouting5 === null || this.state.bay4Text3Scouting5 === "") {
 
-            this.setState({bay4Text3Scouting5: '0'})
+            this.setState({ bay4Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay4Text4Scouting5 === null || this.state.bay4Text4Scouting5 === ""){
+        if (this.state.bay4Text4Scouting5 === null || this.state.bay4Text4Scouting5 === "") {
 
-            this.setState({bay4Text4Scouting5: '0'})
+            this.setState({ bay4Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay4Text4Scouting5", '0')
 
@@ -1417,33 +1418,33 @@ export default class Scouting4 extends Component {
 
 
         //BAY 5
-        if(this.state.bay5Text1Scouting5 === null || this.state.bay5Text1Scouting5 === ""){
+        if (this.state.bay5Text1Scouting5 === null || this.state.bay5Text1Scouting5 === "") {
 
-            this.setState({bay5Text1Scouting5: '0'})
+            this.setState({ bay5Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay5Text2Scouting5 === null || this.state.bay5Text2Scouting5 === ""){
+        if (this.state.bay5Text2Scouting5 === null || this.state.bay5Text2Scouting5 === "") {
 
-            this.setState({bay5Text2Scouting5: '0'})
+            this.setState({ bay5Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay5Text3Scouting5 === null || this.state.bay5Text3Scouting5 === ""){
+        if (this.state.bay5Text3Scouting5 === null || this.state.bay5Text3Scouting5 === "") {
 
-            this.setState({bay5Text3Scouting5: '0'})
+            this.setState({ bay5Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay5Text4Scouting5 === null || this.state.bay5Text4Scouting5 === ""){
+        if (this.state.bay5Text4Scouting5 === null || this.state.bay5Text4Scouting5 === "") {
 
-            this.setState({bay5Text4Scouting5: '0'})
+            this.setState({ bay5Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay5Text4Scouting5", '0')
 
@@ -1451,218 +1452,218 @@ export default class Scouting4 extends Component {
 
 
         //BAY 6
-        if(this.state.bay6Text1Scouting5 === null || this.state.bay6Text1Scouting5 === ""){
+        if (this.state.bay6Text1Scouting5 === null || this.state.bay6Text1Scouting5 === "") {
 
-            this.setState({bay6Text1Scouting5: '0'})
+            this.setState({ bay6Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay6Text2Scouting5 === null || this.state.bay6Text2Scouting5 === ""){
+        if (this.state.bay6Text2Scouting5 === null || this.state.bay6Text2Scouting5 === "") {
 
-            this.setState({bay6Text2Scouting5: '0'})
+            this.setState({ bay6Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay6Text3Scouting5 === null || this.state.bay6Text3Scouting5 === ""){
+        if (this.state.bay6Text3Scouting5 === null || this.state.bay6Text3Scouting5 === "") {
 
-            this.setState({bay6Text3Scouting5: '0'})
+            this.setState({ bay6Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay6Text4Scouting5 === null || this.state.bay6Text4Scouting5 === ""){
+        if (this.state.bay6Text4Scouting5 === null || this.state.bay6Text4Scouting5 === "") {
 
-            this.setState({bay6Text4Scouting5: '0'})
+            this.setState({ bay6Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay6Text4Scouting5", '0')
 
         }
 
 
-         //BAY 7
-         if(this.state.bay7Text1Scouting5 === null || this.state.bay7Text1Scouting5 === ""){
+        //BAY 7
+        if (this.state.bay7Text1Scouting5 === null || this.state.bay7Text1Scouting5 === "") {
 
-            this.setState({bay7Text1Scouting5: '0'})
+            this.setState({ bay7Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay7Text2Scouting5 === null || this.state.bay7Text2Scouting5 === ""){
+        if (this.state.bay7Text2Scouting5 === null || this.state.bay7Text2Scouting5 === "") {
 
-            this.setState({bay7Text2Scouting5: '0'})
+            this.setState({ bay7Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay7Text3Scouting5 === null || this.state.bay7Text3Scouting5 === ""){
+        if (this.state.bay7Text3Scouting5 === null || this.state.bay7Text3Scouting5 === "") {
 
-            this.setState({bay7Text3Scouting5: '0'})
+            this.setState({ bay7Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay7Text4Scouting5 === null || this.state.bay7Text4Scouting5 === ""){
+        if (this.state.bay7Text4Scouting5 === null || this.state.bay7Text4Scouting5 === "") {
 
-            this.setState({bay7Text4Scouting5: '0'})
+            this.setState({ bay7Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay7Text4Scouting5", '0')
 
         }
 
-        
-         //BAY 8
-         if(this.state.bay8Text1Scouting5 === null || this.state.bay8Text1Scouting5 === ""){
 
-            this.setState({bay8Text1Scouting5: '0'})
+        //BAY 8
+        if (this.state.bay8Text1Scouting5 === null || this.state.bay8Text1Scouting5 === "") {
+
+            this.setState({ bay8Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay8Text2Scouting5 === null || this.state.bay8Text2Scouting5 === ""){
+        if (this.state.bay8Text2Scouting5 === null || this.state.bay8Text2Scouting5 === "") {
 
-            this.setState({bay8Text2Scouting5: '0'})
+            this.setState({ bay8Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay8Text3Scouting5 === null || this.state.bay8Text3Scouting5 === ""){
+        if (this.state.bay8Text3Scouting5 === null || this.state.bay8Text3Scouting5 === "") {
 
-            this.setState({bay8Text3Scouting5: '0'})
+            this.setState({ bay8Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay8Text4Scouting5 === null || this.state.bay8Text4Scouting5 === ""){
+        if (this.state.bay8Text4Scouting5 === null || this.state.bay8Text4Scouting5 === "") {
 
-            this.setState({bay8Text4Scouting5: '0'})
+            this.setState({ bay8Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay8Text4Scouting5", '0')
 
         }
 
-         //BAY 9
-         if(this.state.bay9Text1Scouting5 === null || this.state.bay9Text1Scouting5 === ""){
+        //BAY 9
+        if (this.state.bay9Text1Scouting5 === null || this.state.bay9Text1Scouting5 === "") {
 
-            this.setState({bay9Text1Scouting5: '0'})
+            this.setState({ bay9Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay9Text2Scouting5 === null || this.state.bay9Text2Scouting5 === ""){
+        if (this.state.bay9Text2Scouting5 === null || this.state.bay9Text2Scouting5 === "") {
 
-            this.setState({bay9Text2Scouting5: '0'})
+            this.setState({ bay9Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay9Text3Scouting5 === null || this.state.bay9Text3Scouting5 === ""){
+        if (this.state.bay9Text3Scouting5 === null || this.state.bay9Text3Scouting5 === "") {
 
-            this.setState({bay9Text3Scouting5: '0'})
+            this.setState({ bay9Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay9Text4Scouting5 === null || this.state.bay9Text4Scouting5 === ""){
+        if (this.state.bay9Text4Scouting5 === null || this.state.bay9Text4Scouting5 === "") {
 
-            this.setState({bay9Text4Scouting5: '0'})
+            this.setState({ bay9Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay9Text4Scouting5", '0')
 
         }
 
         //BAY 10
-        if(this.state.bay10Text1Scouting5 === null || this.state.bay10Text1Scouting5 === ""){
+        if (this.state.bay10Text1Scouting5 === null || this.state.bay10Text1Scouting5 === "") {
 
-            this.setState({bay10Text1Scouting5: '0'})
+            this.setState({ bay10Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay10Text2Scouting5 === null || this.state.bay10Text2Scouting5 === ""){
+        if (this.state.bay10Text2Scouting5 === null || this.state.bay10Text2Scouting5 === "") {
 
-            this.setState({bay10Text2Scouting5: '0'})
+            this.setState({ bay10Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay10Text3Scouting5 === null || this.state.bay10Text3Scouting5 === ""){
+        if (this.state.bay10Text3Scouting5 === null || this.state.bay10Text3Scouting5 === "") {
 
-            this.setState({bay10Text3Scouting5: '0'})
+            this.setState({ bay10Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay10Text4Scouting5 === null || this.state.bay10Text4Scouting5 === ""){
+        if (this.state.bay10Text4Scouting5 === null || this.state.bay10Text4Scouting5 === "") {
 
-            this.setState({bay10Text4Scouting5: '0'})
+            this.setState({ bay10Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay10Text4Scouting5", '0')
 
         }
 
-         //BAY 11
-         if(this.state.bay11Text1Scouting5 === null || this.state.bay11Text1Scouting5 === ""){
+        //BAY 11
+        if (this.state.bay11Text1Scouting5 === null || this.state.bay11Text1Scouting5 === "") {
 
-            this.setState({bay11Text1Scouting5: '0'})
+            this.setState({ bay11Text1Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting5", '0')
 
         }
 
-        if(this.state.bay11Text2Scouting5 === null || this.state.bay11Text2Scouting5 === ""){
+        if (this.state.bay11Text2Scouting5 === null || this.state.bay11Text2Scouting5 === "") {
 
-            this.setState({bay11Text2Scouting5: '0'})
+            this.setState({ bay11Text2Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting5", '0')
 
         }
 
-        if(this.state.bay11Text3Scouting5 === null || this.state.bay11Text3Scouting5 === ""){
+        if (this.state.bay11Text3Scouting5 === null || this.state.bay11Text3Scouting5 === "") {
 
-            this.setState({bay11Text3Scouting5: '0'})
+            this.setState({ bay11Text3Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting5", '0')
 
         }
 
-        if(this.state.bay11Text4Scouting5 === null || this.state.bay11Text4Scouting5 === ""){
+        if (this.state.bay11Text4Scouting5 === null || this.state.bay11Text4Scouting5 === "") {
 
-            this.setState({bay11Text4Scouting5: '0'})
+            this.setState({ bay11Text4Scouting5: '0' })
 
             this.setItem(this.state.scoutingType + "" + "bay11Text4Scouting5", '0')
 
         }
     }
 
-    
+
     checkRowNumber = () => {
 
         var that = this;
 
         const { rowNumberScouting5 } = this.state;
 
-        if(rowNumberScouting5){
+        if (rowNumberScouting5) {
 
             this.handleNextButtonPress();
 
-        }else{
+        } else {
 
             alert('Please enter row number')
         }
@@ -3273,7 +3274,7 @@ export default class Scouting4 extends Component {
 
                             <View style={styles.marginBetweenTop}></View>
 
-                            <TouchableOpacity  onPress={() => this.handleEmptyCells()}>
+                            <TouchableOpacity onPress={() => this.handleEmptyCells()}>
                                 <Text style={styles.copyText}>Click here to set empty cells with 0(zero)</Text>
                             </TouchableOpacity>
 
@@ -3528,7 +3529,7 @@ const styles = StyleSheet.create({
 
     },
 
-    alignButton : {
+    alignButton: {
 
         alignItems: 'center',
 

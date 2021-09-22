@@ -289,15 +289,15 @@ export default class Scouting extends Component {
                 this.setState({ rowNumberScouting: JSON.parse(text1Value) });
 
 
-                if (this.state.dataEntered == 'Yes') {
+                /*if (this.state.dataEntered == 'Yes') {
 
-                    this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
                 } else {
 
                     console.log("Data not submitted");
 
-                }
+                }*/
 
             }).done();
         } catch (error) {
@@ -1671,7 +1671,7 @@ export default class Scouting extends Component {
                     } else {
 
 
-                        this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                        this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
 
@@ -1726,7 +1726,7 @@ export default class Scouting extends Component {
                 } else {
 
 
-                    this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
                 }
@@ -1777,7 +1777,7 @@ export default class Scouting extends Component {
                 } else {
 
 
-                    this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
                 }
@@ -1829,7 +1829,7 @@ export default class Scouting extends Component {
                 } else {
 
 
-                    this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
                 }
@@ -1880,7 +1880,7 @@ export default class Scouting extends Component {
                 } else {
 
 
-                    this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
                 }
@@ -1932,7 +1932,7 @@ export default class Scouting extends Component {
                 } else {
 
 
-                    this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
                 }
@@ -1984,7 +1984,7 @@ export default class Scouting extends Component {
                 } else {
 
 
-                    this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
                 }
 
@@ -2034,7 +2034,7 @@ export default class Scouting extends Component {
                 } else {
 
 
-                    this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
                 }
@@ -2085,7 +2085,7 @@ export default class Scouting extends Component {
                 } else {
 
 
-                    this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
                 }
@@ -2137,7 +2137,7 @@ export default class Scouting extends Component {
                 } else {
 
 
-                    this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
                 }
@@ -2182,7 +2182,7 @@ export default class Scouting extends Component {
 
                 console.log(result);
 
-                this.props.navigation.navigate('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
 

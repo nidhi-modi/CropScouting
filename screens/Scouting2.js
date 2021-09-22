@@ -199,7 +199,7 @@ export default class Scouting2 extends Component {
             AsyncStorage.getItem("scoutType").then((text1Value) => {
                 var opt1 = JSON.parse(text1Value);
                 this.setState({ scoutingType: opt1 });
-                this.getAsyncData(opt1);
+                
 
                 try {
 
@@ -266,6 +266,16 @@ export default class Scouting2 extends Component {
 
                         this.setState({ dataEntered: opt7 })
 
+                       /* if (this.state.dataEntered == 'Yes') {
+
+                            this.props.navigation.navigate('Scouting3', { startNumber2: this.state.rowNumberScouting2, inter2: this.state.intervals })
+    
+                        } else {
+    
+                            console.log("Data not submitted");
+    
+                        }*/
+
 
                     }).done();
                 } catch (error) {
@@ -307,15 +317,7 @@ export default class Scouting2 extends Component {
                     console.log("Row number : " + JSON.parse(text1Value));
                     this.setState({ rowNumberScouting2: JSON.parse(text1Value) });
 
-                    if (this.state.dataEntered == 'Yes') {
-
-                        this.props.navigation.navigate('Scouting3', { startNumber2: this.state.rowNumberScouting2, inter2: this.state.intervals })
-
-                    } else {
-
-                        console.log("Data not submitted");
-
-                    }
+                  
                 }
 
             }).done();

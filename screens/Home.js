@@ -27,6 +27,8 @@ import moment from 'moment'
 import Database from '../screens/Database'
 import NetInfo from "@react-native-community/netinfo";
 
+var intervalNumber, rowNum1, rowNum2, rowNum3, rowNum4, rowNum5, rowNum6, rowNum7, rowNum8, rowNum9, rowNum10, rowNum11;
+var scouting1st, scouting2nd, scouting3rd, scouting4th, scouting5th, scouting6th, scouting7th, scouting8th, scouting9th, scouting10th, scouting11th;
 
 
 var screenWidth = (Dimensions.get('window').width) / 1.6;
@@ -65,83 +67,83 @@ export default class Home extends Component {
     CheckConnectivity = () => {
         // For Android devices
         if (Platform.OS === "android") {
-          NetInfo.isConnected.fetch().then(isConnected => {
-            if (isConnected) {
-              Alert.alert("You are online!");
-            } else {
-              Alert.alert("You are offline!");
-            }
-          });
+            NetInfo.isConnected.fetch().then(isConnected => {
+                if (isConnected) {
+                    Alert.alert("You are online!");
+                } else {
+                    Alert.alert("You are offline!");
+                }
+            });
         } else {
-          // For iOS devices
-          NetInfo.isConnected.addEventListener(
+            // For iOS devices
+            NetInfo.isConnected.addEventListener(
+                "connectionChange",
+                this.handleFirstConnectivityChange
+            );
+        }
+    };
+
+    handleFirstConnectivityChange = isConnected => {
+        NetInfo.isConnected.removeEventListener(
             "connectionChange",
             this.handleFirstConnectivityChange
-          );
-        }
-      };
-    
-      handleFirstConnectivityChange = isConnected => {
-        NetInfo.isConnected.removeEventListener(
-          "connectionChange",
-          this.handleFirstConnectivityChange
         );
-    
+
         if (isConnected === false) {
-          Alert.alert("You are offline!");
+            Alert.alert("You are offline!");
         } else {
-          Alert.alert("You are online!");
+            Alert.alert("You are online!");
         }
-      };
-    
-      handleConnectivityChange = state => {
+    };
+
+    handleConnectivityChange = state => {
         if (state.isConnected) {
-    
-          this.setState({ isItConnected: 'Online' });
-    
+
+            this.setState({ isItConnected: 'Online' });
+
         } else {
-    
-          this.setState({ isItConnected: 'Offline' });
+
+            this.setState({ isItConnected: 'Offline' });
         }
-      };
-    
-      checkInternetConnection = () => {
-    
+    };
+
+    checkInternetConnection = () => {
+
         if (this.state.isItConnected == 'Online') {
-    
+
             this.setState({
                 scoutersName: null,
                 location: null,
                 scoutType: null
             })
-    
+
             this.props.navigation.navigate('ViewScoutingDetails')
-    
-    
+
+
         } else {
-    
-          this.errorMessage();
-    
+
+            this.errorMessage();
+
         }
-      }
-    
-      errorMessage = () => {
-    
+    }
+
+    errorMessage = () => {
+
         Alert.alert(
-          'No Internet Connection',
-          'Make sure your device is connected to the internet',
-          [
-    
-            { text: 'OK', onPress: () => console.log('No button clicked'), style: 'cancel' },
-    
-          ],
-          {
-            cancelable: true
-          }
+            'No Internet Connection',
+            'Make sure your device is connected to the internet',
+            [
+
+                { text: 'OK', onPress: () => console.log('No button clicked'), style: 'cancel' },
+
+            ],
+            {
+                cancelable: true
+            }
         );
-    
-    
-      }
+
+
+    }
 
     componentDidMount() {
 
@@ -153,6 +155,8 @@ export default class Home extends Component {
                 this.getDatabase();
             }
         );
+
+
 
         var weekNumber = moment().week() - 1;
         var yearNumber = moment().year();
@@ -249,12 +253,426 @@ export default class Home extends Component {
 
         if (name != '' && loc != '' && type != '') {
 
-            this.props.navigation.navigate("Scouting")
+            //GET interval
+            try {
+
+                AsyncStorage.getItem("intervals" + type).then((text2Value) => {
+
+                    intervalNumber = JSON.parse(text2Value)
+
+                }).done();
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row1
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting").then((rowNumber1) => {
+
+                    rowNum1 = JSON.parse(rowNumber1);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row2
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting1").then((rowNumber2) => {
+
+                    rowNum2 = JSON.parse(rowNumber2);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row3
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting2").then((rowNumber3) => {
+
+                    rowNum3 = JSON.parse(rowNumber3);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row4
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting3").then((rowNumber4) => {
+
+                    rowNum4 = JSON.parse(rowNumber4);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row5
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting4").then((rowNumber5) => {
+
+                    rowNum5 = JSON.parse(rowNumber5);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row6
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting5").then((rowNumber6) => {
+
+                    rowNum6 = JSON.parse(rowNumber6);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row7
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting6").then((rowNumber7) => {
+
+                    rowNum7 = JSON.parse(rowNumber7);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row8
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting7").then((rowNumber8) => {
+
+                    rowNum8 = JSON.parse(rowNumber8);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row9
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting8").then((rowNumber9) => {
+
+                    rowNum9 = JSON.parse(rowNumber9);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row10
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting9").then((rowNumber10) => {
+
+                    rowNum10 = JSON.parse(rowNumber10);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row11
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting10").then((rowNumber11) => {
+
+                    rowNum11 = JSON.parse(rowNumber11);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            try {
+
+                AsyncStorage.getItem(type + "" + "ScoutingYes").then((dataEntered) => {
+
+                    scouting1st = JSON.parse(dataEntered);
+
+                    console.log("1st:  " + scouting1st);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting1Yes").then((dataEntered1) => {
+
+                    console.log("2nd:  " + JSON.parse(dataEntered1));
+
+                    scouting2nd = JSON.parse(dataEntered1);
+
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting2Yes").then((dataEntered2) => {
+
+                    console.log("3rd:  " + JSON.parse(dataEntered2));
+
+                    scouting3rd = JSON.parse(dataEntered2);
+
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting3Yes").then((dataEntered3) => {
+
+                    console.log("4th:  " + JSON.parse(dataEntered3));
+
+                    scouting4th = JSON.parse(dataEntered3);
+
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting4Yes").then((dataEntered4) => {
+
+                    console.log("5th:  " + JSON.parse(dataEntered4));
+
+                    scouting5th = JSON.parse(dataEntered4);
+
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting5Yes").then((dataEntered5) => {
+
+                    console.log("6th:  " + JSON.parse(dataEntered5));
+
+                    scouting6th = JSON.parse(dataEntered5);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting6Yes").then((dataEntered6) => {
+
+                    console.log("7th:  " + JSON.parse(dataEntered6));
+
+                    scouting7th = JSON.parse(dataEntered6);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting7Yes").then((dataEntered7) => {
+
+                    console.log("8th:  " + JSON.parse(dataEntered7));
+
+                    scouting8th = JSON.parse(dataEntered7);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting8Yes").then((dataEntered8) => {
+
+                    console.log("9th:  " + JSON.parse(dataEntered8));
+
+                    scouting9th = JSON.parse(dataEntered8);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting9Yes").then((dataEntered9) => {
+
+                    console.log("10th:  " + JSON.parse(dataEntered9));
+
+                    scouting10th = JSON.parse(dataEntered9);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting10Yes").then((dataEntered10) => {
+
+                    console.log("11th:  " + JSON.parse(dataEntered10));
+
+                    scouting11th = JSON.parse(dataEntered10);
+
+                    this.navigateToScreens();
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+
 
         } else {
 
 
         }
+
+    }
+
+    navigateToScreens = () => {
+
+        console.log("Navigation");
+
+        if (scouting1st === 'Yes') {
+
+            if (scouting2nd === 'Yes') {
+
+                if (scouting3rd === 'Yes') {
+
+                    if (scouting4th === 'Yes') {
+
+                        if (scouting5th === 'Yes') {
+
+                            if (scouting6th === 'Yes') {
+
+                                if (scouting7th === 'Yes') {
+
+                                    if (scouting8th === 'Yes') {
+
+                                        if (scouting9th === 'Yes') {
+
+                                            if (scouting10th === 'Yes') {
+
+                                                if (scouting11th === 'Yes') {
+
+                                                    alert('Need to add more rows. Please get in touch with the developer')
+
+                                                } else {
+
+                                                    this.props.navigation.push('Scouting10', { startNumber: rowNum10, inter: intervalNumber })
+
+                                                }
+                                            } else {
+
+                                                this.props.navigation.push('Scouting9', { startNumber: rowNum9, inter: intervalNumber })
+
+                                            }
+                                        } else {
+
+                                            this.props.navigation.push('Scouting8', { startNumber: rowNum8, inter: intervalNumber })
+
+                                        }
+                                    } else {
+
+                                        this.props.navigation.push('Scouting7', { startNumber: rowNum7, inter: intervalNumber })
+
+
+                                    }
+                                } else {
+
+                                    this.props.navigation.push('Scouting6', { startNumber: rowNum6, inter: intervalNumber })
+
+
+                                }
+                            } else {
+
+                                this.props.navigation.push('Scouting5', { startNumber: rowNum5, inter: intervalNumber })
+
+
+                            }
+                        } else {
+
+                            this.props.navigation.push('Scouting4', { startNumber: rowNum4, inter: intervalNumber })
+
+
+                        }
+
+
+                    } else {
+
+                        this.props.navigation.push('Scouting3', { startNumber: rowNum3, inter: intervalNumber })
+
+
+                    }
+
+                } else {
+
+                    this.props.navigation.push('Scouting2', { startNumber: rowNum2, inter: intervalNumber })
+
+
+                }
+
+
+            } else {
+
+                this.props.navigation.push('Scouting1', { startNumber: rowNum1, inter: intervalNumber })
+
+
+            }
+
+        } else {
+
+            this.props.navigation.push("Scouting")
+
+        }
+
+        /*if (scouting1st === 'Yes') {
+
+            this.props.navigation.push('Scouting1', { startNumber: rowNum1, inter: intervalNumber })
+
+        } else if (scouting2nd === 'Yes') {
+
+            this.props.navigation.push('Scouting2', { startNumber: rowNum2, inter: intervalNumber })
+
+        } else if (scouting3rd === 'Yes') {
+
+            this.props.navigation.push('Scouting3', { startNumber: rowNum3, inter: intervalNumber })
+
+        } else if (scouting4th === 'Yes') {
+
+            this.props.navigation.push('Scouting4', { startNumber: rowNum4, inter: intervalNumber })
+
+        } else if (scouting5th === 'Yes') {
+
+            this.props.navigation.push('Scouting5', { startNumber: rowNum5, inter: intervalNumber })
+
+        } else {
+
+            this.props.navigation.push("Scouting")
+
+        }*/
 
     }
 
@@ -271,7 +689,7 @@ export default class Home extends Component {
         this.setState(state);
     }
 
-  
+
     render() {
 
         return (

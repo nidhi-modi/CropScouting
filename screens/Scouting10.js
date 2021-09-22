@@ -201,7 +201,6 @@ export default class Scouting4 extends Component {
                 var opt1 = JSON.parse(text1Value);
                 this.setState({ scoutingType: opt1 });
 
-                this.getAsyncData(opt1);
 
                 try {
 
@@ -268,6 +267,15 @@ export default class Scouting4 extends Component {
 
                         this.setState({ dataEntered: opt7 })
 
+                        /*if (this.state.dataEntered == 'Yes') {
+
+                            this.props.navigation.navigate('Home');
+    
+                        } else {
+    
+                            console.log("Data not submitted");
+    
+                        }*/
 
                     }).done();
                 } catch (error) {
@@ -309,15 +317,7 @@ export default class Scouting4 extends Component {
                     this.setState({ rowNumberScouting10: JSON.parse(text1Value) });
 
 
-                    if (this.state.dataEntered == 'Yes') {
-
-                        this.props.navigation.navigate('Home');
-
-                    } else {
-
-                        console.log("Data not submitted");
-
-                    }
+                    
                 }
 
             }).done();
