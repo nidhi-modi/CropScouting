@@ -350,7 +350,7 @@ export default class Settings extends Component {
                                         <Text style={styles.titleBlackText}>Number of Rows:</Text>
                                     </View>
 
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+                                    <View style={{ flexDirection: 'column', alignItems: 'center', flex: 1 }}>
 
                                         <View style={styles.borderEdit}>
                                             <TextInput style={styles.textInputStyle2}
@@ -368,18 +368,18 @@ export default class Settings extends Component {
 
                                         </View>
 
+                                        <View style={styles.marginBetweenTextTop}></View>
+
+                                    <TouchableOpacity>
+                                        <Text style={styles.titleRedText}>Set rows as default</Text>
+                                    </TouchableOpacity>
+
                                     </View>
 
                                 </View>
 
-                                <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginRight: 8, marginTop: 4 }}>
-                                    <TouchableOpacity>
-                                        <Text style={styles.titleRedText}>Set as default</Text>
-                                    </TouchableOpacity>
-
-                                </View>
-
-                                <View style={styles.marginBetweenTextTop}></View>
+                                
+                                <View style={styles.marginContainerTop}></View>
 
                                 <View style={{ flexDirection: 'row' }}>
 
@@ -387,7 +387,7 @@ export default class Settings extends Component {
                                         <Text style={styles.titleBlackText}>Row Interval:</Text>
                                     </View>
 
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+                                    <View style={{ flexDirection: 'column', alignItems: 'center', flex: 1 }}>
 
                                         <View style={styles.borderEdit}>
                                             <TextInput style={styles.textInputStyle2}
@@ -403,6 +403,12 @@ export default class Settings extends Component {
                                             />
 
                                         </View>
+
+                                        <View style={styles.marginBetweenTextTop}></View>
+
+                                    <TouchableOpacity>
+                                        <Text style={styles.titleRedText}></Text>
+                                    </TouchableOpacity>
 
                                     </View>
 
@@ -468,6 +474,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         flexShrink: 1,
         fontWeight: 'bold',
+        
 
     },
 

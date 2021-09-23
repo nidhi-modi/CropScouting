@@ -479,6 +479,8 @@
 			baseConfigurationReference = 416C4C080491519F24AA9EF4 /* Pods-CropScouting-CropScoutingTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -506,7 +508,9 @@
 			baseConfigurationReference = 6592EC23E32E9175DD4D47D4 /* Pods-CropScouting-CropScoutingTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				INFOPLIST_FILE = CropScoutingTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -532,6 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CropScouting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -559,6 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				INFOPLIST_FILE = CropScouting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

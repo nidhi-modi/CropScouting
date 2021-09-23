@@ -3468,10 +3468,11 @@ const styles = StyleSheet.create({
     textInputStyle: {
         fontSize: 14,
         color: 'black',
-        marginLeft: 10,
-        marginRight: 10,
+        width: 40,
         height: 60,
+        textAlign: 'center',
         backgroundColor: "transparent",
+        
 
 
     },
