@@ -372,17 +372,6 @@ export default class Settings extends Component {
 
                                 </View>
 
-                                <View style={{ flexDirection: 'row'}}>
-
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-                                        <Text style={styles.titleBlackText}></Text>
-                                    </View>
-
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1, marginTop: 15 }}>
-                                        <Text style={styles.titleRedText}>Set row as default</Text>
-                                    </View>
-
-                                </View>
 
                                 <View style={styles.marginContainerTop}></View>
 
