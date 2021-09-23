@@ -15,7 +15,7 @@ import {
     BackHandler,
     Platform,
     TextInput,
-    
+
 
 } from 'react-native';
 
@@ -79,7 +79,7 @@ export default class Settings extends Component {
         navigate('NewScreen');
     }
 
-    
+
 
     updateTextInput = (text, field) => {
         console.log(field + "" + this.state.settingType);
@@ -368,17 +368,22 @@ export default class Settings extends Component {
 
                                         </View>
 
-                                        <View style={styles.marginBetweenTextTop}></View>
-
-                                    <TouchableOpacity>
-                                        <Text style={styles.titleRedText}>Set rows as default</Text>
-                                    </TouchableOpacity>
-
                                     </View>
 
                                 </View>
 
-                                
+                                <View style={{ flexDirection: 'row'}}>
+
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+                                        <Text style={styles.titleBlackText}></Text>
+                                    </View>
+
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1, marginTop: 15 }}>
+                                        <Text style={styles.titleRedText}>Set row as default</Text>
+                                    </View>
+
+                                </View>
+
                                 <View style={styles.marginContainerTop}></View>
 
                                 <View style={{ flexDirection: 'row' }}>
@@ -404,12 +409,6 @@ export default class Settings extends Component {
 
                                         </View>
 
-                                        <View style={styles.marginBetweenTextTop}></View>
-
-                                    <TouchableOpacity>
-                                        <Text style={styles.titleRedText}></Text>
-                                    </TouchableOpacity>
-
                                     </View>
 
                                 </View>
@@ -417,7 +416,6 @@ export default class Settings extends Component {
                             </View>
 
                             : null}
-
 
                         <View style={styles.marginBetweenTop}></View>
 
@@ -474,7 +472,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         flexShrink: 1,
         fontWeight: 'bold',
-        
+
 
     },
 
@@ -547,16 +545,6 @@ const styles = StyleSheet.create({
         marginTop: 10,
 
     },
-
-
-
-
-
-
-
-
-
-
 
     buttonContainer: {
         backgroundColor: '#7DBD5C',

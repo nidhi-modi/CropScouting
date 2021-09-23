@@ -252,7 +252,7 @@ export default class Scouting4 extends Component {
 
                     AsyncStorage.getItem("column4" + opt1).then((text6Value) => {
                         var opt6 = JSON.parse(text6Value);
-                        this.setState({ header4Scouting10: opt6 });
+                        this.setState({ header4Scogiuting10: opt6 });
 
                     }).done();
                 } catch (error) {
@@ -3463,11 +3463,10 @@ const styles = StyleSheet.create({
     textInputStyle: {
         fontSize: 14,
         color: 'black',
-        width: 40,
+        marginLeft: 10,
+        marginRight: 10,
         height: 60,
-        textAlign: 'center',
         backgroundColor: "transparent",
-        
 
 
     },
