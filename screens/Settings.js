@@ -15,6 +15,9 @@ import {
     BackHandler,
     Platform,
     TextInput,
+    KeyboardAvoidingView,
+    TouchableWithoutFeedback,
+    Keyboard,
 
 
 } from 'react-native';
@@ -200,7 +203,11 @@ export default class Settings extends Component {
 
         return (
 
-            <View style={styles.container}>
+            <KeyboardAvoidingView
+            behavior={Platform.OS === 'ios' ? "padding" : "height"}
+            style={styles.container}>
+
+                <TouchableWithoutFeedback>
 
                 <ScrollView keyboardShouldPersistTaps='handled'>
 
@@ -408,6 +415,10 @@ export default class Settings extends Component {
 
                                 </View>
 
+                                <View style={styles.marginContainerBottom}></View>
+                                <View style={styles.marginContainerBottom}></View>
+                                <View style={styles.marginContainerBottom}></View>
+
                             </View>
 
                             : null}
@@ -415,8 +426,10 @@ export default class Settings extends Component {
                         <View style={styles.marginBetweenTop}></View>
 
                     </View>
+
                 </ScrollView>
-            </View>
+                </TouchableWithoutFeedback>
+            </KeyboardAvoidingView>
         );
     }
 }
@@ -427,6 +440,12 @@ const styles = StyleSheet.create({
 
         flex: 1,
         backgroundColor: '#ffffff'
+    },
+
+    containerNew: {
+
+        flex: 1,
+
     },
 
     flexArrangement: {
@@ -520,6 +539,12 @@ const styles = StyleSheet.create({
     marginContainerTop: {
 
         marginTop: 40,
+
+    },
+
+    marginContainerBottom: {
+
+        marginBottom: 30,
 
     },
 

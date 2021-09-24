@@ -17,6 +17,8 @@ import {
     TextInput,
     ActivityIndicator,
     Alert,
+    KeyboardAvoidingView,
+    TouchableWithoutFeedback
 
 
 } from 'react-native';
@@ -2239,7 +2241,11 @@ export default class Scouting extends Component {
 
         return (
 
-            <View style={styles.container}>
+            <KeyboardAvoidingView
+            behavior={Platform.OS === 'ios' ? "padding" : "height"}
+            style={styles.container}>
+
+                <TouchableWithoutFeedback>
 
                 <ScrollView keyboardShouldPersistTaps='handled'>
 
@@ -3341,14 +3347,17 @@ export default class Scouting extends Component {
                                     <Text style={styles.buttonText}>Next</Text>
                                 </TouchableOpacity>
                             </View>
-                            <View style={styles.marginBetweenTop}></View>
+                            <View style={styles.marginContainerBottom}></View>
+                            <View style={styles.marginContainerBottom}></View>
+                            <View style={styles.marginContainerBottom}></View>
 
                         </View>
 
                     </View>
 
                 </ScrollView>
-            </View>
+                </TouchableWithoutFeedback>
+            </KeyboardAvoidingView>
         );
     }
 }
@@ -3567,6 +3576,12 @@ const styles = StyleSheet.create({
     marginBetweenTop: {
 
         marginTop: 28,
+
+    },
+
+    marginContainerBottom: {
+
+        marginBottom: 40,
 
     },
 
