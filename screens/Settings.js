@@ -281,6 +281,7 @@ export default class Settings extends Component {
                                     <TextInput style={styles.textInputStyle}
                                         multiline={false}
                                         autoCorrect={false}
+                                        returnKeyType={'done'}
                                         enablesReturnKeyAutomatically={true}
                                         editable={true}
                                         keyboardType={'default'}
@@ -296,6 +297,7 @@ export default class Settings extends Component {
                                     <TextInput style={styles.textInputStyle}
                                         multiline={false}
                                         autoCorrect={false}
+                                        returnKeyType={'done'}
                                         enablesReturnKeyAutomatically={true}
                                         editable={true}
                                         keyboardType={'default'}
@@ -313,6 +315,7 @@ export default class Settings extends Component {
                                     <TextInput style={styles.textInputStyle}
                                         multiline={false}
                                         autoCorrect={false}
+                                        returnKeyType={'done'}
                                         enablesReturnKeyAutomatically={true}
                                         editable={true}
                                         keyboardType={'default'}
@@ -330,6 +333,7 @@ export default class Settings extends Component {
                                     <TextInput style={styles.textInputStyle}
                                         multiline={false}
                                         autoCorrect={false}
+                                        returnKeyType={'done'}
                                         enablesReturnKeyAutomatically={true}
                                         editable={true}
                                         keyboardType={'default'}
@@ -355,6 +359,7 @@ export default class Settings extends Component {
                                         <View style={styles.borderEdit}>
                                             <TextInput style={styles.textInputStyle2}
                                                 multiline={false}
+                                                returnKeyType={'done'}
                                                 placeholder={"Max rows are 10"}
                                                 autoCorrect={false}
                                                 enablesReturnKeyAutomatically={true}
@@ -387,6 +392,7 @@ export default class Settings extends Component {
                                             <TextInput style={styles.textInputStyle2}
                                                 multiline={false}
                                                 autoCorrect={false}
+                                                returnKeyType={'done'}
                                                 enablesReturnKeyAutomatically={true}
                                                 editable={true}
                                                 keyboardType={'numeric'}

@@ -2329,10 +2329,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2347,10 +2348,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2365,10 +2367,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2383,10 +2386,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2416,10 +2420,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2434,10 +2439,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2452,10 +2458,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2470,10 +2477,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2502,10 +2510,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2520,10 +2529,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2538,10 +2548,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2556,10 +2567,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2590,10 +2602,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2608,10 +2621,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2626,10 +2640,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2645,10 +2660,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2678,10 +2694,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2696,10 +2713,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2714,10 +2732,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2732,10 +2751,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2765,10 +2785,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2783,10 +2804,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2801,10 +2823,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2819,10 +2842,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2853,10 +2877,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2871,10 +2896,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2889,10 +2915,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2907,10 +2934,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2942,10 +2970,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2960,10 +2989,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2978,10 +3008,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2996,10 +3027,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3029,10 +3061,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3047,10 +3080,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3065,10 +3099,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3083,10 +3118,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3117,10 +3153,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3135,10 +3172,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3153,10 +3191,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3171,10 +3210,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3202,10 +3242,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3220,10 +3261,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3238,10 +3280,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3256,10 +3299,11 @@ export default class Scouting4 extends Component {
                                         borderRightWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotalsEdit}>
+                                   <View style={styles.tableColumnTotalsEdit}>
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}

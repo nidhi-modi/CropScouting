@@ -2342,6 +2342,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2360,6 +2361,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2378,6 +2380,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2396,6 +2399,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2429,6 +2433,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2447,6 +2452,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2465,6 +2471,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2483,6 +2490,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2515,6 +2523,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2533,6 +2542,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2551,6 +2561,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2569,6 +2580,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2603,6 +2615,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2621,6 +2634,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2639,6 +2653,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2658,6 +2673,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2691,6 +2707,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2709,6 +2726,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2727,6 +2745,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2745,6 +2764,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2778,6 +2798,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2796,6 +2817,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2814,6 +2836,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2832,6 +2855,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2866,6 +2890,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2884,6 +2909,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2902,6 +2928,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2920,6 +2947,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2955,6 +2983,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2973,6 +3002,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -2991,6 +3021,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3009,6 +3040,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3042,6 +3074,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3060,6 +3093,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3078,6 +3112,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3096,6 +3131,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3130,6 +3166,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3148,6 +3185,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3166,6 +3204,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3184,6 +3223,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3215,6 +3255,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3233,6 +3274,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3251,6 +3293,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
@@ -3269,6 +3312,7 @@ export default class Scouting1 extends Component {
                                         <TextInput style={styles.textInputStyle}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
