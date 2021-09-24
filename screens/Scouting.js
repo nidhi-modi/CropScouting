@@ -1248,372 +1248,934 @@ export default class Scouting extends Component {
 
     handleEmptyCells = () => {
 
-        //BAY 1
-        if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
 
-            this.setState({ bay1Text1Scouting: '0' })
+        var h1 = this.state.header1Scouting;
+        var h2 = this.state.header2Scouting;
+        var h3 = this.state.header3Scouting;
+        var h4 = this.state.header4Scouting;
 
-            this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
+        console.log("H1 : " + h1 + " H2 : " + h2 + " H3 : " + h3 + " H4 : " + h4);
+
+        if (h1 !== null && h2 === null && h3 === null && h4 === null || h1 !== "" && h2 === "" && h3 === "" && h4 === "") {
+
+            console.log("Header 1");
+
+            if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
+
+                this.setState({ bay1Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
+
+            }
+
+            if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
+
+                this.setState({ bay2Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
+
+            }
+
+            if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
+
+                this.setState({ bay3Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
+
+            }
+
+            if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
+
+                this.setState({ bay4Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
+
+            }
+
+            if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
+
+                this.setState({ bay5Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
+
+            }
+
+            if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
+
+                this.setState({ bay6Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
+
+            }
+
+            if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
+
+                this.setState({ bay7Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
+
+            }
+
+            if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
+
+                this.setState({ bay8Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
+
+            }
+
+            if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
+
+                this.setState({ bay9Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
+
+            }
+
+            if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
+
+                this.setState({ bay10Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
+
+            }
+
+            if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
+
+                this.setState({ bay11Text1Scouting: '0' })
+
+                this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
+
+            }
+
+        } else {
+
+            if (h1 !== null && h2 !== null && h3 === null && h4 === null || h1 !== "" && h2 !== "" && h3 === "" && h4 === "") {
+
+                console.log("Header1 & Header 2");
+
+                if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
+
+                    this.setState({ bay1Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
+
+                    this.setState({ bay2Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
+
+                    this.setState({ bay3Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
+
+                    this.setState({ bay4Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
+
+                    this.setState({ bay5Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
+
+                    this.setState({ bay6Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
+
+                    this.setState({ bay7Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
+
+                    this.setState({ bay8Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
+
+                    this.setState({ bay9Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
+
+                    this.setState({ bay10Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
+
+                    this.setState({ bay11Text1Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
+
+                }
+
+                if (this.state.bay1Text2Scouting === null || this.state.bay1Text2Scouting === "") {
+
+                    this.setState({ bay1Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting", '0')
+
+                }
+
+
+                if (this.state.bay2Text2Scouting === null || this.state.bay2Text2Scouting === "") {
+
+                    this.setState({ bay2Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting", '0')
+
+                }
+
+                if (this.state.bay3Text2Scouting === null || this.state.bay3Text2Scouting === "") {
+
+                    this.setState({ bay3Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting", '0')
+
+                }
+
+                if (this.state.bay4Text2Scouting === null || this.state.bay4Text2Scouting === "") {
+
+                    this.setState({ bay4Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting", '0')
+
+                }
+
+                if (this.state.bay5Text2Scouting === null || this.state.bay5Text2Scouting === "") {
+
+                    this.setState({ bay5Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting", '0')
+
+                }
+
+                if (this.state.bay6Text2Scouting === null || this.state.bay6Text2Scouting === "") {
+
+                    this.setState({ bay6Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting", '0')
+
+                }
+
+                if (this.state.bay7Text2Scouting === null || this.state.bay7Text2Scouting === "") {
+
+                    this.setState({ bay7Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting", '0')
+
+                }
+
+                if (this.state.bay8Text2Scouting === null || this.state.bay8Text2Scouting === "") {
+
+                    this.setState({ bay8Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting", '0')
+
+                }
+
+                if (this.state.bay9Text2Scouting === null || this.state.bay9Text2Scouting === "") {
+
+                    this.setState({ bay9Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting", '0')
+
+                }
+
+                if (this.state.bay10Text2Scouting === null || this.state.bay10Text2Scouting === "") {
+
+                    this.setState({ bay10Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting", '0')
+
+                }
+
+                if (this.state.bay11Text2Scouting === null || this.state.bay11Text2Scouting === "") {
+
+                    this.setState({ bay11Text2Scouting: '0' })
+
+                    this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting", '0')
+
+                }
+
+
+
+            } else {
+
+                if (h1 !== null && h2 !== null && h3 !== null && h4 === null || h1 !== "" && h2 !== "" && h3 !== "" && h4 === "") {
+
+                    console.log("Header 1, Header 2 & Header 3");
+
+                    if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
+
+                        this.setState({ bay1Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
+
+                        this.setState({ bay2Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
+
+                        this.setState({ bay3Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
+
+                        this.setState({ bay4Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
+
+                        this.setState({ bay5Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
+
+                        this.setState({ bay6Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
+
+                        this.setState({ bay7Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
+
+                        this.setState({ bay8Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
+
+                        this.setState({ bay9Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
+
+                        this.setState({ bay10Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
+
+                        this.setState({ bay11Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
+
+                    }
+
+                    if (this.state.bay1Text2Scouting === null || this.state.bay1Text2Scouting === "") {
+
+                        this.setState({ bay1Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting", '0')
+
+                    }
+
+
+                    if (this.state.bay2Text2Scouting === null || this.state.bay2Text2Scouting === "") {
+
+                        this.setState({ bay2Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting", '0')
+
+                    }
+
+                    if (this.state.bay3Text2Scouting === null || this.state.bay3Text2Scouting === "") {
+
+                        this.setState({ bay3Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting", '0')
+
+                    }
+
+                    if (this.state.bay4Text2Scouting === null || this.state.bay4Text2Scouting === "") {
+
+                        this.setState({ bay4Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting", '0')
+
+                    }
+
+                    if (this.state.bay5Text2Scouting === null || this.state.bay5Text2Scouting === "") {
+
+                        this.setState({ bay5Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting", '0')
+
+                    }
+
+                    if (this.state.bay6Text2Scouting === null || this.state.bay6Text2Scouting === "") {
+
+                        this.setState({ bay6Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting", '0')
+
+                    }
+
+                    if (this.state.bay7Text2Scouting === null || this.state.bay7Text2Scouting === "") {
+
+                        this.setState({ bay7Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting", '0')
+
+                    }
+
+                    if (this.state.bay8Text2Scouting === null || this.state.bay8Text2Scouting === "") {
+
+                        this.setState({ bay8Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting", '0')
+
+                    }
+
+                    if (this.state.bay9Text2Scouting === null || this.state.bay9Text2Scouting === "") {
+
+                        this.setState({ bay9Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting", '0')
+
+                    }
+
+                    if (this.state.bay10Text2Scouting === null || this.state.bay10Text2Scouting === "") {
+
+                        this.setState({ bay10Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting", '0')
+
+                    }
+
+                    if (this.state.bay11Text2Scouting === null || this.state.bay11Text2Scouting === "") {
+
+                        this.setState({ bay11Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting", '0')
+
+                    }
+
+                    if (this.state.bay1Text3Scouting === null || this.state.bay1Text3Scouting === "") {
+
+                        this.setState({ bay1Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting", '0')
+
+                    }
+
+                    if (this.state.bay2Text3Scouting === null || this.state.bay2Text3Scouting === "") {
+
+                        this.setState({ bay2Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting", '0')
+
+                    }
+
+                    if (this.state.bay3Text3Scouting === null || this.state.bay3Text3Scouting === "") {
+
+                        this.setState({ bay3Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting", '0')
+
+                    }
+
+                    if (this.state.bay4Text3Scouting === null || this.state.bay4Text3Scouting === "") {
+
+                        this.setState({ bay4Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting", '0')
+
+                    }
+
+                    if (this.state.bay5Text3Scouting === null || this.state.bay5Text3Scouting === "") {
+
+                        this.setState({ bay5Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting", '0')
+
+                    }
+
+                    if (this.state.bay6Text3Scouting === null || this.state.bay6Text3Scouting === "") {
+
+                        this.setState({ bay6Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting", '0')
+
+                    }
+
+                    if (this.state.bay7Text3Scouting === null || this.state.bay7Text3Scouting === "") {
+
+                        this.setState({ bay7Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting", '0')
+
+                    }
+
+                    if (this.state.bay8Text3Scouting === null || this.state.bay8Text3Scouting === "") {
+
+                        this.setState({ bay8Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting", '0')
+
+                    }
+
+                    if (this.state.bay9Text3Scouting === null || this.state.bay9Text3Scouting === "") {
+
+                        this.setState({ bay9Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting", '0')
+
+                    }
+
+                    if (this.state.bay10Text3Scouting === null || this.state.bay10Text3Scouting === "") {
+
+                        this.setState({ bay10Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting", '0')
+
+                    }
+
+                    if (this.state.bay11Text3Scouting === null || this.state.bay11Text3Scouting === "") {
+
+                        this.setState({ bay11Text3Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting", '0')
+
+                    }
+
+
+                } else {
+
+                    if (h1 !== null && h2 !== null && h3 !== null && h4 !== null || h1 !== "" && h2 !== "" && h3 !== "" && h4 !== "") {
+
+                        console.log("Header 1, Header 2, Header 3 & Header 4");
+
+                        if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
+
+                            this.setState({ bay1Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
+
+                            this.setState({ bay2Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
+
+                            this.setState({ bay3Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
+
+                            this.setState({ bay4Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
+
+                            this.setState({ bay5Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
+
+                            this.setState({ bay6Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
+
+                            this.setState({ bay7Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
+
+                            this.setState({ bay8Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
+
+                            this.setState({ bay9Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
+
+                            this.setState({ bay10Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
+
+                            this.setState({ bay11Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
+
+                        }
+
+                        if (this.state.bay1Text2Scouting === null || this.state.bay1Text2Scouting === "") {
+
+                            this.setState({ bay1Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting", '0')
+
+                        }
+
+
+                        if (this.state.bay2Text2Scouting === null || this.state.bay2Text2Scouting === "") {
+
+                            this.setState({ bay2Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting", '0')
+
+                        }
+
+                        if (this.state.bay3Text2Scouting === null || this.state.bay3Text2Scouting === "") {
+
+                            this.setState({ bay3Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting", '0')
+
+                        }
+
+                        if (this.state.bay4Text2Scouting === null || this.state.bay4Text2Scouting === "") {
+
+                            this.setState({ bay4Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting", '0')
+
+                        }
+
+                        if (this.state.bay5Text2Scouting === null || this.state.bay5Text2Scouting === "") {
+
+                            this.setState({ bay5Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting", '0')
+
+                        }
+
+                        if (this.state.bay6Text2Scouting === null || this.state.bay6Text2Scouting === "") {
+
+                            this.setState({ bay6Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting", '0')
+
+                        }
+
+                        if (this.state.bay7Text2Scouting === null || this.state.bay7Text2Scouting === "") {
+
+                            this.setState({ bay7Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting", '0')
+
+                        }
+
+                        if (this.state.bay8Text2Scouting === null || this.state.bay8Text2Scouting === "") {
+
+                            this.setState({ bay8Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting", '0')
+
+                        }
+
+                        if (this.state.bay9Text2Scouting === null || this.state.bay9Text2Scouting === "") {
+
+                            this.setState({ bay9Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting", '0')
+
+                        }
+
+                        if (this.state.bay10Text2Scouting === null || this.state.bay10Text2Scouting === "") {
+
+                            this.setState({ bay10Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting", '0')
+
+                        }
+
+                        if (this.state.bay11Text2Scouting === null || this.state.bay11Text2Scouting === "") {
+
+                            this.setState({ bay11Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting", '0')
+
+                        }
+
+                        if (this.state.bay1Text3Scouting === null || this.state.bay1Text3Scouting === "") {
+
+                            this.setState({ bay1Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay2Text3Scouting === null || this.state.bay2Text3Scouting === "") {
+
+                            this.setState({ bay2Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay3Text3Scouting === null || this.state.bay3Text3Scouting === "") {
+
+                            this.setState({ bay3Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay4Text3Scouting === null || this.state.bay4Text3Scouting === "") {
+
+                            this.setState({ bay4Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay5Text3Scouting === null || this.state.bay5Text3Scouting === "") {
+
+                            this.setState({ bay5Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay6Text3Scouting === null || this.state.bay6Text3Scouting === "") {
+
+                            this.setState({ bay6Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay7Text3Scouting === null || this.state.bay7Text3Scouting === "") {
+
+                            this.setState({ bay7Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay8Text3Scouting === null || this.state.bay8Text3Scouting === "") {
+
+                            this.setState({ bay8Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay9Text3Scouting === null || this.state.bay9Text3Scouting === "") {
+
+                            this.setState({ bay9Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay10Text3Scouting === null || this.state.bay10Text3Scouting === "") {
+
+                            this.setState({ bay10Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay11Text3Scouting === null || this.state.bay11Text3Scouting === "") {
+
+                            this.setState({ bay11Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting", '0')
+
+                        }
+
+                        if (this.state.bay1Text4Scouting === null || this.state.bay1Text4Scouting === "") {
+
+                            this.setState({ bay1Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay1Text4Scouting", '0')
+
+                        }
+
+                        if (this.state.bay2Text4Scouting === null || this.state.bay2Text4Scouting === "") {
+
+                            this.setState({ bay2Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay2Text4Scouting", '0')
+
+                        }
+
+                        if (this.state.bay3Text4Scouting === null || this.state.bay3Text4Scouting === "") {
+
+                            this.setState({ bay3Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay3Text4Scouting", '0')
+
+                        }
+
+                        if (this.state.bay4Text4Scouting === null || this.state.bay4Text4Scouting === "") {
+
+                            this.setState({ bay4Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay4Text4Scouting", '0')
+
+                        }
+
+                        if (this.state.bay5Text4Scouting === null || this.state.bay5Text4Scouting === "") {
+
+                            this.setState({ bay5Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay5Text4Scouting", '0')
+
+                        }
+
+                        if (this.state.bay6Text4Scouting === null || this.state.bay6Text4Scouting === "") {
+
+                            this.setState({ bay6Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay6Text4Scouting", '0')
+
+                        }
+
+                        if (this.state.bay7Text4Scouting === null || this.state.bay7Text4Scouting === "") {
+
+                            this.setState({ bay7Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay7Text4Scouting", '0')
+
+                        }
+
+                        if (this.state.bay8Text4Scouting === null || this.state.bay8Text4Scouting === "") {
+
+                            this.setState({ bay8Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay8Text4Scouting", '0')
+
+                        }
+
+                        if (this.state.bay9Text4Scouting === null || this.state.bay9Text4Scouting === "") {
+
+                            this.setState({ bay9Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay9Text4Scouting", '0')
+
+                        }
+
+                        if (this.state.bay10Text4Scouting === null || this.state.bay10Text4Scouting === "") {
+
+                            this.setState({ bay10Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay10Text4Scouting", '0')
+
+                        }
+
+                        if (this.state.bay11Text4Scouting === null || this.state.bay11Text4Scouting === "") {
+
+                            this.setState({ bay11Text4Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay11Text4Scouting", '0')
+
+                        }
+
+                    } else {
+
+
+                    }
+
+                }
+
+            }
 
         }
 
-        if (this.state.bay1Text2Scouting === null || this.state.bay1Text2Scouting === "") {
 
-            this.setState({ bay1Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay1Text3Scouting === null || this.state.bay1Text3Scouting === "") {
-
-            this.setState({ bay1Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay1Text4Scouting === null || this.state.bay1Text4Scouting === "") {
-
-            this.setState({ bay1Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay1Text4Scouting", '0')
-
-        }
-
-        //BAY 2
-        if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
-
-            this.setState({ bay2Text1Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
-
-        }
-
-        if (this.state.bay2Text2Scouting === null || this.state.bay2Text2Scouting === "") {
-
-            this.setState({ bay2Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay2Text3Scouting === null || this.state.bay2Text3Scouting === "") {
-
-            this.setState({ bay2Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay2Text4Scouting === null || this.state.bay2Text4Scouting === "") {
-
-            this.setState({ bay2Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay2Text4Scouting", '0')
-
-        }
-
-        //BAY 3
-        if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
-
-            this.setState({ bay3Text1Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
-
-        }
-
-        if (this.state.bay3Text2Scouting === null || this.state.bay3Text2Scouting === "") {
-
-            this.setState({ bay3Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay3Text3Scouting === null || this.state.bay3Text3Scouting === "") {
-
-            this.setState({ bay3Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay3Text4Scouting === null || this.state.bay3Text4Scouting === "") {
-
-            this.setState({ bay3Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay3Text4Scouting", '0')
-
-        }
-
-        //BAY 4
-        if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
-
-            this.setState({ bay4Text1Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
-
-        }
-
-        if (this.state.bay4Text2Scouting === null || this.state.bay4Text2Scouting === "") {
-
-            this.setState({ bay4Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay4Text3Scouting === null || this.state.bay4Text3Scouting === "") {
-
-            this.setState({ bay4Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay4Text4Scouting === null || this.state.bay4Text4Scouting === "") {
-
-            this.setState({ bay4Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay4Text4Scouting", '0')
-
-        }
-
-
-        //BAY 5
-        if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
-
-            this.setState({ bay5Text1Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
-
-        }
-
-        if (this.state.bay5Text2Scouting === null || this.state.bay5Text2Scouting === "") {
-
-            this.setState({ bay5Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay5Text3Scouting === null || this.state.bay5Text3Scouting === "") {
-
-            this.setState({ bay5Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay5Text4Scouting === null || this.state.bay5Text4Scouting === "") {
-
-            this.setState({ bay5Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay5Text4Scouting", '0')
-
-        }
-
-
-        //BAY 6
-        if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
-
-            this.setState({ bay6Text1Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
-
-        }
-
-        if (this.state.bay6Text2Scouting === null || this.state.bay6Text2Scouting === "") {
-
-            this.setState({ bay6Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay6Text3Scouting === null || this.state.bay6Text3Scouting === "") {
-
-            this.setState({ bay6Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay6Text4Scouting === null || this.state.bay6Text4Scouting === "") {
-
-            this.setState({ bay6Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay6Text4Scouting", '0')
-
-        }
-
-
-        //BAY 7
-        if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
-
-            this.setState({ bay7Text1Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
-
-        }
-
-        if (this.state.bay7Text2Scouting === null || this.state.bay7Text2Scouting === "") {
-
-            this.setState({ bay7Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay7Text3Scouting === null || this.state.bay7Text3Scouting === "") {
-
-            this.setState({ bay7Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay7Text4Scouting === null || this.state.bay7Text4Scouting === "") {
-
-            this.setState({ bay7Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay7Text4Scouting", '0')
-
-        }
-
-
-        //BAY 8
-        if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
-
-            this.setState({ bay8Text1Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
-
-        }
-
-        if (this.state.bay8Text2Scouting === null || this.state.bay8Text2Scouting === "") {
-
-            this.setState({ bay8Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay8Text3Scouting === null || this.state.bay8Text3Scouting === "") {
-
-            this.setState({ bay8Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay8Text4Scouting === null || this.state.bay8Text4Scouting === "") {
-
-            this.setState({ bay8Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay8Text4Scouting", '0')
-
-        }
-
-        //BAY 9
-        if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
-
-            this.setState({ bay9Text1Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
-
-        }
-
-        if (this.state.bay9Text2Scouting === null || this.state.bay9Text2Scouting === "") {
-
-            this.setState({ bay9Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay9Text3Scouting === null || this.state.bay9Text3Scouting === "") {
-
-            this.setState({ bay9Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay9Text4Scouting === null || this.state.bay9Text4Scouting === "") {
-
-            this.setState({ bay9Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay9Text4Scouting", '0')
-
-        }
-
-        //BAY 10
-        if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
-
-            this.setState({ bay10Text1Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
-
-        }
-
-        if (this.state.bay10Text2Scouting === null || this.state.bay10Text2Scouting === "") {
-
-            this.setState({ bay10Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay10Text3Scouting === null || this.state.bay10Text3Scouting === "") {
-
-            this.setState({ bay10Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay10Text4Scouting === null || this.state.bay10Text4Scouting === "") {
-
-            this.setState({ bay10Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay10Text4Scouting", '0')
-
-        }
-
-        //BAY 11
-        if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
-
-            this.setState({ bay11Text1Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
-
-        }
-
-        if (this.state.bay11Text2Scouting === null || this.state.bay11Text2Scouting === "") {
-
-            this.setState({ bay11Text2Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting", '0')
-
-        }
-
-        if (this.state.bay11Text3Scouting === null || this.state.bay11Text3Scouting === "") {
-
-            this.setState({ bay11Text3Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting", '0')
-
-        }
-
-        if (this.state.bay11Text4Scouting === null || this.state.bay11Text4Scouting === "") {
-
-            this.setState({ bay11Text4Scouting: '0' })
-
-            this.setItem(this.state.scoutingType + "" + "bay11Text4Scouting", '0')
-
-        }
     }
 
     checkRowNumber = () => {
@@ -1622,11 +2184,11 @@ export default class Scouting extends Component {
 
         const { rowNumberScouting } = this.state;
 
-        if(rowNumberScouting){
+        if (rowNumberScouting) {
 
             this.handleNextButtonPress();
 
-        }else{
+        } else {
 
             alert('Please enter row number')
         }
@@ -1639,7 +2201,7 @@ export default class Scouting extends Component {
 
         if (this.state.miniBay1Scouting !== null) {
 
-          
+
             let data = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
@@ -1661,29 +2223,29 @@ export default class Scouting extends Component {
             }
 
 
-        
-                db.addScoutingDetails(data).then((result) => {
 
-                    console.log(result);
+            db.addScoutingDetails(data).then((result) => {
 
-                    if (this.state.miniBay2Scouting !== '' && this.state.miniBay2Scouting !== null) {
+                console.log(result);
 
-                        this.saveScoutingDetails2();
+                if (this.state.miniBay2Scouting !== '' && this.state.miniBay2Scouting !== null) {
 
-                    } else {
+                    this.saveScoutingDetails2();
 
-
-                        this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
+                } else {
 
 
+                    this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
 
 
-                    }
 
 
-                })
+                }
 
-           
+
+            })
+
+
         } else {
 
             console.log("No Data");
@@ -2242,1120 +2804,1118 @@ export default class Scouting extends Component {
         return (
 
             <KeyboardAvoidingView
-            behavior={Platform.OS === 'ios' ? "padding" : "height"}
-            style={styles.container}>
+                behavior={Platform.OS === 'ios' ? "padding" : "height"}
+                style={styles.container}>
 
                 <TouchableWithoutFeedback>
 
-                <ScrollView keyboardShouldPersistTaps='handled'>
+                    <ScrollView keyboardShouldPersistTaps='handled'>
 
-                    <View pointerEvents={this.state.dataEntered == "Yes" ? 'none' : 'auto'}>
+                        <View pointerEvents={this.state.dataEntered == "Yes" ? 'none' : 'auto'}>
 
-                        <View style={styles.mainPageContainer}>
+                            <View style={styles.mainPageContainer}>
 
-                            <View style={{ flexDirection: 'row' }}>
+                                <View style={{ flexDirection: 'row' }}>
 
-                                <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-                                    <Text style={styles.titleBlackText}>Enter Row Number:</Text>
-                                </View>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+                                        <Text style={styles.titleBlackText}>Enter Row Number:</Text>
+                                    </View>
 
-                                <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
 
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle2}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'rowNumberScouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.rowNumberScouting}
+                                        <View style={styles.borderEdit}>
+                                            <TextInput style={styles.textInputStyle2}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'rowNumberScouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.rowNumberScouting}
 
-                                        />
+                                            />
+
+                                        </View>
 
                                     </View>
 
                                 </View>
 
-                            </View>
 
+                                <View style={styles.marginBetweenTop}></View>
+                                <View style={styles.tableContainer}>
 
-                            <View style={styles.marginBetweenTop}></View>
-                            <View style={styles.tableContainer}>
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItem}></Text>
+                                        </View>
 
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItem}></Text>
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotals}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.header1Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotals}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.header2Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotals}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.header3Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotals}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.header4Scouting}</Text>
+                                        </View>
+
                                     </View>
 
                                     <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotals}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.header1Scouting}</Text>
+
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay1Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay1Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay1Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay1Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay1Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay1Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay1Text3Scouting}
+                                            />
+                                        </View>
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay1Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay1Text4Scouting}
+                                            />
+                                        </View>
+
                                     </View>
+
+
+
 
                                     <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotals}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.header2Scouting}</Text>
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay2Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay2Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay2Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay2Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay2Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay2Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay2Text3Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay2Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay2Text4Scouting}
+                                            />
+                                        </View>
+
                                     </View>
+
+
 
                                     <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotals}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.header3Scouting}</Text>
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay3Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay3Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay3Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay3Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay3Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay3Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay3Text3Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay3Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay3Text4Scouting}
+                                            />
+                                        </View>
+
                                     </View>
+
+
+
+
 
                                     <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
                                     }}></View>
 
-                                    <View style={styles.tableColumnTotals}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.header4Scouting}</Text>
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay4Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay4Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay4Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay4Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay4Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay4Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay4Text3Scouting}
+
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay4Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay4Text4Scouting}
+                                            />
+                                        </View>
+
                                     </View>
 
+
+
+
+                                    <View style={{
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
+                                    }}></View>
+
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay5Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay5Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay5Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay5Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay5Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay5Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay5Text3Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay5Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay5Text4Scouting}
+                                            />
+                                        </View>
+
+                                    </View>
+
+
+
+
+                                    <View style={{
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
+                                    }}></View>
+
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay6Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay6Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay6Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay6Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay6Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay6Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay6Text3Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay6Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay6Text4Scouting}
+                                            />
+                                        </View>
+
+                                    </View>
+
+
+
+
+
+                                    <View style={{
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
+                                    }}></View>
+
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay7Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay7Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay7Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay7Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay7Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay7Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay7Text3Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay7Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay7Text4Scouting}
+                                            />
+                                        </View>
+
+                                    </View>
+
+
+
+
+
+
+                                    <View style={{
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
+                                    }}></View>
+
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay8Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay8Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay8Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay8Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay8Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay8Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay8Text3Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay8Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay8Text4Scouting}
+                                            />
+                                        </View>
+
+                                    </View>
+
+
+
+
+                                    <View style={{
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
+                                    }}></View>
+
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay9Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay9Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay9Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay9Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay9Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay9Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay9Text3Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay9Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay9Text4Scouting}
+                                            />
+                                        </View>
+
+                                    </View>
+
+
+
+
+
+                                    <View style={{
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
+                                    }}></View>
+
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay10Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay10Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay10Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay10Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay10Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay10Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay10Text3Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay10Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay10Text4Scouting}
+                                            />
+                                        </View>
+
+                                    </View>
+
+
+                                    <View style={{
+                                        borderTopColor: '#F1EEEC',
+                                        borderTopWidth: 1,
+                                    }}></View>
+
+                                    <View style={styles.tableRow}>
+                                        <View style={styles.tableColumnClockInOutTimes}>
+                                            <Text style={styles.textLineItemGreen}>{this.state.miniBay11Scouting}</Text>
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay11Text1Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay11Text1Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay11Text2Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay11Text2Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay11Text3Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay11Text3Scouting}
+                                            />
+                                        </View>
+
+                                        <View style={{
+                                            borderRightColor: '#F1EEEC',
+                                            borderRightWidth: 1,
+                                        }}></View>
+
+                                        <View style={styles.tableColumnTotalsEdit}>
+                                            <TextInput style={styles.textInputStyle}
+                                                multiline={false}
+                                                autoCorrect={false}
+                                                returnKeyType={'done'}
+                                                enablesReturnKeyAutomatically={true}
+                                                editable={true}
+                                                keyboardType={'numeric'}
+                                                onChangeText={(text) => this.updateTextInput(text, 'bay11Text4Scouting')}
+                                                blurOnSubmit={true}
+                                                value={this.state.bay11Text4Scouting}
+                                            />
+                                        </View>
+
+                                    </View>
                                 </View>
 
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
+                                <View style={styles.marginBetweenTop}></View>
 
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay1Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay1Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay1Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay1Text3Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay1Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay1Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-
-
-
-
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay2Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay2Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay2Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay2Text3Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay2Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay2Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-
-
-
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay3Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay3Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay3Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay3Text3Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay3Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay3Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-
-
-
-
-
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay4Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay4Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay4Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay4Text3Scouting}
-
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay4Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay4Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-
-
-
-
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay5Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay5Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay5Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay5Text3Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay5Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay5Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-
-
-
-
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay6Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay6Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay6Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay6Text3Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay6Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay6Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-
-
-
-
-
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay7Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay7Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay7Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay7Text3Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay7Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay7Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-
-
-
-
-
-
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay8Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay8Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay8Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay8Text3Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay8Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay8Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-
-
-
-
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay9Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay9Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay9Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay9Text3Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay9Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay9Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-
-
-
-
-
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay10Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay10Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay10Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay10Text3Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay10Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay10Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-
-
-                                <View style={{
-                                    borderTopColor: '#F1EEEC',
-                                    borderTopWidth: 1,
-                                }}></View>
-
-                                <View style={styles.tableRow}>
-                                    <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay11Scouting}</Text>
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text1Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay11Text1Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text2Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay11Text2Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text3Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay11Text3Scouting}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        borderRightColor: '#F1EEEC',
-                                        borderRightWidth: 1,
-                                    }}></View>
-
-                                    <View style={styles.tableColumnTotalsEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'bay11Text4Scouting')}
-                                            blurOnSubmit={true}
-                                            value={this.state.bay11Text4Scouting}
-                                        />
-                                    </View>
-
-                                </View>
-                            </View>
-
-                            <View style={styles.marginBetweenTop}></View>
-
-                            <TouchableOpacity onPress={() => this.handleEmptyCells()}>
-                                <Text style={styles.copyText}>Click here to set empty cells with 0(zero)</Text>
-                            </TouchableOpacity>
-
-                            <View style={styles.marginBetweenTop}></View>
-
-                            <View style={styles.alignButton}>
-                                <TouchableOpacity
-                                    style={styles.buttonContainer}
-                                    disabled={false}
-                                    onPress={() => this.checkRowNumber()}>
-                                    <Text style={styles.buttonText}>Next</Text>
+                                <TouchableOpacity onPress={() => this.handleEmptyCells()}>
+                                    <Text style={styles.copyText}>Click here to set empty cells with 0(zero)</Text>
                                 </TouchableOpacity>
+
+                                <View style={styles.marginBetweenTop}></View>
+
+                                <View style={styles.alignButton}>
+                                    <TouchableOpacity
+                                        style={styles.buttonContainer}
+                                        disabled={false}
+                                        onPress={() => this.checkRowNumber()}>
+                                        <Text style={styles.buttonText}>Next</Text>
+                                    </TouchableOpacity>
+                                </View>
+
+                                <View style={styles.marginContainerBottom}></View>
+
                             </View>
-                            <View style={styles.marginContainerBottom}></View>
-                            <View style={styles.marginContainerBottom}></View>
-                            <View style={styles.marginContainerBottom}></View>
 
                         </View>
 
-                    </View>
-
-                </ScrollView>
+                    </ScrollView>
                 </TouchableWithoutFeedback>
             </KeyboardAvoidingView>
         );
@@ -3533,7 +4093,7 @@ const styles = StyleSheet.create({
         height: 60,
         textAlign: 'center',
         backgroundColor: "transparent",
-        
+
 
 
     },
@@ -3581,7 +4141,7 @@ const styles = StyleSheet.create({
 
     marginContainerBottom: {
 
-        marginBottom: 40,
+        marginBottom: 95,
 
     },
 

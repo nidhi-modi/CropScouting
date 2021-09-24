@@ -204,230 +204,230 @@ export default class Settings extends Component {
         return (
 
             <KeyboardAvoidingView
-            behavior={Platform.OS === 'ios' ? "padding" : "height"}
-            style={styles.container}>
+                behavior={Platform.OS === 'ios' ? "padding" : "height"}
+                style={styles.container}>
 
                 <TouchableWithoutFeedback>
 
-                <ScrollView keyboardShouldPersistTaps='handled'>
+                    <ScrollView keyboardShouldPersistTaps='handled'>
 
-                    <View style={styles.mainPageContainer}>
+                        <View style={styles.mainPageContainer}>
 
-                        <Text style={styles.titleHeadingText}>Select from the dropdown list to change the setting</Text>
+                            <Text style={styles.titleHeadingText}>Select from the dropdown list to change the setting</Text>
 
-                        <View style={styles.marginTopStyle}></View>
-
-
-                        <View
-                            style={{
-
-                                // The solution: Apply zIndex to any device except Android
-                                ...(Platform.OS !== 'android' && {
-                                    zIndex: 30
-                                })
-
-                            }}
-                        >
-                            <DropDownPicker
+                            <View style={styles.marginTopStyle}></View>
 
 
-                                items={[
-                                    { label: 'Psyllid', value: 'Psyllid' },
-                                    { label: 'Whitefly Adults', value: 'Whitefly Adults' },
-                                    { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
-                                    { label: 'Encarsia Scale', value: 'Encarsia Scale' },
-                                    { label: 'Engytatus', value: 'Engytatus' },
-                                    { label: 'Lacewing', value: 'Lacewing' },
-                                    { label: 'Yellow Heads', value: 'Yellow Heads' },
-                                    { label: 'Botrytis', value: 'Botrytise' },
-                                    { label: 'Disease Plants', value: 'Disease Plants' },
-                                    { label: 'Russet Mite', value: 'Russet Mite' },
-                                    { label: 'Caterpillar', value: 'Caterpillar' },
-                                    { label: 'Butterfly', value: 'Butterfly' },
-
-                                ]}
-                                placeholder=""
-                                containerStyle={{ height: 50 }}
+                            <View
                                 style={{
-                                    borderColor: '#F1EEEC',
-                                    borderWidth: 1,
-                                }}
-                                itemStyle={{
-                                    justifyContent: 'flex-start'
-                                }}
-                                labelStyle={{
-                                    fontSize: 14,
-                                    textAlign: 'left',
-                                    color: '#000000',
 
+                                    // The solution: Apply zIndex to any device except Android
+                                    ...(Platform.OS !== 'android' && {
+                                        zIndex: 30
+                                    })
 
                                 }}
-                                dropDownStyle={{ backgroundColor: '#fafafa' }}
-                                onChangeItem={(item) => this.updateDropTextInput(item.value, 'settingType')}
-                                value={this.state.scoutersName}
+                            >
+                                <DropDownPicker
 
 
-                            />
-                        </View>
+                                    items={[
+                                        { label: 'Psyllid', value: 'Psyllid' },
+                                        { label: 'Whitefly Adults', value: 'Whitefly Adults' },
+                                        { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
+                                        { label: 'Encarsia Scale', value: 'Encarsia Scale' },
+                                        { label: 'Engytatus', value: 'Engytatus' },
+                                        { label: 'Lacewing', value: 'Lacewing' },
+                                        { label: 'Yellow Heads', value: 'Yellow Heads' },
+                                        { label: 'Botrytis', value: 'Botrytise' },
+                                        { label: 'Disease Plants', value: 'Disease Plants' },
+                                        { label: 'Russet Mite', value: 'Russet Mite' },
+                                        { label: 'Caterpillar', value: 'Caterpillar' },
+                                        { label: 'Butterfly', value: 'Butterfly' },
+
+                                    ]}
+                                    placeholder=""
+                                    containerStyle={{ height: 50 }}
+                                    style={{
+                                        borderColor: '#F1EEEC',
+                                        borderWidth: 1,
+                                    }}
+                                    itemStyle={{
+                                        justifyContent: 'flex-start'
+                                    }}
+                                    labelStyle={{
+                                        fontSize: 14,
+                                        textAlign: 'left',
+                                        color: '#000000',
 
 
-                        <View style={styles.marginContainerTop}></View>
-
-                        {(this.state.settingType != '') ?
-
-                            <View>
-                                <Text style={styles.titleGreenText}>{this.state.settingType}</Text>
-
-                                <View style={styles.marginBetweenTop}></View>
-
-                                <Text style={styles.titleBlackText}>Enter Column Names Below</Text>
-
-                                <View style={styles.marginBetweenTextTop}></View>
-
-                                <View style={styles.borderEdit}>
-                                    <TextInput style={styles.textInputStyle}
-                                        multiline={false}
-                                        autoCorrect={false}
-                                        returnKeyType={'done'}
-                                        enablesReturnKeyAutomatically={true}
-                                        editable={true}
-                                        keyboardType={'default'}
-                                        onChangeText={(text) => this.updateTextInput(text, 'column1')}
-                                        blurOnSubmit={true}
-                                        value={this.state.column1}
-                                    />
-                                </View>
-
-                                <View style={styles.marginBetweenTextTop}></View>
-
-                                <View style={styles.borderEdit}>
-                                    <TextInput style={styles.textInputStyle}
-                                        multiline={false}
-                                        autoCorrect={false}
-                                        returnKeyType={'done'}
-                                        enablesReturnKeyAutomatically={true}
-                                        editable={true}
-                                        keyboardType={'default'}
-                                        onChangeText={(text) => this.updateTextInput(text, 'column2')}
-                                        blurOnSubmit={true}
-                                        value={this.state.column2}
-
-                                    />
-
-                                </View>
-
-                                <View style={styles.marginBetweenTextTop}></View>
-
-                                <View style={styles.borderEdit}>
-                                    <TextInput style={styles.textInputStyle}
-                                        multiline={false}
-                                        autoCorrect={false}
-                                        returnKeyType={'done'}
-                                        enablesReturnKeyAutomatically={true}
-                                        editable={true}
-                                        keyboardType={'default'}
-                                        onChangeText={(text) => this.updateTextInput(text, 'column3')}
-                                        blurOnSubmit={true}
-                                        value={this.state.column3}
-
-                                    />
-
-                                </View>
-
-                                <View style={styles.marginBetweenTextTop}></View>
-
-                                <View style={styles.borderEdit}>
-                                    <TextInput style={styles.textInputStyle}
-                                        multiline={false}
-                                        autoCorrect={false}
-                                        returnKeyType={'done'}
-                                        enablesReturnKeyAutomatically={true}
-                                        editable={true}
-                                        keyboardType={'default'}
-                                        onChangeText={(text) => this.updateTextInput(text, 'column4')}
-                                        blurOnSubmit={true}
-                                        value={this.state.column4}
-
-                                    />
-
-                                </View>
+                                    }}
+                                    dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                    onChangeItem={(item) => this.updateDropTextInput(item.value, 'settingType')}
+                                    value={this.state.scoutersName}
 
 
-                                <View style={styles.marginContainerTop}></View>
-
-                                <View style={{ flexDirection: 'row' }}>
-
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-                                        <Text style={styles.titleBlackText}>Number of Rows:</Text>
-                                    </View>
-
-                                    <View style={{ flexDirection: 'column', alignItems: 'center', flex: 1 }}>
-
-                                        <View style={styles.borderEdit}>
-                                            <TextInput style={styles.textInputStyle2}
-                                                multiline={false}
-                                                returnKeyType={'done'}
-                                                placeholder={"Max rows are 10"}
-                                                autoCorrect={false}
-                                                enablesReturnKeyAutomatically={true}
-                                                editable={true}
-                                                keyboardType={'numeric'}
-                                                onChangeText={(text) => this.updateTextInput(text, 'rows')}
-                                                blurOnSubmit={true}
-                                                value={this.state.rows}
-
-                                            />
-
-                                        </View>
-
-                                    </View>
-
-                                </View>
-
-
-                                <View style={styles.marginContainerTop}></View>
-
-                                <View style={{ flexDirection: 'row' }}>
-
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-                                        <Text style={styles.titleBlackText}>Row Interval:</Text>
-                                    </View>
-
-                                    <View style={{ flexDirection: 'column', alignItems: 'center', flex: 1 }}>
-
-                                        <View style={styles.borderEdit}>
-                                            <TextInput style={styles.textInputStyle2}
-                                                multiline={false}
-                                                autoCorrect={false}
-                                                returnKeyType={'done'}
-                                                enablesReturnKeyAutomatically={true}
-                                                editable={true}
-                                                keyboardType={'numeric'}
-                                                onChangeText={(text) => this.updateTextInput(text, 'intervals')}
-                                                blurOnSubmit={true}
-                                                value={this.state.intervals}
-
-                                            />
-
-                                        </View>
-
-                                    </View>
-
-                                </View>
-
-                                <View style={styles.marginContainerBottom}></View>
-                                <View style={styles.marginContainerBottom}></View>
-                                <View style={styles.marginContainerBottom}></View>
-
+                                />
                             </View>
 
-                            : null}
 
-                        <View style={styles.marginBetweenTop}></View>
+                            <View style={styles.marginContainerTop}></View>
 
-                    </View>
+                            {(this.state.settingType != '') ?
 
-                </ScrollView>
+                                <View>
+                                    <Text style={styles.titleGreenText}>{this.state.settingType}</Text>
+
+                                    <View style={styles.marginBetweenTop}></View>
+
+                                    <Text style={styles.titleBlackText}>Enter Column Names Below</Text>
+
+                                    <View style={styles.marginBetweenTextTop}></View>
+
+                                    <View style={styles.borderEdit}>
+                                        <TextInput style={styles.textInputStyle}
+                                            multiline={false}
+                                            autoCorrect={false}
+                                            returnKeyType={'done'}
+                                            enablesReturnKeyAutomatically={true}
+                                            editable={true}
+                                            keyboardType={'default'}
+                                            onChangeText={(text) => this.updateTextInput(text, 'column1')}
+                                            blurOnSubmit={true}
+                                            value={this.state.column1}
+                                        />
+                                    </View>
+
+                                    <View style={styles.marginBetweenTextTop}></View>
+
+                                    <View style={styles.borderEdit}>
+                                        <TextInput style={styles.textInputStyle}
+                                            multiline={false}
+                                            autoCorrect={false}
+                                            returnKeyType={'done'}
+                                            enablesReturnKeyAutomatically={true}
+                                            editable={true}
+                                            keyboardType={'default'}
+                                            onChangeText={(text) => this.updateTextInput(text, 'column2')}
+                                            blurOnSubmit={true}
+                                            value={this.state.column2}
+
+                                        />
+
+                                    </View>
+
+                                    <View style={styles.marginBetweenTextTop}></View>
+
+                                    <View style={styles.borderEdit}>
+                                        <TextInput style={styles.textInputStyle}
+                                            multiline={false}
+                                            autoCorrect={false}
+                                            returnKeyType={'done'}
+                                            enablesReturnKeyAutomatically={true}
+                                            editable={true}
+                                            keyboardType={'default'}
+                                            onChangeText={(text) => this.updateTextInput(text, 'column3')}
+                                            blurOnSubmit={true}
+                                            value={this.state.column3}
+
+                                        />
+
+                                    </View>
+
+                                    <View style={styles.marginBetweenTextTop}></View>
+
+                                    <View style={styles.borderEdit}>
+                                        <TextInput style={styles.textInputStyle}
+                                            multiline={false}
+                                            autoCorrect={false}
+                                            returnKeyType={'done'}
+                                            enablesReturnKeyAutomatically={true}
+                                            editable={true}
+                                            keyboardType={'default'}
+                                            onChangeText={(text) => this.updateTextInput(text, 'column4')}
+                                            blurOnSubmit={true}
+                                            value={this.state.column4}
+
+                                        />
+
+                                    </View>
+
+
+                                    <View style={styles.marginContainerTop}></View>
+
+                                    <View style={{ flexDirection: 'row' }}>
+
+                                        <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+                                            <Text style={styles.titleBlackText}>Number of Rows:</Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'column', alignItems: 'center', flex: 1 }}>
+
+                                            <View style={styles.borderEdit}>
+                                                <TextInput style={styles.textInputStyle2}
+                                                    multiline={false}
+                                                    returnKeyType={'done'}
+                                                    placeholder={"Max rows are 10"}
+                                                    autoCorrect={false}
+                                                    enablesReturnKeyAutomatically={true}
+                                                    editable={true}
+                                                    keyboardType={'numeric'}
+                                                    onChangeText={(text) => this.updateTextInput(text, 'rows')}
+                                                    blurOnSubmit={true}
+                                                    value={this.state.rows}
+
+                                                />
+
+                                            </View>
+
+                                        </View>
+
+                                    </View>
+
+
+                                    <View style={styles.marginContainerTop}></View>
+
+                                    <View style={{ flexDirection: 'row' }}>
+
+                                        <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+                                            <Text style={styles.titleBlackText}>Row Interval:</Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'column', alignItems: 'center', flex: 1 }}>
+
+                                            <View style={styles.borderEdit}>
+                                                <TextInput style={styles.textInputStyle2}
+                                                    multiline={false}
+                                                    autoCorrect={false}
+                                                    returnKeyType={'done'}
+                                                    enablesReturnKeyAutomatically={true}
+                                                    editable={true}
+                                                    keyboardType={'numeric'}
+                                                    onChangeText={(text) => this.updateTextInput(text, 'intervals')}
+                                                    blurOnSubmit={true}
+                                                    value={this.state.intervals}
+
+                                                />
+
+                                            </View>
+
+                                        </View>
+
+                                    </View>
+
+                                    <View style={styles.marginContainerBottom}></View>
+                                    <View style={styles.marginContainerBottom}></View>
+                                    <View style={styles.marginContainerBottom}></View>
+
+                                </View>
+
+                                : null}
+
+                            <View style={styles.marginBetweenTop}></View>
+
+                        </View>
+
+                    </ScrollView>
                 </TouchableWithoutFeedback>
             </KeyboardAvoidingView>
         );
