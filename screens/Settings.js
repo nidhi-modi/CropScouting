@@ -30,9 +30,6 @@ import { TouchableOpacity } from 'react-native';
 
 
 
-
-
-
 export default class Settings extends Component {
 
     constructor(props) {
@@ -239,7 +236,7 @@ export default class Settings extends Component {
                                         { label: 'Engytatus', value: 'Engytatus' },
                                         { label: 'Lacewing', value: 'Lacewing' },
                                         { label: 'Yellow Heads', value: 'Yellow Heads' },
-                                        { label: 'Botrytis', value: 'Botrytise' },
+                                        { label: 'Botrytis', value: 'Botrytis' },
                                         { label: 'Disease Plants', value: 'Disease Plants' },
                                         { label: 'Russet Mite', value: 'Russet Mite' },
                                         { label: 'Caterpillar', value: 'Caterpillar' },

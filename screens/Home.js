@@ -824,18 +824,18 @@ export default class Home extends Component {
                         >
                             <DropDownPicker
                                 items={[
-                                    { label: 'Psyllid', value: 'Psyllid' },
-                                    { label: 'Whitefly Adults', value: 'Whitefly Adults' },
-                                    { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
-                                    { label: 'Encarsia Scale', value: 'Encarsia Scale' },
-                                    { label: 'Engytatus', value: 'Engytatus' },
-                                    { label: 'Lacewing', value: 'Lacewing' },
-                                    { label: 'Yellow Heads', value: 'Yellow Heads' },
-                                    { label: 'Botrytis', value: 'Botrytis' },
-                                    { label: 'Disease Plants', value: 'Disease Plants' },
-                                    { label: 'Russet Mite', value: 'Russet Mite' },
-                                    { label: 'Caterpillar', value: 'Caterpillar' },
-                                    { label: 'Butterfly', value: 'Butterfly' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
+                                    { label: '', value: '' },
 
                                 ]}
                                 placeholder=""
