@@ -44,9 +44,7 @@ export default class Settings extends Component {
             column4: '',
             rows: '',
             intervals: '',
-
-
-
+            
         };
 
 
@@ -229,7 +227,7 @@ export default class Settings extends Component {
 
 
                                     items={[
-                                        { label: 'Psyllid', value: 'Psyllid' },
+                                        /*{ label: 'Psyllid', value: 'Psyllid' },
                                         { label: 'Whitefly Adults', value: 'Whitefly Adults' },
                                         { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
                                         { label: 'Encarsia Scale', value: 'Encarsia Scale' },
@@ -240,7 +238,11 @@ export default class Settings extends Component {
                                         { label: 'Disease Plants', value: 'Disease Plants' },
                                         { label: 'Russet Mite', value: 'Russet Mite' },
                                         { label: 'Caterpillar', value: 'Caterpillar' },
-                                        { label: 'Butterfly', value: 'Butterfly' },
+                                        { label: 'Butterfly', value: 'Butterfly' },*/
+
+                                        { label: 'Plant Head', value: 'Plant Head' },
+                                        { label: 'Plant Middle', value: 'Plant Middle' },
+                                        { label: 'Plant Ground', value: 'Plant Ground' },
 
                                     ]}
                                     placeholder=""

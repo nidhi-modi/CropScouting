@@ -726,10 +726,9 @@ export default class Home extends Component {
 
                             <DropDownPicker
                                 items={[
-                                    { label: 'A', value: 'A' },
-                                    { label: 'B', value: 'B' },
-                                    { label: 'C', value: 'C' },
-                                    { label: 'D', value: 'D' },
+                                    { label: 'Chaminda Perera', value: 'Chaminda Perera' },
+                                    { label: 'Nicholas Wallace', value: 'Nicholas Wallace' },
+                                    { label: 'Chris Cowie', value: 'Chris Cowie' },
 
                                 ]}
                                 placeholder=""
@@ -807,7 +806,7 @@ export default class Home extends Component {
 
                         <View style={styles.marginContainerTop}></View>
 
-                        <Text style={styles.titleHeadingText}>Select Pests &amp; Diseases to Scout</Text>
+                        <Text style={styles.titleHeadingText}>Scouting Type</Text>
 
                         <View style={styles.marginTopStyle}></View>
 
@@ -824,18 +823,10 @@ export default class Home extends Component {
                         >
                             <DropDownPicker
                                 items={[
-                                    { label: 'Psyllid', value: 'Psyllid' },
-                                    { label: 'Whitefly Adults', value: 'Whitefly Adults' },
-                                    { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
-                                    { label: 'Encarsia Scale', value: 'Encarsia Scale' },
-                                    { label: 'Engytatus', value: 'Engytatus' },
-                                    { label: 'Lacewing', value: 'Lacewing' },
-                                    { label: 'Yellow Heads', value: 'Yellow Heads' },
-                                    { label: 'Botrytis', value: 'Botrytis' },
-                                    { label: 'Disease Plants', value: 'Disease Plants' },
-                                    { label: 'Russet Mite', value: 'Russet Mite' },
-                                    { label: 'Caterpillar', value: 'Caterpillar' },
-                                    { label: 'Butterfly', value: 'Butterfly' },
+                                    { label: 'Plant Head', value: 'Plant Head' },
+                                    { label: 'Plant Middle', value: 'Plant Middle' },
+                                    { label: 'Plant Ground', value: 'Plant Ground' },
+                                    
 
                                 ]}
                                 placeholder=""
