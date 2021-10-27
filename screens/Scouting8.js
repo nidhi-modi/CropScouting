@@ -37,7 +37,7 @@ var intervalsOffline, startRowsOffline
 
 
 
-export default class Scouting4 extends Component {
+export default class Scouting8 extends Component {
 
     constructor(props) {
         super(props);
@@ -2713,7 +2713,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting2', { startNumber2: this.state.rowNumberScouting8, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting9', { startNumber2: this.state.rowNumberScouting8, inter2: this.state.intervals })
 
                 }
 
@@ -2757,7 +2757,7 @@ export default class Scouting4 extends Component {
 
                 console.log(result);
 
-                this.props.navigation.navigate('Scouting2', { startNumber2: this.state.rowNumberScouting8, inter2: this.state.intervals })
+                this.props.navigation.navigate('Scouting9', { startNumber2: this.state.rowNumberScouting8, inter2: this.state.intervals })
 
 
             })

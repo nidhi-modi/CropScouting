@@ -36,7 +36,7 @@ var intervalsOffline, startRowsOffline
 
 
 
-export default class Scouting4 extends Component {
+export default class Scouting6 extends Component {
 
     constructor(props) {
         super(props);
