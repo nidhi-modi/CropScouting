@@ -37,7 +37,7 @@ var intervalsOffline, startRowsOffline
 
 
 
-export default class Scouting4 extends Component {
+export default class Scouting10 extends Component {
 
     constructor(props) {
         super(props);
@@ -123,11 +123,12 @@ export default class Scouting4 extends Component {
             bay11Text3Scouting10: '',
             bay11Text4Scouting10: '',
 
-
             scoutersName: '',
             location: '',
             weekNum: '',
             dataEntered: '',
+
+
 
         };
 
@@ -254,7 +255,7 @@ export default class Scouting4 extends Component {
 
                     AsyncStorage.getItem("column4" + opt1).then((text6Value) => {
                         var opt6 = JSON.parse(text6Value);
-                        this.setState({ header4Scogiuting10: opt6 });
+                        this.setState({ header4Scouting10: opt6 });
 
                     }).done();
                 } catch (error) {
@@ -271,18 +272,18 @@ export default class Scouting4 extends Component {
 
                         /*if (this.state.dataEntered == 'Yes') {
 
-                            this.props.navigation.navigate('Home');
+                            this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
     
                         } else {
     
                             console.log("Data not submitted");
     
                         }*/
-
                     }).done();
                 } catch (error) {
 
                 }
+
                 this.getAsyncData(opt1);
 
             }).done();
@@ -303,7 +304,8 @@ export default class Scouting4 extends Component {
 
         var finalRowNumber = '' + actualRowNumber;
 
-        this.setState({ rowNumberScouting10: actualRowNumber })
+
+        this.setState({ rowNumberScouting10: finalRowNumber })
 
     }
 
@@ -318,8 +320,7 @@ export default class Scouting4 extends Component {
                     console.log("Row number : " + JSON.parse(text1Value));
                     this.setState({ rowNumberScouting10: JSON.parse(text1Value) });
 
-
-                    
+                   
                 }
 
             }).done();
@@ -1252,7 +1253,6 @@ export default class Scouting4 extends Component {
         } catch (error) {
 
         }
-
         //
 
     }
@@ -1262,27 +1262,7 @@ export default class Scouting4 extends Component {
         BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
     }
 
-
-
-    handleBackButton = () => {
-
-        BackHandler.exitApp();
-
-    }
-
-    onButtonPress = () => {
-        BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
-        // then navigate
-        navigate('NewScreen');
-    }
-
-    updateTextInput = (text, field) => {
-        this.setItem(this.state.scoutingType + "" + field, text)
-        const state = this.state
-        state[field] = text;
-        this.setState(state);
-    }
-
+    
     handleEmptyCells = () => {
 
         var h1 = this.state.header1Scouting10;
@@ -2212,6 +2192,7 @@ export default class Scouting4 extends Component {
         }
     }
 
+    
     checkRowNumber = () => {
 
         var that = this;
@@ -2228,6 +2209,7 @@ export default class Scouting4 extends Component {
         }
 
     }
+
 
     handleNextButtonPress = () => {
 
@@ -2266,7 +2248,8 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Home');
+                    this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
+
                 }
 
 
@@ -2314,7 +2297,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Home');
+                    this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
 
                 }
 
@@ -2363,7 +2346,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Home');
+                    this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
 
                 }
 
@@ -2413,7 +2396,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Home');
+                    this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
 
                 }
 
@@ -2462,7 +2445,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Home');
+                    this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
 
                 }
 
@@ -2512,7 +2495,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Home');
+                    this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
 
                 }
 
@@ -2562,7 +2545,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Home');
+                    this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
 
                 }
 
@@ -2611,7 +2594,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Home');
+                    this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
 
                 }
 
@@ -2660,7 +2643,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Home');
+                    this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
 
                 }
 
@@ -2710,7 +2693,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Home');
+                    this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
 
                 }
 
@@ -2754,7 +2737,7 @@ export default class Scouting4 extends Component {
 
                 console.log(result);
 
-                this.props.navigation.navigate('Home');
+                this.props.navigation.navigate('Scouting11', { startNumber2: this.state.rowNumberScouting10, inter2: this.state.intervals })
 
 
             })
@@ -2767,6 +2750,27 @@ export default class Scouting4 extends Component {
 
 
     }
+
+    handleBackButton = () => {
+
+        BackHandler.exitApp();
+
+    }
+
+    onButtonPress = () => {
+        BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+        // then navigate
+        navigate('NewScreen');
+    }
+
+    updateTextInput = (text, field) => {
+        this.setItem(this.state.scoutingType + "" + field, text)
+        const state = this.state
+        state[field] = text;
+        this.setState(state);
+    }
+
+
 
     //ASYNC METHOD
 
@@ -2788,10 +2792,10 @@ export default class Scouting4 extends Component {
         return (
 
             <KeyboardAvoidingView
-                behavior={Platform.OS === 'ios' ? "padding" : "height"}
-                style={styles.container}>
+            behavior={Platform.OS === 'ios' ? "padding" : "height"}
+            style={styles.container}>
 
-                <TouchableWithoutFeedback>
+            <TouchableWithoutFeedback>
 
                 <ScrollView keyboardShouldPersistTaps='handled'>
 
@@ -2811,12 +2815,12 @@ export default class Scouting4 extends Component {
                                         <TextInput style={styles.textInputStyle2}
                                             multiline={false}
                                             autoCorrect={false}
+                                            returnKeyType={'done'}
                                             enablesReturnKeyAutomatically={true}
                                             editable={true}
                                             keyboardType={'numeric'}
                                             onChangeText={(text) => this.updateTextInput(text, 'rowNumberScouting10')}
                                             blurOnSubmit={true}
-                                            returnKeyType={'done'}
                                             value={this.state.rowNumberScouting10}
 
                                         />
@@ -3879,6 +3883,7 @@ export default class Scouting4 extends Component {
                             </View>
 
                             <View style={styles.marginBetweenTop}></View>
+
                             <TouchableOpacity  onPress={() => this.handleEmptyCells()}>
                                 <Text style={styles.copyText}>Click here to set empty cells with 0(zero)</Text>
                             </TouchableOpacity>
@@ -3925,20 +3930,20 @@ const styles = StyleSheet.create({
         color: "#000000",
     },
 
-    copyText: {
-
-        alignSelf: 'center',
-        fontSize: 18,
-        color: '#ff0000',
-
-    },
-
     textLineItemGreen: {
 
         color: "#87B26A",
         flexShrink: 1,
         fontWeight: 'bold',
         textAlign: 'center',
+    },
+
+    copyText: {
+
+        alignSelf: 'center',
+        fontSize: 18,
+        color: '#ff0000',
+
     },
 
     textLineItemGreenIOS: {
@@ -4016,6 +4021,11 @@ const styles = StyleSheet.create({
 
     },
 
+    marginContainerBottom: {
+
+        marginBottom: 95,
+
+    },
 
     titleHeadingTextIOS: {
 
@@ -4075,10 +4085,11 @@ const styles = StyleSheet.create({
     textInputStyle: {
         fontSize: 14,
         color: 'black',
-        marginLeft: 10,
-        marginRight: 10,
+        width: 40,
         height: 60,
+        textAlign: 'center',
         backgroundColor: "transparent",
+        
 
 
     },
@@ -4127,12 +4138,6 @@ const styles = StyleSheet.create({
     marginBetweenTextTop: {
 
         marginTop: 10,
-
-    },
-
-    marginContainerBottom: {
-
-        marginBottom: 95,
 
     },
 

@@ -37,7 +37,7 @@ var intervalsOffline, startRowsOffline
 
 
 
-export default class Scouting4 extends Component {
+export default class Scouting9 extends Component {
 
     constructor(props) {
         super(props);
@@ -272,7 +272,7 @@ export default class Scouting4 extends Component {
 
                         /*if (this.state.dataEntered == 'Yes') {
 
-                            this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                            this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
     
                         } else {
     
@@ -2248,7 +2248,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
                 }
 
@@ -2297,7 +2297,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
                 }
 
@@ -2346,7 +2346,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
                 }
 
@@ -2396,7 +2396,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
                 }
 
@@ -2445,7 +2445,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
                 }
 
@@ -2495,7 +2495,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
                 }
 
@@ -2545,7 +2545,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
                 }
 
@@ -2594,7 +2594,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
                 }
 
@@ -2643,7 +2643,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
                 }
 
@@ -2693,7 +2693,7 @@ export default class Scouting4 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
                 }
 
@@ -2737,7 +2737,7 @@ export default class Scouting4 extends Component {
 
                 console.log(result);
 
-                this.props.navigation.navigate('Scouting90', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
+                this.props.navigation.navigate('Scouting10', { startNumber2: this.state.rowNumberScouting9, inter2: this.state.intervals })
 
 
             })

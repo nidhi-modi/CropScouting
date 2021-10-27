@@ -27,8 +27,8 @@ import moment from 'moment'
 import Database from '../screens/Database'
 import NetInfo from "@react-native-community/netinfo";
 
-var intervalNumber, rowNum1, rowNum2, rowNum3, rowNum4, rowNum5, rowNum6, rowNum7, rowNum8, rowNum9, rowNum10, rowNum11;
-var scouting1st, scouting2nd, scouting3rd, scouting4th, scouting5th, scouting6th, scouting7th, scouting8th, scouting9th, scouting10th, scouting11th;
+var intervalNumber, rowNum1, rowNum2, rowNum3, rowNum4, rowNum5, rowNum6, rowNum7, rowNum8, rowNum9, rowNum10, rowNum11, rowNum12, rowNum13, rowNum14, rowNum15, rowNum16, rowNum17, rowNum18, rowNum19, rowNum20, rowNum21, rowNum22, rowNum23, rowNum24, rowNum25, rowNum26, rowNum27, rowNum28, rowNum29, rowNum30, rowNum31, rowNum32, rowNum33, rowNum34, rowNum35, rowNum36, rowNum37, rowNum38, rowNum39, rowNum40, rowNum41, rowNum42, rowNum43, rowNum44, rowNum45, rowNum46, rowNum47, rowNum48, rowNum49, rowNum50, rowNum51, rowNum52, rowNum53, rowNum54, rowNum55, rowNum56, rowNum57, rowNum58, rowNum59, rowNum60, rowNum61;
+var scouting1st, scouting2nd, scouting3rd, scouting4th, scouting5th, scouting6th, scouting7th, scouting8th, scouting9th, scouting10th, scouting11th, scouting12th, scouting13th, scouting14th, scouting15th, scouting16th, scouting17th, scouting18th, scouting19th, scouting20th, scouting21th, scouting22th, scouting23th, scouting24th, scouting25th, scouting26th, scouting27th, scouting28th, scouting29th, scouting30th, scouting31th, scouting32th, scouting33th, scouting34th, scouting35th, scouting36th, scouting37th, scouting38th, scouting39th, scouting40th, scouting41th, scouting42th, scouting43th, scouting44th, scouting45th, scouting46th, scouting47th, scouting48th, scouting49th, scouting50th, scouting51th, scouting52th, scouting53th, scouting54th, scouting55th, scouting56th, scouting57th, scouting58th, scouting59th, scouting60th, scouting61th;
 
 
 var screenWidth = (Dimensions.get('window').width) / 1.6;
@@ -432,6 +432,759 @@ export default class Home extends Component {
 
             //END
 
+            //GET row12
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting11").then((rowNumber12) => {
+
+                    rowNum12 = JSON.parse(rowNumber12);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row12
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting12").then((rowNumber13) => {
+
+                    rowNum13 = JSON.parse(rowNumber13);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row13
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting13").then((rowNumber14) => {
+
+                    rowNum14 = JSON.parse(rowNumber14);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row14
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting14").then((rowNumber15) => {
+
+                    rowNum15 = JSON.parse(rowNumber15);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row15
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting15").then((rowNumber16) => {
+
+                    rowNum16 = JSON.parse(rowNumber16);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row16
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting16").then((rowNumber66) => {
+
+                    rowNum17 = JSON.parse(rowNumber66);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row17
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting17").then((rowNumber17) => {
+
+                    rowNum18 = JSON.parse(rowNumber17);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row19
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting18").then((rowNumber18) => {
+
+                    rowNum19 = JSON.parse(rowNumber18);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row20
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting19").then((rowNumber19) => {
+
+                    rowNum20 = JSON.parse(rowNumber19);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row21
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting20").then((rowNumber20) => {
+
+                    rowNum21 = JSON.parse(rowNumber20);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row22
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting21").then((rowNumber21) => {
+
+                    rowNum22 = JSON.parse(rowNumber21);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+
+            //GET row23
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting22").then((rowNumber22) => {
+
+                    rowNum23 = JSON.parse(rowNumber22);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row24
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting23").then((rowNumber23) => {
+
+                    rowNum24 = JSON.parse(rowNumber23);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row25
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting24").then((rowNumber24) => {
+
+                    rowNum25 = JSON.parse(rowNumber24);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row26
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting25").then((rowNumber25) => {
+
+                    rowNum26 = JSON.parse(rowNumber25);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row27
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting26").then((rowNumber26) => {
+
+                    rowNum27 = JSON.parse(rowNumber26);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row28
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting27").then((rowNumber27) => {
+
+                    rowNum28 = JSON.parse(rowNumber27);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row29
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting28").then((rowNumber28) => {
+
+                    rowNum29 = JSON.parse(rowNumber28);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row30
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting29").then((rowNumber29) => {
+
+                    rowNum30 = JSON.parse(rowNumber29);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row31
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting30").then((rowNumber30) => {
+
+                    rowNum31 = JSON.parse(rowNumber30);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row32
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting31").then((rowNumber31) => {
+
+                    rowNum32 = JSON.parse(rowNumber31);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row33
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting32").then((rowNumber32) => {
+
+                    rowNum33 = JSON.parse(rowNumber32);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row34
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting33").then((rowNumber33) => {
+
+                    rowNum34 = JSON.parse(rowNumber33);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row35
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting34").then((rowNumber34) => {
+
+                    rowNum35 = JSON.parse(rowNumber34);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row36
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting35").then((rowNumber35) => {
+
+                    rowNum36 = JSON.parse(rowNumber35);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row37
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting36").then((rowNumber36) => {
+
+                    rowNum37 = JSON.parse(rowNumber36);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row38
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting37").then((rowNumber37) => {
+
+                    rowNum38 = JSON.parse(rowNumber37);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row39
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting38").then((rowNumber38) => {
+
+                    rowNum39 = JSON.parse(rowNumber38);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row40
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting39").then((rowNumber39) => {
+
+                    rowNum40 = JSON.parse(rowNumber39);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row41
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting40").then((rowNumber40) => {
+
+                    rowNum41 = JSON.parse(rowNumber40);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row42
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting41").then((rowNumber41) => {
+
+                    rowNum42 = JSON.parse(rowNumber41);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row42
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting42").then((rowNumber42) => {
+
+                    rowNum43 = JSON.parse(rowNumber42);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row43
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting43").then((rowNumber43) => {
+
+                    rowNum44 = JSON.parse(rowNumber43);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row44
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting44").then((rowNumber44) => {
+
+                    rowNum45 = JSON.parse(rowNumber44);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row45
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting45").then((rowNumber45) => {
+
+                    rowNum46 = JSON.parse(rowNumber45);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row46
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting46").then((rowNumber46) => {
+
+                    rowNum47 = JSON.parse(rowNumber46);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row47
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting47").then((rowNumber47) => {
+
+                    rowNum48 = JSON.parse(rowNumber47);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row48
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting48").then((rowNumber48) => {
+
+                    rowNum49 = JSON.parse(rowNumber48);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row49
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting49").then((rowNumber49) => {
+
+                    rowNum50 = JSON.parse(rowNumber49);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row50
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting50").then((rowNumber50) => {
+
+                    rowNum51 = JSON.parse(rowNumber50);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row51
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting51").then((rowNumber51) => {
+
+                    rowNum52 = JSON.parse(rowNumber51);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row52
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting52").then((rowNumber52) => {
+
+                    rowNum53 = JSON.parse(rowNumber52);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row53
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting53").then((rowNumber53) => {
+
+                    rowNum54 = JSON.parse(rowNumber53);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row54
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting54").then((rowNumber54) => {
+
+                    rowNum55 = JSON.parse(rowNumber54);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row55
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting55").then((rowNumber55) => {
+
+                    rowNum56 = JSON.parse(rowNumber55);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row56
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting56").then((rowNumber56) => {
+
+                    rowNum57 = JSON.parse(rowNumber56);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row57
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting57").then((rowNumber57) => {
+
+                    rowNum58 = JSON.parse(rowNumber57);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row58
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting58").then((rowNumber58) => {
+
+                    rowNum59 = JSON.parse(rowNumber58);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row59
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting59").then((rowNumber59) => {
+
+                    rowNum60 = JSON.parse(rowNumber59);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+            //GET row60
+            try {
+
+                AsyncStorage.getItem(type + "" + "rowNumberScouting60").then((rowNumber60) => {
+
+                    rowNum61 = JSON.parse(rowNumber60);
+
+                }).done();
+
+            } catch (error) {
+
+            }
+
+            //END
+
+
+
             try {
 
                 AsyncStorage.getItem(type + "" + "ScoutingYes").then((dataEntered) => {
@@ -534,10 +1287,458 @@ export default class Home extends Component {
 
                     scouting11th = JSON.parse(dataEntered10);
 
-                    this.navigateToScreens();
 
                 }).done();
 
+                AsyncStorage.getItem(type + "" + "Scouting11Yes").then((dataEntered11) => {
+
+                    console.log("12th:  " + JSON.parse(dataEntered11));
+
+                    scouting12th = JSON.parse(dataEntered11);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting12Yes").then((dataEntered12) => {
+
+                    console.log("13th:  " + JSON.parse(dataEntered12));
+
+                    scouting13th = JSON.parse(dataEntered12);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting13Yes").then((dataEntered13) => {
+
+                    console.log("14th:  " + JSON.parse(dataEntered13));
+
+                    scouting14th = JSON.parse(dataEntered13);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting14Yes").then((dataEntered14) => {
+
+                    console.log("15th:  " + JSON.parse(dataEntered14));
+
+                    scouting15th = JSON.parse(dataEntered14);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting15Yes").then((dataEntered15) => {
+
+                    console.log("16th:  " + JSON.parse(dataEntered15));
+
+                    scouting16th = JSON.parse(dataEntered15);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting16Yes").then((dataEntered16) => {
+
+                    console.log("17th:  " + JSON.parse(dataEntered16));
+
+                    scouting17th = JSON.parse(dataEntered16);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting17Yes").then((dataEntered17) => {
+
+                    console.log("18th:  " + JSON.parse(dataEntered17));
+
+                    scouting18th = JSON.parse(dataEntered17);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting18Yes").then((dataEntered18) => {
+
+                    console.log("19th:  " + JSON.parse(dataEntered18));
+
+                    scouting19th = JSON.parse(dataEntered18);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting19Yes").then((dataEntered19) => {
+
+                    console.log("20th:  " + JSON.parse(dataEntered19));
+
+                    scouting20th = JSON.parse(dataEntered19);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting20Yes").then((dataEntered20) => {
+
+                    console.log("21th:  " + JSON.parse(dataEntered20));
+
+                    scouting21th = JSON.parse(dataEntered20);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting21Yes").then((dataEntered21) => {
+
+                    console.log("22th:  " + JSON.parse(dataEntered21));
+
+                    scouting22th = JSON.parse(dataEntered21);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting22Yes").then((dataEntered22) => {
+
+                    console.log("23th:  " + JSON.parse(dataEntered22));
+
+                    scouting23th = JSON.parse(dataEntered22);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting23Yes").then((dataEntered23) => {
+
+                    console.log("24th:  " + JSON.parse(dataEntered23));
+
+                    scouting24th = JSON.parse(dataEntered23);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting24Yes").then((dataEntered24) => {
+
+                    console.log("25th:  " + JSON.parse(dataEntered24));
+
+                    scouting25th = JSON.parse(dataEntered24);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting25Yes").then((dataEntered25) => {
+
+                    console.log("26th:  " + JSON.parse(dataEntered25));
+
+                    scouting26th = JSON.parse(dataEntered25);
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting26Yes").then((dataEntered26) => {
+
+                    console.log("27th:  " + JSON.parse(dataEntered26));
+
+                    scouting27th = JSON.parse(dataEntered26);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting27Yes").then((dataEntered27) => {
+
+                    console.log("28th:  " + JSON.parse(dataEntered27));
+
+                    scouting28th = JSON.parse(dataEntered27);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting28Yes").then((dataEntered28) => {
+
+                    console.log("29th:  " + JSON.parse(dataEntered28));
+
+                    scouting29th = JSON.parse(dataEntered28);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting29Yes").then((dataEntered29) => {
+
+                    console.log("30th:  " + JSON.parse(dataEntered29));
+
+                    scouting30th = JSON.parse(dataEntered29);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting30Yes").then((dataEntered30) => {
+
+                    console.log("31th:  " + JSON.parse(dataEntered30));
+
+                    scouting31th = JSON.parse(dataEntered30);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting31Yes").then((dataEntered31) => {
+
+                    console.log("32th:  " + JSON.parse(dataEntered31));
+
+                    scouting32th = JSON.parse(dataEntered31);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting32Yes").then((dataEntered32) => {
+
+                    console.log("33th:  " + JSON.parse(dataEntered32));
+
+                    scouting33th = JSON.parse(dataEntered32);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting33Yes").then((dataEntered33) => {
+
+                    console.log("34th:  " + JSON.parse(dataEntered33));
+
+                    scouting34th = JSON.parse(dataEntered33);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting34Yes").then((dataEntered34) => {
+
+                    console.log("35th:  " + JSON.parse(dataEntered34));
+
+                    scouting35th = JSON.parse(dataEntered34);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting35Yes").then((dataEntered35) => {
+
+                    console.log("36th:  " + JSON.parse(dataEntered35));
+
+                    scouting36th = JSON.parse(dataEntered35);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting36Yes").then((dataEntered36) => {
+
+                    console.log("37th:  " + JSON.parse(dataEntered36));
+
+                    scouting37th = JSON.parse(dataEntered36);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting37Yes").then((dataEntered37) => {
+
+                    console.log("38th:  " + JSON.parse(dataEntered37));
+
+                    scouting38th = JSON.parse(dataEntered37);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting38Yes").then((dataEntered38) => {
+
+                    console.log("39th:  " + JSON.parse(dataEntered38));
+
+                    scouting39th = JSON.parse(dataEntered38);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting39Yes").then((dataEntered39) => {
+
+                    console.log("40th:  " + JSON.parse(dataEntered39));
+
+                    scouting40th = JSON.parse(dataEntered39);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting40Yes").then((dataEntered40) => {
+
+                    console.log("41th:  " + JSON.parse(dataEntered40));
+
+                    scouting41th = JSON.parse(dataEntered40);
+
+                  
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting41Yes").then((dataEntered41) => {
+
+                    console.log("42th:  " + JSON.parse(dataEntered41));
+
+                    scouting42th = JSON.parse(dataEntered41);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting42Yes").then((dataEntered43) => {
+
+                    console.log("43th:  " + JSON.parse(dataEntered43));
+
+                    scouting43th = JSON.parse(dataEntered43);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting43Yes").then((dataEntered42) => {
+
+                    console.log("44th:  " + JSON.parse(dataEntered42));
+
+                    scouting44th = JSON.parse(dataEntered42);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting44Yes").then((dataEntered44) => {
+
+                    console.log("45th:  " + JSON.parse(dataEntered44));
+
+                    scouting45th = JSON.parse(dataEntered44);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting45Yes").then((dataEntered45) => {
+
+                    console.log("46th:  " + JSON.parse(dataEntered45));
+
+                    scouting46th = JSON.parse(dataEntered45);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting46Yes").then((dataEntered46) => {
+
+                    console.log("47th:  " + JSON.parse(dataEntered46));
+
+                    scouting47th = JSON.parse(dataEntered46);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting47Yes").then((dataEntered47) => {
+
+                    console.log("48th:  " + JSON.parse(dataEntered47));
+
+                    scouting48th = JSON.parse(dataEntered47);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting48Yes").then((dataEntered48) => {
+
+                    console.log("49th:  " + JSON.parse(dataEntered48));
+
+                    scouting49th = JSON.parse(dataEntered48);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting49Yes").then((dataEntered49) => {
+
+                    console.log("50th:  " + JSON.parse(dataEntered49));
+
+                    scouting50th = JSON.parse(dataEntered49);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting50Yes").then((dataEntered50) => {
+
+                    console.log("51th:  " + JSON.parse(dataEntered50));
+
+                    scouting51th = JSON.parse(dataEntered50);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting51Yes").then((dataEntered51) => {
+
+                    console.log("52th:  " + JSON.parse(dataEntered51));
+
+                    scouting52th = JSON.parse(dataEntered51);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting52Yes").then((dataEntered52) => {
+
+                    console.log("53th:  " + JSON.parse(dataEntered52));
+
+                    scouting53th = JSON.parse(dataEntered52);
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting53Yes").then((dataEntered53) => {
+
+                    console.log("54th:  " + JSON.parse(dataEntered53));
+
+                    scouting54th = JSON.parse(dataEntered53);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting54Yes").then((dataEntered54) => {
+
+                    console.log("55th:  " + JSON.parse(dataEntered54));
+
+                    scouting55th = JSON.parse(dataEntered54);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting55Yes").then((dataEntered55) => {
+
+                    console.log("56th:  " + JSON.parse(dataEntered55));
+
+                    scouting56th = JSON.parse(dataEntered55);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting56Yes").then((dataEntered56) => {
+
+                    console.log("57th:  " + JSON.parse(dataEntered56));
+
+                    scouting57th = JSON.parse(dataEntered56);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting57Yes").then((dataEntered57) => {
+
+                    console.log("58th:  " + JSON.parse(dataEntered57));
+
+                    scouting58th = JSON.parse(dataEntered57);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting58Yes").then((dataEntered58) => {
+
+                    console.log("59th:  " + JSON.parse(dataEntered58));
+
+                    scouting59th = JSON.parse(dataEntered58);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting59Yes").then((dataEntered59) => {
+
+                    console.log("60th:  " + JSON.parse(dataEntered59));
+
+                    scouting60th = JSON.parse(dataEntered59);
+
+
+                }).done();
+
+                AsyncStorage.getItem(type + "" + "Scouting60Yes").then((dataEntered60) => {
+
+                    console.log("61th:  " + JSON.parse(dataEntered60));
+
+                    scouting61th = JSON.parse(dataEntered60);
+
+                    this.navigateToScreens();
+
+                }).done();
             } catch (error) {
 
             }
@@ -577,7 +1778,482 @@ export default class Home extends Component {
 
                                                 if (scouting11th === 'Yes') {
 
-                                                    alert('Need to add more rows. Please get in touch with the developer')
+                                                    if (scouting12th === 'Yes') {
+
+                                                        if (scouting13th === 'Yes') {
+
+                                                            if (scouting14th === 'Yes') {
+
+                                                                if (scouting15th === 'Yes') {
+
+                                                                    if (scouting16th === 'Yes') {
+
+                                                                        if (scouting17th === 'Yes') {
+
+                                                                            if (scouting18th === 'Yes') {
+
+                                                                                if (scouting19th === 'Yes') {
+
+                                                                                    if (scouting20th === 'Yes') {
+
+                                                                                        if (scouting21th === 'Yes') {
+
+                                                                                            if (scouting22th === 'Yes') {
+
+                                                                                                if (scouting23th === 'Yes') {
+
+                                                                                                    if (scouting24th === 'Yes') {
+
+                                                                                                        if (scouting25th === 'Yes') {
+
+                                                                                                            if (scouting26th === 'Yes') {
+
+                                                                                                                if (scouting27th === 'Yes') {
+
+                                                                                                                    if (scouting28th === 'Yes') {
+
+                                                                                                                        if (scouting29th === 'Yes') {
+
+                                                                                                                            if (scouting30th === 'Yes') {
+
+                                                                                                                                if (scouting31th === 'Yes') {
+
+                                                                                                                                    if (scouting32th === 'Yes') {
+
+                                                                                                                                        if (scouting33th === 'Yes') {
+
+                                                                                                                                            if (scouting34th === 'Yes') {
+
+                                                                                                                                                if (scouting35th === 'Yes') {
+
+                                                                                                                                                    if (scouting36th === 'Yes') {
+
+                                                                                                                                                        if (scouting37th === 'Yes') {
+
+                                                                                                                                                            if (scouting38th === 'Yes') {
+
+                                                                                                                                                                if (scouting39th === 'Yes') {
+
+                                                                                                                                                                    if (scouting40th === 'Yes') {
+
+                                                                                                                                                                        if (scouting41th === 'Yes') {
+
+                                                                                                                                                                            if (scouting42th === 'Yes') {
+
+                                                                                                                                                                                if (scouting43th === 'Yes') {
+
+                                                                                                                                                                                    if (scouting44th === 'Yes') {
+
+                                                                                                                                                                                        if (scouting45th === 'Yes') {
+
+                                                                                                                                                                                            if (scouting46th === 'Yes') {
+
+                                                                                                                                                                                                if (scouting47th === 'Yes') {
+
+                                                                                                                                                                                                    if (scouting48th === 'Yes') {
+
+                                                                                                                                                                                                        if (scouting49th === 'Yes') {
+
+                                                                                                                                                                                                            if (scouting50th === 'Yes') {
+
+                                                                                                                                                                                                                if (scouting51th === 'Yes') {
+
+                                                                                                                                                                                                                    if (scouting52th === 'Yes') {
+
+                                                                                                                                                                                                                        if (scouting53th === 'Yes') {
+
+                                                                                                                                                                                                                            if (scouting54th === 'Yes') {
+
+                                                                                                                                                                                                                                if (scouting55th === 'Yes') {
+
+                                                                                                                                                                                                                                    if (scouting56th === 'Yes') {
+
+                                                                                                                                                                                                                                        if (scouting57th === 'Yes') {
+
+                                                                                                                                                                                                                                            if (scouting58th === 'Yes') {
+
+                                                                                                                                                                                                                                                if (scouting59th === 'Yes') {
+
+                                                                                                                                                                                                                                                    if (scouting60th === 'Yes') {
+
+                                                                                                                                                                                                                                                        if (scouting61th === 'Yes') {
+
+                                                                                                                                                                                                                                                            alert('Need to add more rows. Please get in touch with the developer')
+
+
+                                                                                                                                                                                                                                                        } else {
+
+                                                                                                                                                                                                                                                            this.props.navigation.push('Scouting60', { startNumber: rowNum60, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                                                        }
+
+
+                                                                                                                                                                                                                                                    } else {
+
+                                                                                                                                                                                                                                                        this.props.navigation.push('Scouting59', { startNumber: rowNum59, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                                                    }
+
+
+                                                                                                                                                                                                                                                } else {
+
+                                                                                                                                                                                                                                                    this.props.navigation.push('Scouting58', { startNumber: rowNum58, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                                                }
+
+
+                                                                                                                                                                                                                                            } else {
+
+                                                                                                                                                                                                                                                this.props.navigation.push('Scouting57', { startNumber: rowNum57, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                                            }
+
+
+                                                                                                                                                                                                                                        } else {
+
+                                                                                                                                                                                                                                            this.props.navigation.push('Scouting56', { startNumber: rowNum56, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                                        }
+
+
+                                                                                                                                                                                                                                    } else {
+
+                                                                                                                                                                                                                                        this.props.navigation.push('Scouting55', { startNumber: rowNum55, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                                    }
+
+
+                                                                                                                                                                                                                                } else {
+
+                                                                                                                                                                                                                                    this.props.navigation.push('Scouting54', { startNumber: rowNum54, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                                }
+
+
+                                                                                                                                                                                                                            } else {
+
+                                                                                                                                                                                                                                this.props.navigation.push('Scouting53', { startNumber: rowNum53, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                            }
+
+
+                                                                                                                                                                                                                        } else {
+
+                                                                                                                                                                                                                            this.props.navigation.push('Scouting52', { startNumber: rowNum52, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                        }
+
+
+                                                                                                                                                                                                                    } else {
+
+                                                                                                                                                                                                                        this.props.navigation.push('Scouting51', { startNumber: rowNum51, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                    }
+
+
+                                                                                                                                                                                                                } else {
+
+                                                                                                                                                                                                                    this.props.navigation.push('Scouting50', { startNumber: rowNum50, inter: intervalNumber })
+
+
+                                                                                                                                                                                                                }
+
+
+                                                                                                                                                                                                            } else {
+
+                                                                                                                                                                                                                this.props.navigation.push('Scouting49', { startNumber: rowNum49, inter: intervalNumber })
+
+
+                                                                                                                                                                                                            }
+
+
+                                                                                                                                                                                                        } else {
+
+                                                                                                                                                                                                            this.props.navigation.push('Scouting48', { startNumber: rowNum48, inter: intervalNumber })
+
+
+                                                                                                                                                                                                        }
+
+
+                                                                                                                                                                                                    } else {
+
+                                                                                                                                                                                                        this.props.navigation.push('Scouting47', { startNumber: rowNum47, inter: intervalNumber })
+
+
+                                                                                                                                                                                                    }
+
+
+                                                                                                                                                                                                } else {
+
+                                                                                                                                                                                                    this.props.navigation.push('Scouting46', { startNumber: rowNum46, inter: intervalNumber })
+
+
+                                                                                                                                                                                                }
+
+
+                                                                                                                                                                                            } else {
+
+                                                                                                                                                                                                this.props.navigation.push('Scouting45', { startNumber: rowNum45, inter: intervalNumber })
+
+
+                                                                                                                                                                                            }
+
+
+                                                                                                                                                                                        } else {
+
+                                                                                                                                                                                            this.props.navigation.push('Scouting44', { startNumber: rowNum44, inter: intervalNumber })
+
+
+                                                                                                                                                                                        }
+
+
+                                                                                                                                                                                    } else {
+
+                                                                                                                                                                                        this.props.navigation.push('Scouting43', { startNumber: rowNum43, inter: intervalNumber })
+
+
+                                                                                                                                                                                    }
+
+
+                                                                                                                                                                                } else {
+
+                                                                                                                                                                                    this.props.navigation.push('Scouting42', { startNumber: rowNum42, inter: intervalNumber })
+                                                                                                                                                                                }
+
+
+                                                                                                                                                                            } else {
+
+                                                                                                                                                                                this.props.navigation.push('Scouting41', { startNumber: rowNum41, inter: intervalNumber })
+
+
+                                                                                                                                                                            }
+
+
+                                                                                                                                                                        } else {
+
+                                                                                                                                                                            this.props.navigation.push('Scouting40', { startNumber: rowNum40, inter: intervalNumber })
+
+
+                                                                                                                                                                        }
+
+
+                                                                                                                                                                    } else {
+
+                                                                                                                                                                        this.props.navigation.push('Scouting39', { startNumber: rowNum39, inter: intervalNumber })
+
+
+                                                                                                                                                                    }
+
+
+                                                                                                                                                                } else {
+
+                                                                                                                                                                    this.props.navigation.push('Scouting38', { startNumber: rowNum38, inter: intervalNumber })
+
+
+                                                                                                                                                                }
+
+
+                                                                                                                                                            } else {
+
+                                                                                                                                                                this.props.navigation.push('Scouting37', { startNumber: rowNum37, inter: intervalNumber })
+
+
+                                                                                                                                                            }
+
+
+                                                                                                                                                        } else {
+
+                                                                                                                                                            this.props.navigation.push('Scouting36', { startNumber: rowNum36, inter: intervalNumber })
+                                                                                                                                                        }
+
+
+                                                                                                                                                    } else {
+
+                                                                                                                                                        this.props.navigation.push('Scouting35', { startNumber: rowNum35, inter: intervalNumber })
+
+
+                                                                                                                                                    }
+
+
+                                                                                                                                                } else {
+
+                                                                                                                                                    this.props.navigation.push('Scouting34', { startNumber: rowNum34, inter: intervalNumber })
+
+
+                                                                                                                                                }
+
+
+                                                                                                                                            } else {
+
+                                                                                                                                                this.props.navigation.push('Scouting33', { startNumber: rowNum33, inter: intervalNumber })
+
+
+                                                                                                                                            }
+
+
+                                                                                                                                        } else {
+
+                                                                                                                                            this.props.navigation.push('Scouting32', { startNumber: rowNum32, inter: intervalNumber })
+
+
+                                                                                                                                        }
+
+
+                                                                                                                                    } else {
+
+                                                                                                                                        this.props.navigation.push('Scouting31', { startNumber: rowNum31, inter: intervalNumber })
+
+
+                                                                                                                                    }
+
+
+                                                                                                                                } else {
+
+                                                                                                                                    this.props.navigation.push('Scouting30', { startNumber: rowNum30, inter: intervalNumber })
+
+
+                                                                                                                                }
+
+
+                                                                                                                            } else {
+
+                                                                                                                                this.props.navigation.push('Scouting29', { startNumber: rowNum29, inter: intervalNumber })
+
+
+                                                                                                                            }
+
+
+                                                                                                                        } else {
+
+                                                                                                                            this.props.navigation.push('Scouting28', { startNumber: rowNum28, inter: intervalNumber })
+
+
+                                                                                                                        }
+
+
+                                                                                                                    } else {
+
+                                                                                                                        this.props.navigation.push('Scouting27', { startNumber: rowNum27, inter: intervalNumber })
+
+
+                                                                                                                    }
+
+
+                                                                                                                } else {
+
+                                                                                                                    this.props.navigation.push('Scouting26', { startNumber: rowNum26, inter: intervalNumber })
+
+
+                                                                                                                }
+
+
+                                                                                                            } else {
+
+                                                                                                                this.props.navigation.push('Scouting25', { startNumber: rowNum25, inter: intervalNumber })
+
+
+                                                                                                            }
+
+
+                                                                                                        } else {
+
+                                                                                                            this.props.navigation.push('Scouting24', { startNumber: rowNum24, inter: intervalNumber })
+
+
+                                                                                                        }
+
+
+                                                                                                    } else {
+
+                                                                                                        this.props.navigation.push('Scouting23', { startNumber: rowNum23, inter: intervalNumber })
+
+
+                                                                                                    }
+                                                                                                } else {
+
+                                                                                                    this.props.navigation.push('Scouting22', { startNumber: rowNum22, inter: intervalNumber })
+
+
+                                                                                                }
+                                                                                            } else {
+
+                                                                                                this.props.navigation.push('Scouting21', { startNumber: rowNum21, inter: intervalNumber })
+
+
+                                                                                            }
+
+                                                                                        } else {
+
+                                                                                            this.props.navigation.push('Scouting20', { startNumber: rowNum20, inter: intervalNumber })
+
+
+                                                                                        }
+
+                                                                                    } else {
+
+                                                                                        this.props.navigation.push('Scouting19', { startNumber: rowNum19, inter: intervalNumber })
+
+
+                                                                                    }
+
+                                                                                } else {
+
+                                                                                    this.props.navigation.push('Scouting18', { startNumber: rowNum18, inter: intervalNumber })
+
+                                                                                }
+
+                                                                            } else {
+
+                                                                                this.props.navigation.push('Scouting17', { startNumber: rowNum17, inter: intervalNumber })
+
+                                                                            }
+
+                                                                        } else {
+
+                                                                            this.props.navigation.push('Scouting16', { startNumber: rowNum16, inter: intervalNumber })
+
+                                                                        }
+
+                                                                    } else {
+
+                                                                        this.props.navigation.push('Scouting15', { startNumber: rowNum15, inter: intervalNumber })
+
+                                                                    }
+
+                                                                } else {
+
+                                                                    this.props.navigation.push('Scouting14', { startNumber: rowNum14, inter: intervalNumber })
+
+                                                                }
+
+
+                                                            } else {
+
+                                                                this.props.navigation.push('Scouting13', { startNumber: rowNum13, inter: intervalNumber })
+
+                                                            }
+
+                                                        } else {
+
+                                                            this.props.navigation.push('Scouting12', { startNumber: rowNum12, inter: intervalNumber })
+
+                                                        }
+
+                                                    } else {
+
+                                                        this.props.navigation.push('Scouting11', { startNumber: rowNum11, inter: intervalNumber })
+
+                                                    }
 
                                                 } else {
 
@@ -826,7 +2502,6 @@ export default class Home extends Component {
                                     { label: 'Plant Head', value: 'Plant Head' },
                                     { label: 'Plant Middle', value: 'Plant Middle' },
                                     { label: 'Plant Ground', value: 'Plant Ground' }
-                                    
                                 ]}
                                 placeholder=""
                                 containerStyle={{ height: 50 }}
