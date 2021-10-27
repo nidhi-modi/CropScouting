@@ -728,7 +728,7 @@ export default class Home extends Component {
                                 items={[
                                     { label: 'Chaminda Perera', value: 'Chaminda Perera' },
                                     { label: 'Nicholas Wallace', value: 'Nicholas Wallace' },
-                                    { label: 'Chris Cowie', value: 'Chris Cowie' },
+                                    { label: 'Chris Cowie', value: 'Chris Cowie' }
 
                                 ]}
                                 placeholder=""
@@ -825,9 +825,8 @@ export default class Home extends Component {
                                 items={[
                                     { label: 'Plant Head', value: 'Plant Head' },
                                     { label: 'Plant Middle', value: 'Plant Middle' },
-                                    { label: 'Plant Ground', value: 'Plant Ground' },
+                                    { label: 'Plant Ground', value: 'Plant Ground' }
                                     
-
                                 ]}
                                 placeholder=""
                                 containerStyle={{ height: 50 }}
