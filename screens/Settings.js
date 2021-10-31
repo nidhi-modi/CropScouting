@@ -44,7 +44,7 @@ export default class Settings extends Component {
             column4: '',
             rows: '',
             intervals: '',
-            
+
         };
 
 
@@ -283,72 +283,215 @@ export default class Settings extends Component {
 
                                     <View style={styles.marginBetweenTextTop}></View>
 
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'default'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'column1')}
-                                            blurOnSubmit={true}
-                                            value={this.state.column1}
+                                    <View
+                                        style={{
+
+                                            // The solution: Apply zIndex to any device except Android
+                                            ...(Platform.OS !== 'android' && {
+                                                zIndex: 10
+                                            })
+
+                                        }}
+                                    >
+                                        <DropDownPicker
+
+
+                                            items={[
+                                                { label: 'Psyllid', value: 'Psyllid' },
+                                                { label: 'Whitefly Adults', value: 'Whitefly Adults' },
+                                                { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
+                                                { label: 'Encarsia Scale', value: 'Encarsia Scale' },
+                                                { label: 'Engytatus', value: 'Engytatus' },
+                                                { label: 'Lacewing', value: 'Lacewing' },
+                                                { label: 'Yellow Heads', value: 'Yellow Heads' },
+                                                { label: 'Botrytis', value: 'Botrytis' },
+                                                { label: 'Disease Plants', value: 'Disease Plants' },
+                                                { label: 'Russet Mite', value: 'Russet Mite' },
+                                                { label: 'Caterpillar', value: 'Caterpillar' },
+                                                { label: 'Butterfly', value: 'Butterfly' },
+                                            ]}
+                                            placeholder=""
+                                            containerStyle={{ height: 50 }}
+                                            style={{
+                                                borderColor: '#F1EEEC',
+                                                borderWidth: 1,
+                                            }}
+                                            itemStyle={{
+                                                justifyContent: 'flex-start'
+                                            }}
+                                            labelStyle={{
+                                                fontSize: 14,
+                                                textAlign: 'left',
+                                                color: '#000000',
+
+
+                                            }}
+                                            dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                            onChangeItem={(item) => this.updateTextInput(item.value, 'column1')}
+                                            defaultValue={this.state.column1}
+
+
+                                        />
+                                    </View>
+
+
+                                    <View style={styles.marginBetweenTextTop}></View>
+
+                                    <View
+                                        style={{
+
+                                            // The solution: Apply zIndex to any device except Android
+                                            ...(Platform.OS !== 'android' && {
+                                                zIndex: 20
+                                            })
+
+                                        }}
+                                    >
+                                        <DropDownPicker
+
+
+                                            items={[
+                                                { label: 'Psyllid', value: 'Psyllid' },
+                                                { label: 'Whitefly Adults', value: 'Whitefly Adults' },
+                                                { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
+                                                { label: 'Encarsia Scale', value: 'Encarsia Scale' },
+                                                { label: 'Engytatus', value: 'Engytatus' },
+                                                { label: 'Lacewing', value: 'Lacewing' },
+                                                { label: 'Yellow Heads', value: 'Yellow Heads' },
+                                                { label: 'Botrytis', value: 'Botrytis' },
+                                                { label: 'Disease Plants', value: 'Disease Plants' },
+                                                { label: 'Russet Mite', value: 'Russet Mite' },
+                                                { label: 'Caterpillar', value: 'Caterpillar' },
+                                                { label: 'Butterfly', value: 'Butterfly' },
+                                            ]}
+                                            placeholder=""
+                                            containerStyle={{ height: 50 }}
+                                            style={{
+                                                borderColor: '#F1EEEC',
+                                                borderWidth: 1,
+                                            }}
+                                            itemStyle={{
+                                                justifyContent: 'flex-start'
+                                            }}
+                                            labelStyle={{
+                                                fontSize: 14,
+                                                textAlign: 'left',
+                                                color: '#000000',
+
+
+                                            }}
+                                            dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                            onChangeItem={(item) => this.updateTextInput(item.value, 'column2')}
+                                            defaultValue={this.state.column2}
+
+
                                         />
                                     </View>
 
                                     <View style={styles.marginBetweenTextTop}></View>
 
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'default'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'column2')}
-                                            blurOnSubmit={true}
-                                            value={this.state.column2}
+                                    <View
+                                        style={{
+
+                                            // The solution: Apply zIndex to any device except Android
+                                            ...(Platform.OS !== 'android' && {
+                                                zIndex: 30
+                                            })
+
+                                        }}
+                                    >
+                                        <DropDownPicker
+
+
+                                            items={[
+                                                { label: 'Psyllid', value: 'Psyllid' },
+                                                { label: 'Whitefly Adults', value: 'Whitefly Adults' },
+                                                { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
+                                                { label: 'Encarsia Scale', value: 'Encarsia Scale' },
+                                                { label: 'Engytatus', value: 'Engytatus' },
+                                                { label: 'Lacewing', value: 'Lacewing' },
+                                                { label: 'Yellow Heads', value: 'Yellow Heads' },
+                                                { label: 'Botrytis', value: 'Botrytis' },
+                                                { label: 'Disease Plants', value: 'Disease Plants' },
+                                                { label: 'Russet Mite', value: 'Russet Mite' },
+                                                { label: 'Caterpillar', value: 'Caterpillar' },
+                                                { label: 'Butterfly', value: 'Butterfly' },
+                                            ]}
+                                            placeholder=""
+                                            containerStyle={{ height: 50 }}
+                                            style={{
+                                                borderColor: '#F1EEEC',
+                                                borderWidth: 1,
+                                            }}
+                                            itemStyle={{
+                                                justifyContent: 'flex-start'
+                                            }}
+                                            labelStyle={{
+                                                fontSize: 14,
+                                                textAlign: 'left',
+                                                color: '#000000',
+
+
+                                            }}
+                                            dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                            onChangeItem={(item) => this.updateTextInput(item.value, 'column3')}
+                                            defaultValue={this.state.column3}
+
 
                                         />
-
                                     </View>
 
                                     <View style={styles.marginBetweenTextTop}></View>
 
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'default'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'column3')}
-                                            blurOnSubmit={true}
-                                            value={this.state.column3}
+                                    <View
+                                        style={{
+
+                                            // The solution: Apply zIndex to any device except Android
+                                            ...(Platform.OS !== 'android' && {
+                                                zIndex: 40
+                                            })
+
+                                        }}
+                                    >
+                                        <DropDownPicker
+
+
+                                            items={[
+                                                { label: 'Psyllid', value: 'Psyllid' },
+                                                { label: 'Whitefly Adults', value: 'Whitefly Adults' },
+                                                { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
+                                                { label: 'Encarsia Scale', value: 'Encarsia Scale' },
+                                                { label: 'Engytatus', value: 'Engytatus' },
+                                                { label: 'Lacewing', value: 'Lacewing' },
+                                                { label: 'Yellow Heads', value: 'Yellow Heads' },
+                                                { label: 'Botrytis', value: 'Botrytis' },
+                                                { label: 'Disease Plants', value: 'Disease Plants' },
+                                                { label: 'Russet Mite', value: 'Russet Mite' },
+                                                { label: 'Caterpillar', value: 'Caterpillar' },
+                                                { label: 'Butterfly', value: 'Butterfly' },
+                                            ]}
+                                            placeholder=""
+                                            containerStyle={{ height: 50 }}
+                                            style={{
+                                                borderColor: '#F1EEEC',
+                                                borderWidth: 1,
+                                            }}
+                                            itemStyle={{
+                                                justifyContent: 'flex-start'
+                                            }}
+                                            labelStyle={{
+                                                fontSize: 14,
+                                                textAlign: 'left',
+                                                color: '#000000',
+
+
+                                            }}
+                                            dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                            onChangeItem={(item) => this.updateTextInput(item.value, 'column4')}
+                                            defaultValue={this.state.column4}
+
 
                                         />
-
-                                    </View>
-
-                                    <View style={styles.marginBetweenTextTop}></View>
-
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            returnKeyType={'done'}
-                                            enablesReturnKeyAutomatically={true}
-                                            editable={true}
-                                            keyboardType={'default'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'column4')}
-                                            blurOnSubmit={true}
-                                            value={this.state.column4}
-
-                                        />
-
                                     </View>
 
 
