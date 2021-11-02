@@ -228,6 +228,7 @@ export default class Settings extends Component {
 
                                     items={[
                                         /*{ label: 'Psyllid', value: 'Psyllid' },
+                                          { label: 'Sick Plants', value: 'Sick Plants' },
                                         { label: 'Whitefly Adults', value: 'Whitefly Adults' },
                                         { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
                                         { label: 'Encarsia Scale', value: 'Encarsia Scale' },
@@ -298,6 +299,7 @@ export default class Settings extends Component {
 
                                             items={[
                                                 { label: 'Psyllid', value: 'Psyllid' },
+                                                { label: 'Sick Plants', value: 'Sick Plants' },
                                                 { label: 'Whitefly Adults', value: 'Whitefly Adults' },
                                                 { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
                                                 { label: 'Encarsia Scale', value: 'Encarsia Scale' },
@@ -352,6 +354,7 @@ export default class Settings extends Component {
 
                                             items={[
                                                 { label: 'Psyllid', value: 'Psyllid' },
+                                                { label: 'Sick Plants', value: 'Sick Plants' },
                                                 { label: 'Whitefly Adults', value: 'Whitefly Adults' },
                                                 { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
                                                 { label: 'Encarsia Scale', value: 'Encarsia Scale' },
@@ -405,6 +408,7 @@ export default class Settings extends Component {
 
                                             items={[
                                                 { label: 'Psyllid', value: 'Psyllid' },
+                                                { label: 'Sick Plants', value: 'Sick Plants' },
                                                 { label: 'Whitefly Adults', value: 'Whitefly Adults' },
                                                 { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
                                                 { label: 'Encarsia Scale', value: 'Encarsia Scale' },
@@ -458,6 +462,7 @@ export default class Settings extends Component {
 
                                             items={[
                                                 { label: 'Psyllid', value: 'Psyllid' },
+                                                { label: 'Sick Plants', value: 'Sick Plants' },
                                                 { label: 'Whitefly Adults', value: 'Whitefly Adults' },
                                                 { label: 'Whitefly Nymphs', value: 'Whitefly Nymphs' },
                                                 { label: 'Encarsia Scale', value: 'Encarsia Scale' },
