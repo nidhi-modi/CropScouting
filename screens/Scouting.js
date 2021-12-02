@@ -47,6 +47,7 @@ export default class Scouting extends Component {
 
             rowNumberScouting: '',
             intervals: '',
+            noRows: '',
             scoutingType: '',
             weekNum: '',
             header1Scouting: '',
@@ -54,71 +55,71 @@ export default class Scouting extends Component {
             header3Scouting: '',
             header4Scouting: '',
 
-            miniBay1Scouting: 'A',
+            miniBay1Scouting: '',
             bay1Text1Scouting: '',
             bay1Text2Scouting: '',
             bay1Text3Scouting: '',
             bay1Text4Scouting: '',
 
-            miniBay2Scouting: 'B-D',
+            miniBay2Scouting: '',
             bay2Text1Scouting: '',
             bay2Text2Scouting: '',
             bay2Text3Scouting: '',
             bay2Text4Scouting: '',
 
-            miniBay3Scouting: 'E-G',
+            miniBay3Scouting: '',
             bay3Text1Scouting: '',
             bay3Text2Scouting: '',
             bay3Text3Scouting: '',
             bay3Text4Scouting: '',
 
-            miniBay4Scouting: 'H-J',
+            miniBay4Scouting: '',
             bay4Text1Scouting: '',
             bay4Text2Scouting: '',
             bay4Text3Scouting: '',
             bay4Text4Scouting: '',
 
-            miniBay5Scouting: 'K-M',
+            miniBay5Scouting: '',
             bay5Text1Scouting: '',
             bay5Text2Scouting: '',
             bay5Text3Scouting: '',
             bay5Text4Scouting: '',
 
-            miniBay6Scouting: 'N-P',
+            miniBay6Scouting: '',
             bay6Text1Scouting: '',
             bay6Text2Scouting: '',
             bay6Text3Scouting: '',
             bay6Text4Scouting: '',
 
-            miniBay7Scouting: 'Q-T',
+            miniBay7Scouting: '',
             bay7Text1Scouting: '',
             bay7Text2Scouting: '',
             bay7Text3Scouting: '',
             bay7Text4Scouting: '',
 
 
-            miniBay8Scouting: 'U-V',
+            miniBay8Scouting: '',
             bay8Text1Scouting: '',
             bay8Text2Scouting: '',
             bay8Text3Scouting: '',
             bay8Text4Scouting: '',
 
 
-            miniBay9Scouting: 'W',
+            miniBay9Scouting: '',
             bay9Text1Scouting: '',
             bay9Text2Scouting: '',
             bay9Text3Scouting: '',
             bay9Text4Scouting: '',
 
 
-            miniBay10Scouting: 'X',
+            miniBay10Scouting: '',
             bay10Text1Scouting: '',
             bay10Text2Scouting: '',
             bay10Text3Scouting: '',
             bay10Text4Scouting: '',
 
 
-            miniBay11Scouting: 'Y-Z',
+            miniBay11Scouting: '',
             bay11Text1Scouting: '',
             bay11Text2Scouting: '',
             bay11Text3Scouting: '',
@@ -191,7 +192,17 @@ export default class Scouting extends Component {
                 var opt1 = JSON.parse(text1Value);
                 this.setState({ scoutingType: opt1 });
 
+                try {
+                    AsyncStorage.getItem("rows" + opt1).then((textRows) => {
+                        var optRows = JSON.parse(textRows);
+                        this.setState({ noRows: optRows });
 
+                        this.setUpMiniBays();
+
+                    }).done();
+                } catch (error) {
+
+                }
 
                 try {
 
@@ -280,6 +291,169 @@ export default class Scouting extends Component {
 
     }
 
+    setUpMiniBays = () => {
+
+        var arrayRows = this.state.noRows
+        var list = [];
+        for (var i = 1; i <= arrayRows; i++) {
+            list.push(i);
+
+        }
+        //miniBay1Scouting
+
+        if (!list.length) {
+
+            alert('Please enter number of bays in the settings page')
+
+        } else {
+
+            //1
+            if (list[0] === undefined) {
+
+                this.setState({ miniBay1Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay1Scouting: list[0] })
+
+
+            }
+
+            //2
+            if (list[1] === undefined) {
+
+                this.setState({ miniBay2Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay2Scouting: list[1] })
+
+
+            }
+
+            //3
+            if (list[2] === undefined) {
+
+                this.setState({ miniBay3Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay3Scouting: list[2] })
+
+
+            }
+
+            //4
+            if (list[3] === undefined) {
+
+                this.setState({ miniBay4Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay4Scouting: list[3] })
+
+
+            }
+
+            //5
+            if (list[4] === undefined) {
+
+                this.setState({ miniBay5Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay5Scouting: list[4] })
+
+
+            }
+
+            //6
+            if (list[5] === undefined) {
+
+                this.setState({ miniBay6Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay6Scouting: list[5] })
+
+
+            }
+            //7
+            if (list[6] === undefined) {
+
+                this.setState({ miniBay7Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay7Scouting: list[6] })
+
+
+            }
+
+            //8
+            if (list[7] === undefined) {
+
+                this.setState({ miniBay8Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay8Scouting: list[7] })
+
+
+            }
+
+            //9
+            if (list[8] === undefined) {
+
+                this.setState({ miniBay9Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay9Scouting: list[8] })
+
+
+            }
+
+            //10
+            if (list[9] === undefined) {
+
+                this.setState({ miniBay10Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay10Scouting: list[9] })
+
+
+            }
+
+            //11
+            if (list[10] === undefined) {
+
+                this.setState({ miniBay11Scouting: '' })
+
+
+            } else {
+
+                this.setState({ miniBay11Scouting: list[10] })
+
+
+            }
+
+
+        }
+
+    }
+
 
     getAsyncData(type) {
 
@@ -292,13 +466,13 @@ export default class Scouting extends Component {
 
 
                 /*if (this.state.dataEntered == 'Yes') {
-
+ 
                     this.props.navigation.push('Scouting1', { startNumber: this.state.rowNumberScouting, inter: this.state.intervals })
-
+ 
                 } else {
-
+ 
                     console.log("Data not submitted");
-
+ 
                 }*/
 
             }).done();
@@ -1254,105 +1428,27 @@ export default class Scouting extends Component {
         var h3 = this.state.header3Scouting;
         var h4 = this.state.header4Scouting;
 
+        var bay1 = this.state.miniBay1Scouting;
+        var bay2 = this.state.miniBay2Scouting;
+        var bay3 = this.state.miniBay3Scouting;
+        var bay4 = this.state.miniBay4Scouting;
+        var bay5 = this.state.miniBay5Scouting;
+        var bay6 = this.state.miniBay6Scouting;
+        var bay7 = this.state.miniBay7Scouting;
+        var bay8 = this.state.miniBay8Scouting;
+        var bay9 = this.state.miniBay9Scouting;
+        var bay10 = this.state.miniBay10Scouting;
+        var bay11 = this.state.miniBay11Scouting;
+
+
+
         console.log("H1 : " + h1 + " H2 : " + h2 + " H3 : " + h3 + " H4 : " + h4);
 
         if (h1 !== null && h2 === null && h3 === null && h4 === null || h1 !== "" && h2 === "" && h3 === "" && h4 === "") {
 
             console.log("Header 1");
 
-            if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
-
-                this.setState({ bay1Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
-
-            }
-
-            if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
-
-                this.setState({ bay2Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
-
-            }
-
-            if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
-
-                this.setState({ bay3Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
-
-            }
-
-            if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
-
-                this.setState({ bay4Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
-
-            }
-
-            if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
-
-                this.setState({ bay5Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
-
-            }
-
-            if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
-
-                this.setState({ bay6Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
-
-            }
-
-            if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
-
-                this.setState({ bay7Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
-
-            }
-
-            if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
-
-                this.setState({ bay8Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
-
-            }
-
-            if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
-
-                this.setState({ bay9Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
-
-            }
-
-            if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
-
-                this.setState({ bay10Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
-
-            }
-
-            if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
-
-                this.setState({ bay11Text1Scouting: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
-
-            }
-
-        } else {
-
-            if (h1 !== null && h2 !== null && h3 === null && h4 === null || h1 !== "" && h2 !== "" && h3 === "" && h4 === "") {
-
-                console.log("Header1 & Header 2");
+            if (bay1 !== '') {
 
                 if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
 
@@ -1361,6 +1457,9 @@ export default class Scouting extends Component {
                     this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
 
                 }
+            }
+
+            if (bay2 !== '') {
 
                 if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
 
@@ -1370,6 +1469,9 @@ export default class Scouting extends Component {
 
                 }
 
+            }
+
+            if (bay3 !== '') {
                 if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
 
                     this.setState({ bay3Text1Scouting: '0' })
@@ -1377,6 +1479,10 @@ export default class Scouting extends Component {
                     this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
 
                 }
+
+            }
+
+            if (bay4 !== '') {
 
                 if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
 
@@ -1386,6 +1492,10 @@ export default class Scouting extends Component {
 
                 }
 
+            }
+
+            if (bay5 !== '') {
+
                 if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
 
                     this.setState({ bay5Text1Scouting: '0' })
@@ -1393,6 +1503,10 @@ export default class Scouting extends Component {
                     this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
 
                 }
+
+            }
+
+            if (bay6 !== '') {
 
                 if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
 
@@ -1402,6 +1516,10 @@ export default class Scouting extends Component {
 
                 }
 
+            }
+
+            if (bay7 !== '') {
+
                 if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
 
                     this.setState({ bay7Text1Scouting: '0' })
@@ -1409,6 +1527,10 @@ export default class Scouting extends Component {
                     this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
 
                 }
+
+            }
+
+            if (bay8 !== '') {
 
                 if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
 
@@ -1418,6 +1540,10 @@ export default class Scouting extends Component {
 
                 }
 
+            }
+
+            if (bay9 !== '') {
+
                 if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
 
                     this.setState({ bay9Text1Scouting: '0' })
@@ -1425,6 +1551,10 @@ export default class Scouting extends Component {
                     this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
 
                 }
+
+            }
+
+            if (bay10 !== '') {
 
                 if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
 
@@ -1434,6 +1564,9 @@ export default class Scouting extends Component {
 
                 }
 
+            }
+
+            if (bay11 !== '') {
                 if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
 
                     this.setState({ bay11Text1Scouting: '0' })
@@ -1442,92 +1575,248 @@ export default class Scouting extends Component {
 
                 }
 
-                if (this.state.bay1Text2Scouting === null || this.state.bay1Text2Scouting === "") {
+            }
 
-                    this.setState({ bay1Text2Scouting: '0' })
+        } else {
 
-                    this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting", '0')
+            if (h1 !== null && h2 !== null && h3 === null && h4 === null || h1 !== "" && h2 !== "" && h3 === "" && h4 === "") {
 
-                }
+                console.log("Header1 & Header 2");
 
+                if (bay1 !== '') {
 
-                if (this.state.bay2Text2Scouting === null || this.state.bay2Text2Scouting === "") {
+                    if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
 
-                    this.setState({ bay2Text2Scouting: '0' })
+                        this.setState({ bay1Text1Scouting: '0' })
 
-                    this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting", '0')
+                        this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
 
-                }
-
-                if (this.state.bay3Text2Scouting === null || this.state.bay3Text2Scouting === "") {
-
-                    this.setState({ bay3Text2Scouting: '0' })
-
-                    this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting", '0')
+                    }
 
                 }
 
-                if (this.state.bay4Text2Scouting === null || this.state.bay4Text2Scouting === "") {
+                if (bay2 !== '') {
 
-                    this.setState({ bay4Text2Scouting: '0' })
+                    if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
 
-                    this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting", '0')
+                        this.setState({ bay2Text1Scouting: '0' })
 
-                }
+                        this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
 
-                if (this.state.bay5Text2Scouting === null || this.state.bay5Text2Scouting === "") {
-
-                    this.setState({ bay5Text2Scouting: '0' })
-
-                    this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting", '0')
+                    }
 
                 }
 
-                if (this.state.bay6Text2Scouting === null || this.state.bay6Text2Scouting === "") {
+                if (bay3 !== '') {
 
-                    this.setState({ bay6Text2Scouting: '0' })
+                    if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
 
-                    this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting", '0')
+                        this.setState({ bay3Text1Scouting: '0' })
 
-                }
+                        this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
 
-                if (this.state.bay7Text2Scouting === null || this.state.bay7Text2Scouting === "") {
-
-                    this.setState({ bay7Text2Scouting: '0' })
-
-                    this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting", '0')
+                    }
 
                 }
 
-                if (this.state.bay8Text2Scouting === null || this.state.bay8Text2Scouting === "") {
+                if (bay4 !== '') {
 
-                    this.setState({ bay8Text2Scouting: '0' })
+                    if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
 
-                    this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting", '0')
+                        this.setState({ bay4Text1Scouting: '0' })
 
-                }
+                        this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
 
-                if (this.state.bay9Text2Scouting === null || this.state.bay9Text2Scouting === "") {
-
-                    this.setState({ bay9Text2Scouting: '0' })
-
-                    this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting", '0')
+                    }
 
                 }
 
-                if (this.state.bay10Text2Scouting === null || this.state.bay10Text2Scouting === "") {
+                if (bay5 !== '') {
+                    if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
 
-                    this.setState({ bay10Text2Scouting: '0' })
+                        this.setState({ bay5Text1Scouting: '0' })
 
-                    this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting", '0')
+                        this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
+
+                    }
 
                 }
 
-                if (this.state.bay11Text2Scouting === null || this.state.bay11Text2Scouting === "") {
+                if (bay6 !== '') {
+                    if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
 
-                    this.setState({ bay11Text2Scouting: '0' })
+                        this.setState({ bay6Text1Scouting: '0' })
 
-                    this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting", '0')
+                        this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
+
+                    }
+
+                }
+
+                if (bay7 !== '') {
+                    if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
+
+                        this.setState({ bay7Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
+
+                    }
+
+                }
+
+                if (bay8 !== '') {
+                    if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
+
+                        this.setState({ bay8Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
+
+                    }
+
+                }
+
+                if (bay9 !== '') {
+                    if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
+
+                        this.setState({ bay9Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
+
+                    }
+                }
+
+                if (bay10 !== '') {
+                    if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
+
+                        this.setState({ bay10Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
+
+                    }
+
+                }
+
+                if (bay11 !== '') {
+                    if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
+
+                        this.setState({ bay11Text1Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
+
+                    }
+                }
+
+                if (bay1 !== '') {
+                    if (this.state.bay1Text2Scouting === null || this.state.bay1Text2Scouting === "") {
+
+                        this.setState({ bay1Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting", '0')
+
+                    }
+                }
+
+                if (bay2 !== '') {
+                    if (this.state.bay2Text2Scouting === null || this.state.bay2Text2Scouting === "") {
+
+                        this.setState({ bay2Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting", '0')
+
+                    }
+                }
+
+                if (bay3 !== '') {
+                    if (this.state.bay3Text2Scouting === null || this.state.bay3Text2Scouting === "") {
+
+                        this.setState({ bay3Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting", '0')
+
+                    }
+                }
+
+                if (bay4 !== '') {
+                    if (this.state.bay4Text2Scouting === null || this.state.bay4Text2Scouting === "") {
+
+                        this.setState({ bay4Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting", '0')
+
+                    }
+                }
+
+                if (bay5 !== '') {
+                    if (this.state.bay5Text2Scouting === null || this.state.bay5Text2Scouting === "") {
+
+                        this.setState({ bay5Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting", '0')
+
+                    }
+                }
+
+                if (bay6 !== '') {
+                    if (this.state.bay6Text2Scouting === null || this.state.bay6Text2Scouting === "") {
+
+                        this.setState({ bay6Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting", '0')
+
+                    }
+                }
+
+                if (bay7 !== '') {
+                    if (this.state.bay7Text2Scouting === null || this.state.bay7Text2Scouting === "") {
+
+                        this.setState({ bay7Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting", '0')
+
+                    }
+                }
+
+                if (bay8 !== '') {
+                    if (this.state.bay8Text2Scouting === null || this.state.bay8Text2Scouting === "") {
+
+                        this.setState({ bay8Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting", '0')
+
+                    }
+                }
+
+
+                if (bay9 !== '') {
+                    if (this.state.bay9Text2Scouting === null || this.state.bay9Text2Scouting === "") {
+
+                        this.setState({ bay9Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting", '0')
+
+                    }
+
+                }
+
+                if (bay10 !== '') {
+                    if (this.state.bay10Text2Scouting === null || this.state.bay10Text2Scouting === "") {
+
+                        this.setState({ bay10Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting", '0')
+
+                    }
+
+                }
+
+                if (bay11 !== '') {
+                    if (this.state.bay11Text2Scouting === null || this.state.bay11Text2Scouting === "") {
+
+                        this.setState({ bay11Text2Scouting: '0' })
+
+                        this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting", '0')
+
+                    }
 
                 }
 
@@ -1539,269 +1828,338 @@ export default class Scouting extends Component {
 
                     console.log("Header 1, Header 2 & Header 3");
 
-                    if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
+                    if (bay1 !== '') {
+                        if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
 
-                        this.setState({ bay1Text1Scouting: '0' })
+                            this.setState({ bay1Text1Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay2 !== '') {
+                        if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
+
+                            this.setState({ bay2Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
+
+                        }
 
                     }
 
-                    if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
+                    if (bay3 !== '') {
+                        if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
 
-                        this.setState({ bay2Text1Scouting: '0' })
+                            this.setState({ bay3Text1Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
 
+                        }
                     }
 
-                    if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
+                    if (bay4 !== '') {
+                        if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
 
-                        this.setState({ bay3Text1Scouting: '0' })
+                            this.setState({ bay4Text1Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
 
+                        }
                     }
 
-                    if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
+                    if (bay5 !== '') {
+                        if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
 
-                        this.setState({ bay4Text1Scouting: '0' })
+                            this.setState({ bay5Text1Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
 
+                        }
                     }
 
-                    if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
+                    if (bay6 !== '') {
+                        if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
 
-                        this.setState({ bay5Text1Scouting: '0' })
+                            this.setState({ bay6Text1Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
 
-                    }
-
-                    if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
-
-                        this.setState({ bay6Text1Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
-
-                    }
-
-                    if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
-
-                        this.setState({ bay7Text1Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
-
-                    }
-
-                    if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
-
-                        this.setState({ bay8Text1Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
-
-                    }
-
-                    if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
-
-                        this.setState({ bay9Text1Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
-
-                    }
-
-                    if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
-
-                        this.setState({ bay10Text1Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
-
-                    }
-
-                    if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
-
-                        this.setState({ bay11Text1Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
-
-                    }
-
-                    if (this.state.bay1Text2Scouting === null || this.state.bay1Text2Scouting === "") {
-
-                        this.setState({ bay1Text2Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting", '0')
+                        }
 
                     }
 
 
-                    if (this.state.bay2Text2Scouting === null || this.state.bay2Text2Scouting === "") {
+                    if (bay7 !== '') {
+                        if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
 
-                        this.setState({ bay2Text2Scouting: '0' })
+                            this.setState({ bay7Text1Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay8 !== '') {
+                        if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
+
+                            this.setState({ bay8Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay9 !== '') {
+                        if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
+
+                            this.setState({ bay9Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay10 !== '') {
+                        if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
+
+                            this.setState({ bay10Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay11 !== '') {
+                        if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
+
+                            this.setState({ bay11Text1Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay1 !== '') {
+                        if (this.state.bay1Text2Scouting === null || this.state.bay1Text2Scouting === "") {
+
+                            this.setState({ bay1Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay2 !== '') {
+                        if (this.state.bay2Text2Scouting === null || this.state.bay2Text2Scouting === "") {
+
+                            this.setState({ bay2Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay3 !== '') {
+                        if (this.state.bay3Text2Scouting === null || this.state.bay3Text2Scouting === "") {
+
+                            this.setState({ bay3Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay4 !== '') {
+                        if (this.state.bay4Text2Scouting === null || this.state.bay4Text2Scouting === "") {
+
+                            this.setState({ bay4Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay5 !== '') {
+                        if (this.state.bay5Text2Scouting === null || this.state.bay5Text2Scouting === "") {
+
+                            this.setState({ bay5Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay6 !== '') {
+                        if (this.state.bay6Text2Scouting === null || this.state.bay6Text2Scouting === "") {
+
+                            this.setState({ bay6Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay7 !== '') {
+                        if (this.state.bay7Text2Scouting === null || this.state.bay7Text2Scouting === "") {
+
+                            this.setState({ bay7Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay8 !== '') {
+                        if (this.state.bay8Text2Scouting === null || this.state.bay8Text2Scouting === "") {
+
+                            this.setState({ bay8Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay9 !== '') {
+                        if (this.state.bay9Text2Scouting === null || this.state.bay9Text2Scouting === "") {
+
+                            this.setState({ bay9Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay10 !== '') {
+                        if (this.state.bay10Text2Scouting === null || this.state.bay10Text2Scouting === "") {
+
+                            this.setState({ bay10Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay11 !== '') {
+                        if (this.state.bay11Text2Scouting === null || this.state.bay11Text2Scouting === "") {
+
+                            this.setState({ bay11Text2Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay1 !== '') {
+                        if (this.state.bay1Text3Scouting === null || this.state.bay1Text3Scouting === "") {
+
+                            this.setState({ bay1Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay2 !== '') {
+                        if (this.state.bay2Text3Scouting === null || this.state.bay2Text3Scouting === "") {
+
+                            this.setState({ bay2Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting", '0')
+
+                        }
+                    }
+
+                    if (bay3 !== '') {
+                        if (this.state.bay3Text3Scouting === null || this.state.bay3Text3Scouting === "") {
+
+                            this.setState({ bay3Text3Scouting: '0' })
+
+                            this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting", '0')
+
+                        }
 
                     }
 
-                    if (this.state.bay3Text2Scouting === null || this.state.bay3Text2Scouting === "") {
+                    if (bay4 !== '') {
+                        if (this.state.bay4Text3Scouting === null || this.state.bay4Text3Scouting === "") {
 
-                        this.setState({ bay3Text2Scouting: '0' })
+                            this.setState({ bay4Text3Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting", '0')
 
+                        }
                     }
 
-                    if (this.state.bay4Text2Scouting === null || this.state.bay4Text2Scouting === "") {
+                    if (bay5 !== '') {
+                        if (this.state.bay5Text3Scouting === null || this.state.bay5Text3Scouting === "") {
 
-                        this.setState({ bay4Text2Scouting: '0' })
+                            this.setState({ bay5Text3Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting", '0')
 
+                        }
                     }
 
-                    if (this.state.bay5Text2Scouting === null || this.state.bay5Text2Scouting === "") {
+                    if (bay6 !== '') {
+                        if (this.state.bay6Text3Scouting === null || this.state.bay6Text3Scouting === "") {
 
-                        this.setState({ bay5Text2Scouting: '0' })
+                            this.setState({ bay6Text3Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting", '0')
 
+                        }
                     }
 
-                    if (this.state.bay6Text2Scouting === null || this.state.bay6Text2Scouting === "") {
+                    if (bay7 !== '') {
+                        if (this.state.bay7Text3Scouting === null || this.state.bay7Text3Scouting === "") {
 
-                        this.setState({ bay6Text2Scouting: '0' })
+                            this.setState({ bay7Text3Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting", '0')
 
+                        }
                     }
 
-                    if (this.state.bay7Text2Scouting === null || this.state.bay7Text2Scouting === "") {
+                    if (bay8 !== '') {
+                        if (this.state.bay8Text3Scouting === null || this.state.bay8Text3Scouting === "") {
 
-                        this.setState({ bay7Text2Scouting: '0' })
+                            this.setState({ bay8Text3Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting", '0')
 
+                        }
                     }
 
-                    if (this.state.bay8Text2Scouting === null || this.state.bay8Text2Scouting === "") {
+                    if (bay9 !== '') {
+                        if (this.state.bay9Text3Scouting === null || this.state.bay9Text3Scouting === "") {
 
-                        this.setState({ bay8Text2Scouting: '0' })
+                            this.setState({ bay9Text3Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting", '0')
 
+                        }
                     }
 
-                    if (this.state.bay9Text2Scouting === null || this.state.bay9Text2Scouting === "") {
+                    if (bay10 !== '') {
+                        if (this.state.bay10Text3Scouting === null || this.state.bay10Text3Scouting === "") {
 
-                        this.setState({ bay9Text2Scouting: '0' })
+                            this.setState({ bay10Text3Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting", '0')
 
+                        }
                     }
 
-                    if (this.state.bay10Text2Scouting === null || this.state.bay10Text2Scouting === "") {
+                    if (bay11 !== '') {
+                        if (this.state.bay11Text3Scouting === null || this.state.bay11Text3Scouting === "") {
 
-                        this.setState({ bay10Text2Scouting: '0' })
+                            this.setState({ bay11Text3Scouting: '0' })
 
-                        this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting", '0')
+                            this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting", '0')
 
-                    }
-
-                    if (this.state.bay11Text2Scouting === null || this.state.bay11Text2Scouting === "") {
-
-                        this.setState({ bay11Text2Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting", '0')
-
-                    }
-
-                    if (this.state.bay1Text3Scouting === null || this.state.bay1Text3Scouting === "") {
-
-                        this.setState({ bay1Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting", '0')
-
-                    }
-
-                    if (this.state.bay2Text3Scouting === null || this.state.bay2Text3Scouting === "") {
-
-                        this.setState({ bay2Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting", '0')
-
-                    }
-
-                    if (this.state.bay3Text3Scouting === null || this.state.bay3Text3Scouting === "") {
-
-                        this.setState({ bay3Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting", '0')
-
-                    }
-
-                    if (this.state.bay4Text3Scouting === null || this.state.bay4Text3Scouting === "") {
-
-                        this.setState({ bay4Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting", '0')
-
-                    }
-
-                    if (this.state.bay5Text3Scouting === null || this.state.bay5Text3Scouting === "") {
-
-                        this.setState({ bay5Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting", '0')
-
-                    }
-
-                    if (this.state.bay6Text3Scouting === null || this.state.bay6Text3Scouting === "") {
-
-                        this.setState({ bay6Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting", '0')
-
-                    }
-
-                    if (this.state.bay7Text3Scouting === null || this.state.bay7Text3Scouting === "") {
-
-                        this.setState({ bay7Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting", '0')
-
-                    }
-
-                    if (this.state.bay8Text3Scouting === null || this.state.bay8Text3Scouting === "") {
-
-                        this.setState({ bay8Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting", '0')
-
-                    }
-
-                    if (this.state.bay9Text3Scouting === null || this.state.bay9Text3Scouting === "") {
-
-                        this.setState({ bay9Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting", '0')
-
-                    }
-
-                    if (this.state.bay10Text3Scouting === null || this.state.bay10Text3Scouting === "") {
-
-                        this.setState({ bay10Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting", '0')
-
-                    }
-
-                    if (this.state.bay11Text3Scouting === null || this.state.bay11Text3Scouting === "") {
-
-                        this.setState({ bay11Text3Scouting: '0' })
-
-                        this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting", '0')
-
+                        }
                     }
 
 
@@ -1811,357 +2169,444 @@ export default class Scouting extends Component {
 
                         console.log("Header 1, Header 2, Header 3 & Header 4");
 
-                        if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
+                        if (bay1 !== '') {
+                            if (this.state.bay1Text1Scouting === null || this.state.bay1Text1Scouting === "") {
 
-                            this.setState({ bay1Text1Scouting: '0' })
+                                this.setState({ bay1Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
+                        if (bay2 !== '') {
+                            if (this.state.bay2Text1Scouting === null || this.state.bay2Text1Scouting === "") {
 
-                            this.setState({ bay2Text1Scouting: '0' })
+                                this.setState({ bay2Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
+                        if (bay3 !== '') {
+                            if (this.state.bay3Text1Scouting === null || this.state.bay3Text1Scouting === "") {
 
-                            this.setState({ bay3Text1Scouting: '0' })
+                                this.setState({ bay3Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
+                        if (bay4 !== '') {
+                            if (this.state.bay4Text1Scouting === null || this.state.bay4Text1Scouting === "") {
 
-                            this.setState({ bay4Text1Scouting: '0' })
+                                this.setState({ bay4Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
+                        if (bay5 !== '') {
+                            if (this.state.bay5Text1Scouting === null || this.state.bay5Text1Scouting === "") {
 
-                            this.setState({ bay5Text1Scouting: '0' })
+                                this.setState({ bay5Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
+                        if (bay6 !== '') {
+                            if (this.state.bay6Text1Scouting === null || this.state.bay6Text1Scouting === "") {
 
-                            this.setState({ bay6Text1Scouting: '0' })
+                                this.setState({ bay6Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
+                        if (bay7 !== '') {
+                            if (this.state.bay7Text1Scouting === null || this.state.bay7Text1Scouting === "") {
 
-                            this.setState({ bay7Text1Scouting: '0' })
+                                this.setState({ bay7Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
+                        if (bay8 !== '') {
+                            if (this.state.bay8Text1Scouting === null || this.state.bay8Text1Scouting === "") {
 
-                            this.setState({ bay8Text1Scouting: '0' })
+                                this.setState({ bay8Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
+                        if (bay9 !== '') {
+                            if (this.state.bay9Text1Scouting === null || this.state.bay9Text1Scouting === "") {
 
-                            this.setState({ bay9Text1Scouting: '0' })
+                                this.setState({ bay9Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
+                        if (bay10 !== '') {
+                            if (this.state.bay10Text1Scouting === null || this.state.bay10Text1Scouting === "") {
 
-                            this.setState({ bay10Text1Scouting: '0' })
+                                this.setState({ bay10Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
+                        if (bay11 !== '') {
+                            if (this.state.bay11Text1Scouting === null || this.state.bay11Text1Scouting === "") {
 
-                            this.setState({ bay11Text1Scouting: '0' })
+                                this.setState({ bay11Text1Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay1Text2Scouting === null || this.state.bay1Text2Scouting === "") {
+                        if (bay1 !== '') {
+                            if (this.state.bay1Text2Scouting === null || this.state.bay1Text2Scouting === "") {
 
-                            this.setState({ bay1Text2Scouting: '0' })
+                                this.setState({ bay1Text2Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting", '0')
 
+                            }
                         }
 
+                        if (bay2 !== '') {
+                            if (this.state.bay2Text2Scouting === null || this.state.bay2Text2Scouting === "") {
 
-                        if (this.state.bay2Text2Scouting === null || this.state.bay2Text2Scouting === "") {
+                                this.setState({ bay2Text2Scouting: '0' })
 
-                            this.setState({ bay2Text2Scouting: '0' })
+                                this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting", '0')
 
-                            this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting", '0')
-
+                            }
                         }
 
-                        if (this.state.bay3Text2Scouting === null || this.state.bay3Text2Scouting === "") {
+                        if (bay3 !== '') {
+                            if (this.state.bay3Text2Scouting === null || this.state.bay3Text2Scouting === "") {
 
-                            this.setState({ bay3Text2Scouting: '0' })
+                                this.setState({ bay3Text2Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay4Text2Scouting === null || this.state.bay4Text2Scouting === "") {
+                        if (bay4 !== '') {
+                            if (this.state.bay4Text2Scouting === null || this.state.bay4Text2Scouting === "") {
 
-                            this.setState({ bay4Text2Scouting: '0' })
+                                this.setState({ bay4Text2Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay5Text2Scouting === null || this.state.bay5Text2Scouting === "") {
+                        if (bay5 !== '') {
+                            if (this.state.bay5Text2Scouting === null || this.state.bay5Text2Scouting === "") {
 
-                            this.setState({ bay5Text2Scouting: '0' })
+                                this.setState({ bay5Text2Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay6Text2Scouting === null || this.state.bay6Text2Scouting === "") {
+                        if (bay6 !== '') {
+                            if (this.state.bay6Text2Scouting === null || this.state.bay6Text2Scouting === "") {
 
-                            this.setState({ bay6Text2Scouting: '0' })
+                                this.setState({ bay6Text2Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay7Text2Scouting === null || this.state.bay7Text2Scouting === "") {
+                        if (bay7 !== '') {
+                            if (this.state.bay7Text2Scouting === null || this.state.bay7Text2Scouting === "") {
 
-                            this.setState({ bay7Text2Scouting: '0' })
+                                this.setState({ bay7Text2Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay8Text2Scouting === null || this.state.bay8Text2Scouting === "") {
+                        if (bay8 !== '') {
+                            if (this.state.bay8Text2Scouting === null || this.state.bay8Text2Scouting === "") {
 
-                            this.setState({ bay8Text2Scouting: '0' })
+                                this.setState({ bay8Text2Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay9Text2Scouting === null || this.state.bay9Text2Scouting === "") {
+                        if (bay9 !== '') {
+                            if (this.state.bay9Text2Scouting === null || this.state.bay9Text2Scouting === "") {
 
-                            this.setState({ bay9Text2Scouting: '0' })
+                                this.setState({ bay9Text2Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay10Text2Scouting === null || this.state.bay10Text2Scouting === "") {
+                        if (bay10 !== '') {
+                            if (this.state.bay10Text2Scouting === null || this.state.bay10Text2Scouting === "") {
 
-                            this.setState({ bay10Text2Scouting: '0' })
+                                this.setState({ bay10Text2Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay11Text2Scouting === null || this.state.bay11Text2Scouting === "") {
+                        if (bay11 !== '') {
+                            if (this.state.bay11Text2Scouting === null || this.state.bay11Text2Scouting === "") {
 
-                            this.setState({ bay11Text2Scouting: '0' })
+                                this.setState({ bay11Text2Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay1Text3Scouting === null || this.state.bay1Text3Scouting === "") {
+                        if (bay1 !== '') {
+                            if (this.state.bay1Text3Scouting === null || this.state.bay1Text3Scouting === "") {
 
-                            this.setState({ bay1Text3Scouting: '0' })
+                                this.setState({ bay1Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay2Text3Scouting === null || this.state.bay2Text3Scouting === "") {
+                        if (bay2 !== '') {
+                            if (this.state.bay2Text3Scouting === null || this.state.bay2Text3Scouting === "") {
 
-                            this.setState({ bay2Text3Scouting: '0' })
+                                this.setState({ bay2Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay3Text3Scouting === null || this.state.bay3Text3Scouting === "") {
+                        if (bay3 !== '') {
+                            if (this.state.bay3Text3Scouting === null || this.state.bay3Text3Scouting === "") {
 
-                            this.setState({ bay3Text3Scouting: '0' })
+                                this.setState({ bay3Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay4Text3Scouting === null || this.state.bay4Text3Scouting === "") {
+                        if (bay4 !== '') {
+                            if (this.state.bay4Text3Scouting === null || this.state.bay4Text3Scouting === "") {
 
-                            this.setState({ bay4Text3Scouting: '0' })
+                                this.setState({ bay4Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay5Text3Scouting === null || this.state.bay5Text3Scouting === "") {
+                        if (bay5 !== '') {
+                            if (this.state.bay5Text3Scouting === null || this.state.bay5Text3Scouting === "") {
 
-                            this.setState({ bay5Text3Scouting: '0' })
+                                this.setState({ bay5Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay6Text3Scouting === null || this.state.bay6Text3Scouting === "") {
+                        if (bay6 !== '') {
+                            if (this.state.bay6Text3Scouting === null || this.state.bay6Text3Scouting === "") {
 
-                            this.setState({ bay6Text3Scouting: '0' })
+                                this.setState({ bay6Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay7Text3Scouting === null || this.state.bay7Text3Scouting === "") {
+                        if (bay7 !== '') {
+                            if (this.state.bay7Text3Scouting === null || this.state.bay7Text3Scouting === "") {
 
-                            this.setState({ bay7Text3Scouting: '0' })
+                                this.setState({ bay7Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay8Text3Scouting === null || this.state.bay8Text3Scouting === "") {
+                        if (bay8 !== '') {
+                            if (this.state.bay8Text3Scouting === null || this.state.bay8Text3Scouting === "") {
 
-                            this.setState({ bay8Text3Scouting: '0' })
+                                this.setState({ bay8Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay9Text3Scouting === null || this.state.bay9Text3Scouting === "") {
+                        if (bay9 !== '') {
+                            if (this.state.bay9Text3Scouting === null || this.state.bay9Text3Scouting === "") {
 
-                            this.setState({ bay9Text3Scouting: '0' })
+                                this.setState({ bay9Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay10Text3Scouting === null || this.state.bay10Text3Scouting === "") {
+                        if (bay10 !== '') {
+                            if (this.state.bay10Text3Scouting === null || this.state.bay10Text3Scouting === "") {
 
-                            this.setState({ bay10Text3Scouting: '0' })
+                                this.setState({ bay10Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay11Text3Scouting === null || this.state.bay11Text3Scouting === "") {
+                        if (bay11 !== '') {
+                            if (this.state.bay11Text3Scouting === null || this.state.bay11Text3Scouting === "") {
 
-                            this.setState({ bay11Text3Scouting: '0' })
+                                this.setState({ bay11Text3Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay1Text4Scouting === null || this.state.bay1Text4Scouting === "") {
+                        if (bay1 !== '') {
+                            if (this.state.bay1Text4Scouting === null || this.state.bay1Text4Scouting === "") {
 
-                            this.setState({ bay1Text4Scouting: '0' })
+                                this.setState({ bay1Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay1Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay1Text4Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay2Text4Scouting === null || this.state.bay2Text4Scouting === "") {
+                        if (bay2 !== '') {
+                            if (this.state.bay2Text4Scouting === null || this.state.bay2Text4Scouting === "") {
 
-                            this.setState({ bay2Text4Scouting: '0' })
+                                this.setState({ bay2Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay2Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay2Text4Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay3Text4Scouting === null || this.state.bay3Text4Scouting === "") {
+                        if (bay2 !== '') {
+                            if (this.state.bay3Text4Scouting === null || this.state.bay3Text4Scouting === "") {
 
-                            this.setState({ bay3Text4Scouting: '0' })
+                                this.setState({ bay3Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay3Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay3Text4Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay4Text4Scouting === null || this.state.bay4Text4Scouting === "") {
+                        if (bay4 !== '') {
+                            if (this.state.bay4Text4Scouting === null || this.state.bay4Text4Scouting === "") {
 
-                            this.setState({ bay4Text4Scouting: '0' })
+                                this.setState({ bay4Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay4Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay4Text4Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay5Text4Scouting === null || this.state.bay5Text4Scouting === "") {
+                        if (bay5 !== '') {
+                            if (this.state.bay5Text4Scouting === null || this.state.bay5Text4Scouting === "") {
 
-                            this.setState({ bay5Text4Scouting: '0' })
+                                this.setState({ bay5Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay5Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay5Text4Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay6Text4Scouting === null || this.state.bay6Text4Scouting === "") {
+                        if (bay6 !== '') {
+                            if (this.state.bay6Text4Scouting === null || this.state.bay6Text4Scouting === "") {
 
-                            this.setState({ bay6Text4Scouting: '0' })
+                                this.setState({ bay6Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay6Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay6Text4Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay7Text4Scouting === null || this.state.bay7Text4Scouting === "") {
+                        if (bay7 !== '') {
+                            if (this.state.bay7Text4Scouting === null || this.state.bay7Text4Scouting === "") {
 
-                            this.setState({ bay7Text4Scouting: '0' })
+                                this.setState({ bay7Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay7Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay7Text4Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay8Text4Scouting === null || this.state.bay8Text4Scouting === "") {
+                        if (bay8 !== '') {
+                            if (this.state.bay8Text4Scouting === null || this.state.bay8Text4Scouting === "") {
 
-                            this.setState({ bay8Text4Scouting: '0' })
+                                this.setState({ bay8Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay8Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay8Text4Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay9Text4Scouting === null || this.state.bay9Text4Scouting === "") {
+                        if (bay9 !== '') {
+                            if (this.state.bay9Text4Scouting === null || this.state.bay9Text4Scouting === "") {
 
-                            this.setState({ bay9Text4Scouting: '0' })
+                                this.setState({ bay9Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay9Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay9Text4Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay10Text4Scouting === null || this.state.bay10Text4Scouting === "") {
+                        if (bay10 !== '') {
+                            if (this.state.bay10Text4Scouting === null || this.state.bay10Text4Scouting === "") {
 
-                            this.setState({ bay10Text4Scouting: '0' })
+                                this.setState({ bay10Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay10Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay10Text4Scouting", '0')
 
+                            }
                         }
 
-                        if (this.state.bay11Text4Scouting === null || this.state.bay11Text4Scouting === "") {
+                        if (bay11 !== '') {
+                            if (this.state.bay11Text4Scouting === null || this.state.bay11Text4Scouting === "") {
 
-                            this.setState({ bay11Text4Scouting: '0' })
+                                this.setState({ bay11Text4Scouting: '0' })
 
-                            this.setItem(this.state.scoutingType + "" + "bay11Text4Scouting", '0')
+                                this.setItem(this.state.scoutingType + "" + "bay11Text4Scouting", '0')
 
+                            }
                         }
 
                     } else {

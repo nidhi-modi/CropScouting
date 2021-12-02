@@ -505,7 +505,7 @@ export default class Settings extends Component {
                                     <View style={{ flexDirection: 'row' }}>
 
                                         <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-                                            <Text style={styles.titleBlackText}>Number of Rows:</Text>
+                                            <Text style={styles.titleBlackText}>Number of Bays:</Text>
                                         </View>
 
                                         <View style={{ flexDirection: 'column', alignItems: 'center', flex: 1 }}>
@@ -514,7 +514,7 @@ export default class Settings extends Component {
                                                 <TextInput style={styles.textInputStyle2}
                                                     multiline={false}
                                                     returnKeyType={'done'}
-                                                    placeholder={"Max rows are 10"}
+                                                    placeholder={"Max bays are 11"}
                                                     autoCorrect={false}
                                                     enablesReturnKeyAutomatically={true}
                                                     editable={true}

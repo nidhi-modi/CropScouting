@@ -33,10 +33,10 @@ var scouting1st, scouting2nd, scouting3rd, scouting4th, scouting5th, scouting6th
 
 var screenWidth = (Dimensions.get('window').width) / 1.6;
 const db = new Database();
+var houseSelected;
 
 
-
-export default class Home extends Component {
+export default class Home extends React.Component {
 
     constructor(props) {
         super(props);
@@ -51,6 +51,7 @@ export default class Home extends Component {
             weekNumber: '',
             listScoutingData: [],
             isItConnected: '',
+            selected: ''
 
 
         };
@@ -149,6 +150,24 @@ export default class Home extends Component {
 
         BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
         NetInfo.addEventListener(this.handleConnectivityChange);
+
+        try {
+            AsyncStorage.getItem('house').then((text1Value) => {
+                houseSelected = JSON.parse(text1Value);
+                this.setState({ selected: text1Value });
+
+                console.log("HOUSE : " + this.state.selected);
+
+                this.handleScoutersName()
+                this.handleLocationItem()
+
+            }).done();
+        } catch (error) {
+
+
+        }
+
+        console.log("Data Saved successfully : " + JSON.stringify(houseSelected));
 
         this.focusListener = this.props.navigation.addListener('focus',
             () => {
@@ -1556,7 +1575,7 @@ export default class Home extends Component {
 
                     scouting41th = JSON.parse(dataEntered40);
 
-                  
+
 
                 }).done();
 
@@ -2352,452 +2371,547 @@ export default class Home extends Component {
 
     }
 
-    onButtonPress = () => {
-        BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
-        // then navigate
-        navigate('NewScreen');
+    handleScoutersName() {
+
+        if (houseSelected === "OHA") {
+
+            return <DropDownPicker
+                items={[
+                    { label: 'Dave Naicker', value: 'Dave Naicker' },
+                    { label: 'Ravi Sarju', value: 'Ravi Sarju' },
+                    { label: 'Missy Brown', value: 'Missy Brown' },
+                    { label: 'Stuart Thom', value: 'Stuart Thom' }
+
+
+                ]}
+                placeholder=""
+                containerStyle={{ height: 50 }}
+                style={{
+                    borderColor: '#F1EEEC',
+                    borderWidth: 1
+                }}
+                itemStyle={{
+                    justifyContent: 'flex-start'
+                }}
+                labelStyle={{
+                    fontSize: 14,
+                    textAlign: 'left',
+                    color: '#000000',
+
+
+                }}
+                dropDownStyle={{ backgroundColor: '#fafafa' }}
+                onChangeItem={(item) => this.updateTextInput(item.value, 'scoutersName')}
+                defaultValue={this.state.scoutersName}
+
+
+            />
+
+        } else if (houseSelected === "REP") {
+
+            return <DropDownPicker
+                items={[
+                    { label: 'Chaminda Perera', value: 'Chaminda Perera' },
+                    { label: 'Nicholas Wallace', value: 'Nicholas Wallace' },
+                    { label: 'Chris Cowie', value: 'Chris Cowie' }
+
+                ]}
+                placeholder=""
+                containerStyle={{ height: 50 }}
+                style={{
+                    borderColor: '#F1EEEC',
+                    borderWidth: 1
+                }}
+                itemStyle={{
+                    justifyContent: 'flex-start'
+                }}
+                labelStyle={{
+                    fontSize: 14,
+                    textAlign: 'left',
+                    color: '#000000',
+
+
+                }}
+                dropDownStyle={{ backgroundColor: '#fafafa' }}
+                onChangeItem={(item) => this.updateTextInput(item.value, 'scoutersName')}
+                defaultValue={this.state.scoutersName}
+
+
+            />
+
+        } else {
+
+
+        }
+
+
     }
 
-    updateTextInput = (text, field) => {
-        this.setItem(field, text)
-        const state = this.state
-        state[field] = text;
-        this.setState(state);
-    }
+    handleLocationItem() {
+
+            if (houseSelected === "OHA") {
+
+               return <DropDownPicker
+                items={[
+                    { label: 'OHA 1', value: 'OHA 1' },
+                    { label: 'OHA 2', value: 'OHA 2' }
 
 
-    render() {
-
-        return (
-
-            <View style={styles.container}>
-
-                <ScrollView keyboardShouldPersistTaps='handled'>
-                    <View style={styles.flexboxWeeknumbers}>
-
-                        <Image source={require('../assets/week_number_logo.png')} style={styles.FloatingButtonStyle2} />
-                        <View style={styles.marginRightStyle}></View>
-                        <Text style={styles.weekText1}>Current Week Number : <Text style={styles.weekText2}>{this.state.weekNumber}</Text></Text>
-
-                    </View>
-
-                    <View style={styles.mainPageContainer}>
-
-                        <Text style={styles.titleHeadingText}>Select Scouter's Name</Text>
-
-                        <View style={styles.marginTopStyle}></View>
+                ]}
+                placeholder=""
+                containerStyle={{ height: 50 }}
+                style={{
+                    borderColor: '#F1EEEC',
+                    borderWidth: 1
+                }}
+                itemStyle={{
+                    justifyContent: 'flex-start'
+                }}
+                labelStyle={{
+                    fontSize: 14,
+                    textAlign: 'left',
+                    color: '#000000',
 
 
-                        <View
-                            style={{
-
-                                // The solution: Apply zIndex to any device except Android
-                                ...(Platform.OS !== 'android' && {
-                                    zIndex: 30
-                                })
-
-                            }}
-                        >
+                }}
+                dropDownStyle={{ backgroundColor: '#fafafa' }}
+                onChangeItem={(item) => this.updateTextInput(item.value, 'location')}
+                defaultValue={this.state.location}
 
 
-                            <DropDownPicker
-                                items={[
-                                    { label: 'Chaminda Perera', value: 'Chaminda Perera' },
-                                    { label: 'Nicholas Wallace', value: 'Nicholas Wallace' },
-                                    { label: 'Chris Cowie', value: 'Chris Cowie' }
+            />
 
-                                ]}
-                                placeholder=""
-                                containerStyle={{ height: 50 }}
-                                style={{
-                                    borderColor: '#F1EEEC',
-                                    borderWidth: 1
-                                }}
-                                itemStyle={{
-                                    justifyContent: 'flex-start'
-                                }}
-                                labelStyle={{
-                                    fontSize: 14,
-                                    textAlign: 'left',
-                                    color: '#000000',
+            } else if (houseSelected === "REP") {
 
+                return  <DropDownPicker
+                items={[
+                    { label: 'REP 1', value: 'REP 1' },
 
-                                }}
-                                dropDownStyle={{ backgroundColor: '#fafafa' }}
-                                onChangeItem={(item) => this.updateTextInput(item.value, 'scoutersName')}
-                                defaultValue={this.state.scoutersName}
+                ]}
+                placeholder=""
+                containerStyle={{ height: 50 }}
+                style={{
+                    borderColor: '#F1EEEC',
+                    borderWidth: 1
+                }}
+                itemStyle={{
+                    justifyContent: 'flex-start'
+                }}
+                labelStyle={{
+                    fontSize: 14,
+                    textAlign: 'left',
+                    color: '#000000',
 
 
-                            />
-
-                        </View>
-
-                        <View style={styles.marginContainerTop}></View>
-
-                        <Text style={styles.titleHeadingText}>Select Location</Text>
-
-                        <View style={styles.marginTopStyle}></View>
+                }}
+                dropDownStyle={{ backgroundColor: '#fafafa' }}
+                onChangeItem={(item) => this.updateTextInput(item.value, 'location')}
+                defaultValue={this.state.location}
 
 
-                        <View
-                            style={{
+            />
 
-                                // The solution: Apply zIndex to any device except Android
-                                ...(Platform.OS !== 'android' && {
-                                    zIndex: 20
-                                })
-
-                            }}
-                        >
-
-                            <DropDownPicker
-                                items={[
-                                    { label: 'REP 1', value: 'REP 1' },
-
-                                ]}
-                                placeholder=""
-                                containerStyle={{ height: 50 }}
-                                style={{
-                                    borderColor: '#F1EEEC',
-                                    borderWidth: 1
-                                }}
-                                itemStyle={{
-                                    justifyContent: 'flex-start'
-                                }}
-                                labelStyle={{
-                                    fontSize: 14,
-                                    textAlign: 'left',
-                                    color: '#000000',
+            } else {
 
 
-                                }}
-                                dropDownStyle={{ backgroundColor: '#fafafa' }}
-                                onChangeItem={(item) => this.updateTextInput(item.value, 'location')}
-                                defaultValue={this.state.location}
+            }
+        }
 
 
-                            />
+
+
+        onButtonPress = () => {
+            BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+            // then navigate
+            navigate('NewScreen');
+        }
+
+        updateTextInput = (text, field) => {
+            this.setItem(field, text)
+            const state = this.state
+            state[field] = text;
+            this.setState(state);
+        }
+
+
+        render() {
+
+            return (
+
+                <View style={styles.container}>
+
+                    <ScrollView keyboardShouldPersistTaps='handled'>
+                        <View style={styles.flexboxWeeknumbers}>
+
+                            <Image source={require('../assets/week_number_logo.png')} style={styles.FloatingButtonStyle2} />
+                            <View style={styles.marginRightStyle}></View>
+                            <Text style={styles.weekText1}>Current Week Number : <Text style={styles.weekText2}>{this.state.weekNumber}</Text></Text>
 
                         </View>
 
-                        <View style={styles.marginContainerTop}></View>
+                        <View style={styles.mainPageContainer}>
 
-                        <Text style={styles.titleHeadingText}>Scouting Type</Text>
+                            <Text style={styles.titleHeadingText}>Select Scouter's Name</Text>
 
-                        <View style={styles.marginTopStyle}></View>
+                            <View style={styles.marginTopStyle}></View>
 
 
-                        <View
-                            style={{
-
-                                // The solution: Apply zIndex to any device except Android
-                                ...(Platform.OS !== 'android' && {
-                                    zIndex: 10
-                                })
-
-                            }}
-                        >
-                            <DropDownPicker
-                                items={[
-                                    { label: 'Plant Head', value: 'Plant Head' },
-                                    { label: 'Plant Middle', value: 'Plant Middle' },
-                                    { label: 'Plant Ground', value: 'Plant Ground' }
-                                ]}
-                                placeholder=""
-                                containerStyle={{ height: 50 }}
+                            <View
                                 style={{
-                                    borderColor: '#F1EEEC',
-                                    borderWidth: 1
-                                }}
-                                itemStyle={{
-                                    justifyContent: 'flex-start'
-                                }}
-                                labelStyle={{
-                                    fontSize: 14,
-                                    textAlign: 'left',
-                                    color: '#000000',
 
+                                    // The solution: Apply zIndex to any device except Android
+                                    ...(Platform.OS !== 'android' && {
+                                        zIndex: 30
+                                    })
 
                                 }}
-                                dropDownStyle={{ backgroundColor: '#fafafa' }}
-                                onChangeItem={(item) => this.updateTextInput(item.value, 'scoutType')}
-                                defaultValue={this.state.scoutType}
+                            >
+
+                                {this.handleScoutersName()}
 
 
-                            />
-
-                        </View>
-
-                        <View style={styles.marginContainerTop}></View>
-
-                        <Text style={styles.titleGreenText}>Select from the options below to start the app:</Text>
-
-                        <View style={styles.marginBetweenTop}></View>
-
-
-                        <Text style={styles.titleBlackText}>Before you start, please make sure all the above data has been entered correctly.</Text>
-
-                        <View style={styles.marginBetweenTop}></View>
-
-                        <View style={styles.marginBetweenTop}></View>
-
-                        {(this.state.scoutersName !== null && this.state.location !== null && this.state.scoutType !== null) ?
-                            <TouchableOpacity
-                                style={styles.buttonContainer}
-                                disabled={false}
-                                onPress={() => this.handleButtonPress()}>
-                                <Text style={styles.buttonText}>Start Crop Scouting</Text>
-                            </TouchableOpacity> :
-                            <TouchableOpacity
-                                style={styles.buttonContainer}
-                                disabled={true}
-                                onPress={() => this.handleButtonPress()}>
-                                <Text style={styles.buttonText}>Start Crop Scouting</Text>
-                            </TouchableOpacity>}
-
-                        <View style={styles.marginBetweenTop}></View>
-
-                        {this.state.listScoutingData.length !== 0 ?
-
-                            <View>
-                                <View style={styles.marginTopStyle}></View>
-
-                                <View style={styles.borderStyle}>
-                                    <Text style={styles.titleBlackText}>Press submit button to send scouting data to the server</Text>
-                                    <View style={styles.marginBetweenTop}></View>
-
-                                    <TouchableOpacity
-                                        style={styles.buttonContainerRed}
-                                        disabled={false}
-                                        onPress={() => this.checkInternetConnection()}>
-                                        <Text style={styles.buttonText}>Submit</Text>
-                                    </TouchableOpacity>
-                                </View>
-                                <View style={styles.marginBetweenTop}></View>
                             </View>
-                            : null}
+
+                            <View style={styles.marginContainerTop}></View>
+
+                            <Text style={styles.titleHeadingText}>Select Location</Text>
+
+                            <View style={styles.marginTopStyle}></View>
+
+
+                            <View
+                                style={{
+
+                                    // The solution: Apply zIndex to any device except Android
+                                    ...(Platform.OS !== 'android' && {
+                                        zIndex: 20
+                                    })
+
+                                }}
+                            >
+
+                               {this.handleLocationItem()}
+
+                            </View>
+
+                            <View style={styles.marginContainerTop}></View>
+
+                            <Text style={styles.titleHeadingText}>Scouting Type</Text>
+
+                            <View style={styles.marginTopStyle}></View>
+
+
+                            <View
+                                style={{
+
+                                    // The solution: Apply zIndex to any device except Android
+                                    ...(Platform.OS !== 'android' && {
+                                        zIndex: 10
+                                    })
+
+                                }}
+                            >
+                                <DropDownPicker
+                                    items={[
+                                        { label: 'Plant Head', value: 'Plant Head' },
+                                        { label: 'Plant Middle', value: 'Plant Middle' },
+                                        { label: 'Plant Ground', value: 'Plant Ground' }
+                                    ]}
+                                    placeholder=""
+                                    containerStyle={{ height: 50 }}
+                                    style={{
+                                        borderColor: '#F1EEEC',
+                                        borderWidth: 1
+                                    }}
+                                    itemStyle={{
+                                        justifyContent: 'flex-start'
+                                    }}
+                                    labelStyle={{
+                                        fontSize: 14,
+                                        textAlign: 'left',
+                                        color: '#000000',
+
+
+                                    }}
+                                    dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                    onChangeItem={(item) => this.updateTextInput(item.value, 'scoutType')}
+                                    defaultValue={this.state.scoutType}
+
+
+                                />
+
+                            </View>
+
+                            <View style={styles.marginContainerTop}></View>
+
+                            <Text style={styles.titleGreenText}>Select from the options below to start the app:</Text>
+
+                            <View style={styles.marginBetweenTop}></View>
+
+
+                            <Text style={styles.titleBlackText}>Before you start, please make sure all the above data has been entered correctly.</Text>
+
+                            <View style={styles.marginBetweenTop}></View>
+
+                            <View style={styles.marginBetweenTop}></View>
+
+                            {(this.state.scoutersName !== null && this.state.location !== null && this.state.scoutType !== null) ?
+                                <TouchableOpacity
+                                    style={styles.buttonContainer}
+                                    disabled={false}
+                                    onPress={() => this.handleButtonPress()}>
+                                    <Text style={styles.buttonText}>Start Crop Scouting</Text>
+                                </TouchableOpacity> :
+                                <TouchableOpacity
+                                    style={styles.buttonContainer}
+                                    disabled={true}
+                                    onPress={() => this.handleButtonPress()}>
+                                    <Text style={styles.buttonText}>Start Crop Scouting</Text>
+                                </TouchableOpacity>}
+
+                            <View style={styles.marginBetweenTop}></View>
+
+                            {this.state.listScoutingData.length !== 0 ?
+
+                                <View>
+                                    <View style={styles.marginTopStyle}></View>
+
+                                    <View style={styles.borderStyle}>
+                                        <Text style={styles.titleBlackText}>Press submit button to send scouting data to the server</Text>
+                                        <View style={styles.marginBetweenTop}></View>
+
+                                        <TouchableOpacity
+                                            style={styles.buttonContainerRed}
+                                            disabled={false}
+                                            onPress={() => this.checkInternetConnection()}>
+                                            <Text style={styles.buttonText}>Submit</Text>
+                                        </TouchableOpacity>
+                                    </View>
+                                    <View style={styles.marginBetweenTop}></View>
+                                </View>
+                                : null}
 
 
 
-                    </View>
-                </ScrollView>
-            </View>
-        );
+                        </View>
+                    </ScrollView>
+                </View>
+            );
+        }
     }
-}
 
-const styles = StyleSheet.create({
-    container: {
+    const styles = StyleSheet.create({
+        container: {
 
-        flex: 1,
-        backgroundColor: '#ffffff'
-    },
+            flex: 1,
+            backgroundColor: '#ffffff'
+        },
 
-    borderStyle: {
+        borderStyle: {
 
-        borderColor: '#F1EEEC',
-        borderWidth: 1,
-        padding: 8,
-        borderRadius: 8
+            borderColor: '#F1EEEC',
+            borderWidth: 1,
+            padding: 8,
+            borderRadius: 8
 
-    },
+        },
 
-    textBottom: {
+        textBottom: {
 
-        fontSize: 20,
-        width: screenWidth,
-        color: '#2C3E50',
-        fontWeight: 'bold',
-        alignSelf: 'center',
-        justifyContent: 'center',
-        alignContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center'
+            fontSize: 20,
+            width: screenWidth,
+            color: '#2C3E50',
+            fontWeight: 'bold',
+            alignSelf: 'center',
+            justifyContent: 'center',
+            alignContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center'
 
 
 
-    },
+        },
 
 
-    mainPageContainer: {
+        mainPageContainer: {
 
-        flex: 1,
-        marginRight: 20,
-        marginLeft: 20,
-        marginTop: 40
+            flex: 1,
+            marginRight: 20,
+            marginLeft: 20,
+            marginTop: 40
 
-    },
+        },
 
-    headerImage2: {
+        headerImage2: {
 
-        resizeMode: 'cover',
-        justifyContent: 'center',
-        alignContent: 'center',
-        alignItems: 'center',
-        marginTop: 18,
+            resizeMode: 'cover',
+            justifyContent: 'center',
+            alignContent: 'center',
+            alignItems: 'center',
+            marginTop: 18,
 
-    },
+        },
 
-    buttonContainer: {
-        backgroundColor: '#7DBD5C',
-        borderRadius: 10,
-        padding: 10,
-        height: 50,
-        justifyContent: 'center',
-        alignItems: 'center'
+        buttonContainer: {
+            backgroundColor: '#7DBD5C',
+            borderRadius: 10,
+            padding: 10,
+            height: 50,
+            justifyContent: 'center',
+            alignItems: 'center'
 
-    },
+        },
 
-    buttonContainerRed: {
-        backgroundColor: '#B11B0A',
-        borderRadius: 10,
-        padding: 10,
-        height: 50,
-        justifyContent: 'center',
-        alignItems: 'center'
+        buttonContainerRed: {
+            backgroundColor: '#B11B0A',
+            borderRadius: 10,
+            padding: 10,
+            height: 50,
+            justifyContent: 'center',
+            alignItems: 'center'
 
-    },
+        },
 
-    buttonText: {
-        fontSize: 16,
-        color: '#ffffff',
+        buttonText: {
+            fontSize: 16,
+            color: '#ffffff',
 
 
-    },
+        },
 
-    buttonTextIOS: {
-        fontSize: 16,
-        color: '#ffffff',
+        buttonTextIOS: {
+            fontSize: 16,
+            color: '#ffffff',
 
-    },
+        },
 
-    marginRightStyle: {
+        marginRightStyle: {
 
-        marginRight: 12
+            marginRight: 12
 
-    },
+        },
 
-    marginContainerTop: {
+        marginContainerTop: {
 
-        marginTop: 40,
+            marginTop: 40,
 
-    },
+        },
 
-    marginBetweenTop: {
+        marginBetweenTop: {
 
-        marginTop: 28,
+            marginTop: 28,
 
-    },
+        },
 
-    marginTopStyle: {
+        marginTopStyle: {
 
-        marginTop: 10,
+            marginTop: 10,
 
-    },
+        },
 
-    weekText1: {
-        fontSize: 18,
+        weekText1: {
 
-        color: '#87B26A'
-    },
+            fontSize: 18,
+            color: '#87B26A'
+        },
 
-    weekText1IOS: {
-        fontSize: 18,
-        color: '#87B26A'
-    },
+        weekText1IOS: {
+            fontSize: 18,
+            color: '#87B26A'
+        },
 
-    weekText2: {
-        fontSize: 20,
-        fontWeight: 'bold',
+        weekText2: {
+            fontSize: 20,
+            fontWeight: 'bold',
 
-        textDecorationLine: 'underline',
+            textDecorationLine: 'underline',
 
-    },
+        },
 
-    weekText2IOS: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        textDecorationLine: 'underline',
+        weekText2IOS: {
+            fontSize: 20,
+            fontWeight: 'bold',
+            textDecorationLine: 'underline',
 
-    },
+        },
 
-    flexboxWeeknumbers: {
+        flexboxWeeknumbers: {
 
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 20,
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 20,
 
 
-    },
-    FloatingButtonStyle2: {
+        },
+        FloatingButtonStyle2: {
 
-        resizeMode: 'contain',
-        width: 30,
-        height: 30,
-    },
+            resizeMode: 'contain',
+            width: 30,
+            height: 30,
+        },
 
-    titleHeadingText: {
+        titleHeadingText: {
 
-        color: 'black',
-        fontSize: 16,
+            color: 'black',
+            fontSize: 16,
 
 
-    },
+        },
 
 
-    titleHeadingTextIOS: {
+        titleHeadingTextIOS: {
 
-        color: 'black',
-        fontSize: 16,
+            color: 'black',
+            fontSize: 16,
 
-    },
+        },
 
-    titleGreenText: {
+        titleGreenText: {
 
-        color: '#87B26A',
-        fontSize: 18,
-        flexShrink: 1,
-        textAlign: 'center',
-        fontWeight: 'bold',
+            color: '#87B26A',
+            fontSize: 18,
+            flexShrink: 1,
+            textAlign: 'center',
+            fontWeight: 'bold',
 
 
-    },
+        },
 
-    titleGreenTextIOS: {
+        titleGreenTextIOS: {
 
-        color: '#87B26A',
-        fontSize: 18,
-        flexShrink: 1,
-        textAlign: 'center',
-        fontWeight: 'bold',
+            color: '#87B26A',
+            fontSize: 18,
+            flexShrink: 1,
+            textAlign: 'center',
+            fontWeight: 'bold',
 
 
-    },
+        },
 
-    titleBlackText: {
+        titleBlackText: {
 
-        color: '#000000',
-        fontSize: 15,
-        flexShrink: 1,
-        textAlign: 'center',
-        marginRight: 30,
-        marginLeft: 30
+            color: '#000000',
+            fontSize: 15,
+            flexShrink: 1,
+            textAlign: 'center',
+            marginRight: 30,
+            marginLeft: 30
 
 
-    },
+        },
 
-    titleBlackTextIOS: {
+        titleBlackTextIOS: {
 
-        color: '#000000',
-        fontSize: 15,
-        flexShrink: 1,
-        textAlign: 'center',
-        marginRight: 30,
-        marginLeft: 30
+            color: '#000000',
+            fontSize: 15,
+            flexShrink: 1,
+            textAlign: 'center',
+            marginRight: 30,
+            marginLeft: 30
 
 
-    },
+        },
 
 
-});
+    });

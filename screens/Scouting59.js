@@ -46,6 +46,7 @@ export default class Scouting59 extends Component {
 
             rowNumberScouting59: '',
             intervals: '',
+            noRows: '',
             startingRowNumber: '',
             scoutingType: '',
             header1Scouting59: '',
@@ -53,71 +54,71 @@ export default class Scouting59 extends Component {
             header3Scouting59: '',
             header4Scouting59: '',
 
-            miniBay1Scouting59: 'A',
+            miniBay1Scouting59: '',
             bay1Text1Scouting59: '',
             bay1Text2Scouting59: '',
             bay1Text3Scouting59: '',
             bay1Text4Scouting59: '',
 
-            miniBay2Scouting59: 'B-D',
+            miniBay2Scouting59: '',
             bay2Text1Scouting59: '',
             bay2Text2Scouting59: '',
             bay2Text3Scouting59: '',
             bay2Text4Scouting59: '',
 
-            miniBay3Scouting59: 'E-G',
+            miniBay3Scouting59: '',
             bay3Text1Scouting59: '',
             bay3Text2Scouting59: '',
             bay3Text3Scouting59: '',
             bay3Text4Scouting59: '',
 
-            miniBay4Scouting59: 'H-J',
+            miniBay4Scouting59: '',
             bay4Text1Scouting59: '',
             bay4Text2Scouting59: '',
             bay4Text3Scouting59: '',
             bay4Text4Scouting59: '',
 
-            miniBay5Scouting59: 'K-M',
+            miniBay5Scouting59: '',
             bay5Text1Scouting59: '',
             bay5Text2Scouting59: '',
             bay5Text3Scouting59: '',
             bay5Text4Scouting59: '',
 
-            miniBay6Scouting59: 'N-P',
+            miniBay6Scouting59: '',
             bay6Text1Scouting59: '',
             bay6Text2Scouting59: '',
             bay6Text3Scouting59: '',
             bay6Text4Scouting59: '',
 
-            miniBay7Scouting59: 'Q-T',
+            miniBay7Scouting59: '',
             bay7Text1Scouting59: '',
             bay7Text2Scouting59: '',
             bay7Text3Scouting59: '',
             bay7Text4Scouting59: '',
 
 
-            miniBay8Scouting59: 'U-V',
+            miniBay8Scouting59: '',
             bay8Text1Scouting59: '',
             bay8Text2Scouting59: '',
             bay8Text3Scouting59: '',
             bay8Text4Scouting59: '',
 
 
-            miniBay9Scouting59: 'W',
+            miniBay9Scouting59: '',
             bay9Text1Scouting59: '',
             bay9Text2Scouting59: '',
             bay9Text3Scouting59: '',
             bay9Text4Scouting59: '',
 
 
-            miniBay10Scouting59: 'X',
+            miniBay10Scouting59: '',
             bay10Text1Scouting59: '',
             bay10Text2Scouting59: '',
             bay10Text3Scouting59: '',
             bay10Text4Scouting59: '',
 
 
-            miniBay11Scouting59: 'Y-Z',
+            miniBay11Scouting59: '',
             bay11Text1Scouting59: '',
             bay11Text2Scouting59: '',
             bay11Text3Scouting59: '',
@@ -204,6 +205,17 @@ export default class Scouting59 extends Component {
                 var opt1 = JSON.parse(text1Value);
                 this.setState({ scoutingType: opt1 });
 
+                try {
+                    AsyncStorage.getItem("rows" + opt1).then((textRows) => {
+                        var optRows = JSON.parse(textRows);
+                        this.setState({ noRows: optRows });
+
+                        this.setUpMiniBays();
+
+                    }).done();
+                } catch (error) {
+
+                }
 
                 try {
 
@@ -272,7 +284,7 @@ export default class Scouting59 extends Component {
 
                         /*if (this.state.dataEntered == 'Yes') {
 
-                            this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                            this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
     
                         } else {
     
@@ -306,6 +318,169 @@ export default class Scouting59 extends Component {
 
 
         this.setState({ rowNumberScouting59: finalRowNumber })
+
+    }
+
+    setUpMiniBays = () => {
+
+        var arrayRows = this.state.noRows
+        var list = [];
+        for (var i = 1; i <= arrayRows; i++) {
+            list.push(i);
+
+        }
+        //miniBay1Scouting
+
+        if (!list.length) {
+
+            alert('Please enter number of bays in the settings page')
+
+        } else {
+
+            //1
+            if (list[0] === undefined) {
+
+                this.setState({ miniBay1Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay1Scouting59: list[0] })
+
+
+            }
+
+            //2
+            if (list[1] === undefined) {
+
+                this.setState({ miniBay2Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay2Scouting59: list[1] })
+
+
+            }
+
+            //3
+            if (list[2] === undefined) {
+
+                this.setState({ miniBay3Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay3Scouting59: list[2] })
+
+
+            }
+
+            //4
+            if (list[3] === undefined) {
+
+                this.setState({ miniBay4Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay4Scouting59: list[3] })
+
+
+            }
+
+            //5
+            if (list[4] === undefined) {
+
+                this.setState({ miniBay5Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay5Scouting59: list[4] })
+
+
+            }
+
+            //6
+            if (list[5] === undefined) {
+
+                this.setState({ miniBay6Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay6Scouting59: list[5] })
+
+
+            }
+            //7
+            if (list[6] === undefined) {
+
+                this.setState({ miniBay7Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay7Scouting59: list[6] })
+
+
+            }
+
+            //8
+            if (list[7] === undefined) {
+
+                this.setState({ miniBay8Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay8Scouting59: list[7] })
+
+
+            }
+
+            //9
+            if (list[8] === undefined) {
+
+                this.setState({ miniBay9Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay9Scouting59: list[8] })
+
+
+            }
+
+            //10
+            if (list[9] === undefined) {
+
+                this.setState({ miniBay10Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay10Scouting59: list[9] })
+
+
+            }
+
+            //11
+            if (list[10] === undefined) {
+
+                this.setState({ miniBay11Scouting59: '' })
+
+
+            } else {
+
+                this.setState({ miniBay11Scouting59: list[10] })
+
+
+            }
+
+
+        }
 
     }
 
@@ -1265,10 +1440,25 @@ export default class Scouting59 extends Component {
     
     handleEmptyCells = () => {
 
+
         var h1 = this.state.header1Scouting59;
         var h2 = this.state.header2Scouting59;
         var h3 = this.state.header3Scouting59;
         var h4 = this.state.header4Scouting59;
+
+        var bay1 = this.state.miniBay1Scouting59;
+        var bay2 = this.state.miniBay2Scouting59;
+        var bay3 = this.state.miniBay3Scouting59;
+        var bay4 = this.state.miniBay4Scouting59;
+        var bay5 = this.state.miniBay5Scouting59;
+        var bay6 = this.state.miniBay6Scouting59;
+        var bay7 = this.state.miniBay7Scouting59;
+        var bay8 = this.state.miniBay8Scouting59;
+        var bay9 = this.state.miniBay9Scouting59;
+        var bay10 = this.state.miniBay10Scouting59;
+        var bay11 = this.state.miniBay11Scouting59;
+
+
 
         console.log("H1 : " + h1 + " H2 : " + h2 + " H3 : " + h3 + " H4 : " + h4);
 
@@ -1276,91 +1466,132 @@ export default class Scouting59 extends Component {
 
             console.log("Header 1");
 
-            if (this.state.bay1Text1Scouting59 === null || this.state.bay1Text1Scouting59 === "") {
+            if (bay1 !== '') {
 
-                this.setState({ bay1Text1Scouting59: '0' })
+                if (this.state.bay1Text1Scouting59 === null || this.state.bay1Text1Scouting59 === "") {
 
-                this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting59", '0')
+                    this.setState({ bay1Text1Scouting59: '0' })
+
+                    this.setItem(this.state.Scouting59Type + "" + "bay1Text1Scouting59", '0')
+
+                }
+            }
+
+            if (bay2 !== '') {
+
+                if (this.state.bay2Text1Scouting59 === null || this.state.bay2Text1Scouting59 === "") {
+
+                    this.setState({ bay2Text1Scouting59: '0' })
+
+                    this.setItem(this.state.Scouting59Type + "" + "bay2Text1Scouting59", '0')
+
+                }
 
             }
 
-            if (this.state.bay2Text1Scouting59 === null || this.state.bay2Text1Scouting59 === "") {
+            if (bay3 !== '') {
+                if (this.state.bay3Text1Scouting59 === null || this.state.bay3Text1Scouting59 === "") {
 
-                this.setState({ bay2Text1Scouting59: '0' })
+                    this.setState({ bay3Text1Scouting59: '0' })
 
-                this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting59", '0')
+                    this.setItem(this.state.Scouting59Type + "" + "bay3Text1Scouting59", '0')
 
-            }
-
-            if (this.state.bay3Text1Scouting59 === null || this.state.bay3Text1Scouting59 === "") {
-
-                this.setState({ bay3Text1Scouting59: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting59", '0')
+                }
 
             }
 
-            if (this.state.bay4Text1Scouting59 === null || this.state.bay4Text1Scouting59 === "") {
+            if (bay4 !== '') {
 
-                this.setState({ bay4Text1Scouting59: '0' })
+                if (this.state.bay4Text1Scouting59 === null || this.state.bay4Text1Scouting59 === "") {
 
-                this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting59", '0')
+                    this.setState({ bay4Text1Scouting59: '0' })
 
-            }
+                    this.setItem(this.state.Scouting59Type + "" + "bay4Text1Scouting59", '0')
 
-            if (this.state.bay5Text1Scouting59 === null || this.state.bay5Text1Scouting59 === "") {
-
-                this.setState({ bay5Text1Scouting59: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting59", '0')
+                }
 
             }
 
-            if (this.state.bay6Text1Scouting59 === null || this.state.bay6Text1Scouting59 === "") {
+            if (bay5 !== '') {
 
-                this.setState({ bay6Text1Scouting59: '0' })
+                if (this.state.bay5Text1Scouting59 === null || this.state.bay5Text1Scouting59 === "") {
 
-                this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting59", '0')
+                    this.setState({ bay5Text1Scouting59: '0' })
 
-            }
+                    this.setItem(this.state.Scouting59Type + "" + "bay5Text1Scouting59", '0')
 
-            if (this.state.bay7Text1Scouting59 === null || this.state.bay7Text1Scouting59 === "") {
-
-                this.setState({ bay7Text1Scouting59: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting59", '0')
+                }
 
             }
 
-            if (this.state.bay8Text1Scouting59 === null || this.state.bay8Text1Scouting59 === "") {
+            if (bay6 !== '') {
 
-                this.setState({ bay8Text1Scouting59: '0' })
+                if (this.state.bay6Text1Scouting59 === null || this.state.bay6Text1Scouting59 === "") {
 
-                this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting59", '0')
+                    this.setState({ bay6Text1Scouting59: '0' })
 
-            }
+                    this.setItem(this.state.Scouting59Type + "" + "bay6Text1Scouting59", '0')
 
-            if (this.state.bay9Text1Scouting59 === null || this.state.bay9Text1Scouting59 === "") {
-
-                this.setState({ bay9Text1Scouting59: '0' })
-
-                this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting59", '0')
+                }
 
             }
 
-            if (this.state.bay10Text1Scouting59 === null || this.state.bay10Text1Scouting59 === "") {
+            if (bay7 !== '') {
 
-                this.setState({ bay10Text1Scouting59: '0' })
+                if (this.state.bay7Text1Scouting59 === null || this.state.bay7Text1Scouting59 === "") {
 
-                this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting59", '0')
+                    this.setState({ bay7Text1Scouting59: '0' })
+
+                    this.setItem(this.state.Scouting59Type + "" + "bay7Text1Scouting59", '0')
+
+                }
 
             }
 
-            if (this.state.bay11Text1Scouting59 === null || this.state.bay11Text1Scouting59 === "") {
+            if (bay8 !== '') {
 
-                this.setState({ bay11Text1Scouting59: '0' })
+                if (this.state.bay8Text1Scouting59 === null || this.state.bay8Text1Scouting59 === "") {
 
-                this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting59", '0')
+                    this.setState({ bay8Text1Scouting59: '0' })
+
+                    this.setItem(this.state.Scouting59Type + "" + "bay8Text1Scouting59", '0')
+
+                }
+
+            }
+
+            if (bay9 !== '') {
+
+                if (this.state.bay9Text1Scouting59 === null || this.state.bay9Text1Scouting59 === "") {
+
+                    this.setState({ bay9Text1Scouting59: '0' })
+
+                    this.setItem(this.state.Scouting59Type + "" + "bay9Text1Scouting59", '0')
+
+                }
+
+            }
+
+            if (bay10 !== '') {
+
+                if (this.state.bay10Text1Scouting59 === null || this.state.bay10Text1Scouting59 === "") {
+
+                    this.setState({ bay10Text1Scouting59: '0' })
+
+                    this.setItem(this.state.Scouting59Type + "" + "bay10Text1Scouting59", '0')
+
+                }
+
+            }
+
+            if (bay11 !== '') {
+                if (this.state.bay11Text1Scouting59 === null || this.state.bay11Text1Scouting59 === "") {
+
+                    this.setState({ bay11Text1Scouting59: '0' })
+
+                    this.setItem(this.state.Scouting59Type + "" + "bay11Text1Scouting59", '0')
+
+                }
 
             }
 
@@ -1370,184 +1601,244 @@ export default class Scouting59 extends Component {
 
                 console.log("Header1 & Header 2");
 
-                if (this.state.bay1Text1Scouting59 === null || this.state.bay1Text1Scouting59 === "") {
+                if (bay1 !== '') {
 
-                    this.setState({ bay1Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting59", '0')
-    
-                }
-    
-                if (this.state.bay2Text1Scouting59 === null || this.state.bay2Text1Scouting59 === "") {
-    
-                    this.setState({ bay2Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting59", '0')
-    
-                }
-    
-                if (this.state.bay3Text1Scouting59 === null || this.state.bay3Text1Scouting59 === "") {
-    
-                    this.setState({ bay3Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting59", '0')
-    
-                }
-    
-                if (this.state.bay4Text1Scouting59 === null || this.state.bay4Text1Scouting59 === "") {
-    
-                    this.setState({ bay4Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting59", '0')
-    
-                }
-    
-                if (this.state.bay5Text1Scouting59 === null || this.state.bay5Text1Scouting59 === "") {
-    
-                    this.setState({ bay5Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting59", '0')
-    
-                }
-    
-                if (this.state.bay6Text1Scouting59 === null || this.state.bay6Text1Scouting59 === "") {
-    
-                    this.setState({ bay6Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting59", '0')
-    
-                }
-    
-                if (this.state.bay7Text1Scouting59 === null || this.state.bay7Text1Scouting59 === "") {
-    
-                    this.setState({ bay7Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting59", '0')
-    
-                }
-    
-                if (this.state.bay8Text1Scouting59 === null || this.state.bay8Text1Scouting59 === "") {
-    
-                    this.setState({ bay8Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting59", '0')
-    
-                }
-    
-                if (this.state.bay9Text1Scouting59 === null || this.state.bay9Text1Scouting59 === "") {
-    
-                    this.setState({ bay9Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting59", '0')
-    
-                }
-    
-                if (this.state.bay10Text1Scouting59 === null || this.state.bay10Text1Scouting59 === "") {
-    
-                    this.setState({ bay10Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting59", '0')
-    
-                }
-    
-                if (this.state.bay11Text1Scouting59 === null || this.state.bay11Text1Scouting59 === "") {
-    
-                    this.setState({ bay11Text1Scouting59: '0' })
-    
-                    this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting59", '0')
-    
-                }
+                    if (this.state.bay1Text1Scouting59 === null || this.state.bay1Text1Scouting59 === "") {
 
-                if (this.state.bay1Text2Scouting59 === null || this.state.bay1Text2Scouting59 === "") {
+                        this.setState({ bay1Text1Scouting59: '0' })
 
-                    this.setState({ bay1Text2Scouting59: '0' })
+                        this.setItem(this.state.Scouting59Type + "" + "bay1Text1Scouting59", '0')
 
-                    this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting59", '0')
+                    }
 
                 }
 
+                if (bay2 !== '') {
 
-                if (this.state.bay2Text2Scouting59 === null || this.state.bay2Text2Scouting59 === "") {
+                    if (this.state.bay2Text1Scouting59 === null || this.state.bay2Text1Scouting59 === "") {
 
-                    this.setState({ bay2Text2Scouting59: '0' })
+                        this.setState({ bay2Text1Scouting59: '0' })
 
-                    this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting59", '0')
+                        this.setItem(this.state.Scouting59Type + "" + "bay2Text1Scouting59", '0')
+
+                    }
 
                 }
 
-                if (this.state.bay3Text2Scouting59 === null || this.state.bay3Text2Scouting59 === "") {
+                if (bay3 !== '') {
 
-                    this.setState({ bay3Text2Scouting59: '0' })
-        
-                    this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting59", '0')
-        
+                    if (this.state.bay3Text1Scouting59 === null || this.state.bay3Text1Scouting59 === "") {
+
+                        this.setState({ bay3Text1Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay3Text1Scouting59", '0')
+
+                    }
+
                 }
 
-                if (this.state.bay4Text2Scouting59 === null || this.state.bay4Text2Scouting59 === "") {
+                if (bay4 !== '') {
 
-                    this.setState({ bay4Text2Scouting59: '0' })
-        
-                    this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting59", '0')
-        
+                    if (this.state.bay4Text1Scouting59 === null || this.state.bay4Text1Scouting59 === "") {
+
+                        this.setState({ bay4Text1Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay4Text1Scouting59", '0')
+
+                    }
+
                 }
 
-                if (this.state.bay5Text2Scouting59 === null || this.state.bay5Text2Scouting59 === "") {
+                if (bay5 !== '') {
+                    if (this.state.bay5Text1Scouting59 === null || this.state.bay5Text1Scouting59 === "") {
 
-                    this.setState({ bay5Text2Scouting59: '0' })
-        
-                    this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting59", '0')
-        
+                        this.setState({ bay5Text1Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay5Text1Scouting59", '0')
+
+                    }
+
                 }
 
-                if (this.state.bay6Text2Scouting59 === null || this.state.bay6Text2Scouting59 === "") {
+                if (bay6 !== '') {
+                    if (this.state.bay6Text1Scouting59 === null || this.state.bay6Text1Scouting59 === "") {
 
-                    this.setState({ bay6Text2Scouting59: '0' })
-        
-                    this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting59", '0')
-        
+                        this.setState({ bay6Text1Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay6Text1Scouting59", '0')
+
+                    }
+
                 }
 
-                if (this.state.bay7Text2Scouting59 === null || this.state.bay7Text2Scouting59 === "") {
+                if (bay7 !== '') {
+                    if (this.state.bay7Text1Scouting59 === null || this.state.bay7Text1Scouting59 === "") {
 
-                    this.setState({ bay7Text2Scouting59: '0' })
-        
-                    this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting59", '0')
-        
+                        this.setState({ bay7Text1Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay7Text1Scouting59", '0')
+
+                    }
+
                 }
 
-                if (this.state.bay8Text2Scouting59 === null || this.state.bay8Text2Scouting59 === "") {
+                if (bay8 !== '') {
+                    if (this.state.bay8Text1Scouting59 === null || this.state.bay8Text1Scouting59 === "") {
 
-                    this.setState({ bay8Text2Scouting59: '0' })
-        
-                    this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting59", '0')
-        
+                        this.setState({ bay8Text1Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay8Text1Scouting59", '0')
+
+                    }
+
                 }
 
-                if (this.state.bay9Text2Scouting59 === null || this.state.bay9Text2Scouting59 === "") {
+                if (bay9 !== '') {
+                    if (this.state.bay9Text1Scouting59 === null || this.state.bay9Text1Scouting59 === "") {
 
-                    this.setState({ bay9Text2Scouting59: '0' })
-        
-                    this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting59", '0')
-        
+                        this.setState({ bay9Text1Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay9Text1Scouting59", '0')
+
+                    }
                 }
 
-                if (this.state.bay10Text2Scouting59 === null || this.state.bay10Text2Scouting59 === "") {
+                if (bay10 !== '') {
+                    if (this.state.bay10Text1Scouting59 === null || this.state.bay10Text1Scouting59 === "") {
 
-                    this.setState({ bay10Text2Scouting59: '0' })
-        
-                    this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting59", '0')
-        
+                        this.setState({ bay10Text1Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay10Text1Scouting59", '0')
+
+                    }
+
                 }
 
-                if (this.state.bay11Text2Scouting59 === null || this.state.bay11Text2Scouting59 === "") {
+                if (bay11 !== '') {
+                    if (this.state.bay11Text1Scouting59 === null || this.state.bay11Text1Scouting59 === "") {
 
-                    this.setState({ bay11Text2Scouting59: '0' })
-        
-                    this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting59", '0')
-        
+                        this.setState({ bay11Text1Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay11Text1Scouting59", '0')
+
+                    }
                 }
-        
-        
+
+                if (bay1 !== '') {
+                    if (this.state.bay1Text2Scouting59 === null || this.state.bay1Text2Scouting59 === "") {
+
+                        this.setState({ bay1Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay1Text2Scouting59", '0')
+
+                    }
+                }
+
+                if (bay2 !== '') {
+                    if (this.state.bay2Text2Scouting59 === null || this.state.bay2Text2Scouting59 === "") {
+
+                        this.setState({ bay2Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay2Text2Scouting59", '0')
+
+                    }
+                }
+
+                if (bay3 !== '') {
+                    if (this.state.bay3Text2Scouting59 === null || this.state.bay3Text2Scouting59 === "") {
+
+                        this.setState({ bay3Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay3Text2Scouting59", '0')
+
+                    }
+                }
+
+                if (bay4 !== '') {
+                    if (this.state.bay4Text2Scouting59 === null || this.state.bay4Text2Scouting59 === "") {
+
+                        this.setState({ bay4Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay4Text2Scouting59", '0')
+
+                    }
+                }
+
+                if (bay5 !== '') {
+                    if (this.state.bay5Text2Scouting59 === null || this.state.bay5Text2Scouting59 === "") {
+
+                        this.setState({ bay5Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay5Text2Scouting59", '0')
+
+                    }
+                }
+
+                if (bay6 !== '') {
+                    if (this.state.bay6Text2Scouting59 === null || this.state.bay6Text2Scouting59 === "") {
+
+                        this.setState({ bay6Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay6Text2Scouting59", '0')
+
+                    }
+                }
+
+                if (bay7 !== '') {
+                    if (this.state.bay7Text2Scouting59 === null || this.state.bay7Text2Scouting59 === "") {
+
+                        this.setState({ bay7Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay7Text2Scouting59", '0')
+
+                    }
+                }
+
+                if (bay8 !== '') {
+                    if (this.state.bay8Text2Scouting59 === null || this.state.bay8Text2Scouting59 === "") {
+
+                        this.setState({ bay8Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay8Text2Scouting59", '0')
+
+                    }
+                }
+
+
+                if (bay9 !== '') {
+                    if (this.state.bay9Text2Scouting59 === null || this.state.bay9Text2Scouting59 === "") {
+
+                        this.setState({ bay9Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay9Text2Scouting59", '0')
+
+                    }
+
+                }
+
+                if (bay10 !== '') {
+                    if (this.state.bay10Text2Scouting59 === null || this.state.bay10Text2Scouting59 === "") {
+
+                        this.setState({ bay10Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay10Text2Scouting59", '0')
+
+                    }
+
+                }
+
+                if (bay11 !== '') {
+                    if (this.state.bay11Text2Scouting59 === null || this.state.bay11Text2Scouting59 === "") {
+
+                        this.setState({ bay11Text2Scouting59: '0' })
+
+                        this.setItem(this.state.Scouting59Type + "" + "bay11Text2Scouting59", '0')
+
+                    }
+
+                }
+
+
 
             } else {
 
@@ -1555,271 +1846,340 @@ export default class Scouting59 extends Component {
 
                     console.log("Header 1, Header 2 & Header 3");
 
-                    if (this.state.bay1Text1Scouting59 === null || this.state.bay1Text1Scouting59 === "") {
+                    if (bay1 !== '') {
+                        if (this.state.bay1Text1Scouting59 === null || this.state.bay1Text1Scouting59 === "") {
 
-                        this.setState({ bay1Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting59", '0')
-        
-                    }
-        
-                    if (this.state.bay2Text1Scouting59 === null || this.state.bay2Text1Scouting59 === "") {
-        
-                        this.setState({ bay2Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting59", '0')
-        
-                    }
-        
-                    if (this.state.bay3Text1Scouting59 === null || this.state.bay3Text1Scouting59 === "") {
-        
-                        this.setState({ bay3Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting59", '0')
-        
-                    }
-        
-                    if (this.state.bay4Text1Scouting59 === null || this.state.bay4Text1Scouting59 === "") {
-        
-                        this.setState({ bay4Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting59", '0')
-        
-                    }
-        
-                    if (this.state.bay5Text1Scouting59 === null || this.state.bay5Text1Scouting59 === "") {
-        
-                        this.setState({ bay5Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting59", '0')
-        
-                    }
-        
-                    if (this.state.bay6Text1Scouting59 === null || this.state.bay6Text1Scouting59 === "") {
-        
-                        this.setState({ bay6Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting59", '0')
-        
-                    }
-        
-                    if (this.state.bay7Text1Scouting59 === null || this.state.bay7Text1Scouting59 === "") {
-        
-                        this.setState({ bay7Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting59", '0')
-        
-                    }
-        
-                    if (this.state.bay8Text1Scouting59 === null || this.state.bay8Text1Scouting59 === "") {
-        
-                        this.setState({ bay8Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting59", '0')
-        
-                    }
-        
-                    if (this.state.bay9Text1Scouting59 === null || this.state.bay9Text1Scouting59 === "") {
-        
-                        this.setState({ bay9Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting59", '0')
-        
-                    }
-        
-                    if (this.state.bay10Text1Scouting59 === null || this.state.bay10Text1Scouting59 === "") {
-        
-                        this.setState({ bay10Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting59", '0')
-        
-                    }
-        
-                    if (this.state.bay11Text1Scouting59 === null || this.state.bay11Text1Scouting59 === "") {
-        
-                        this.setState({ bay11Text1Scouting59: '0' })
-        
-                        this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting59", '0')
-        
-                    }
-    
-                    if (this.state.bay1Text2Scouting59 === null || this.state.bay1Text2Scouting59 === "") {
-    
-                        this.setState({ bay1Text2Scouting59: '0' })
-    
-                        this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting59", '0')
-    
-                    }
-    
-    
-                    if (this.state.bay2Text2Scouting59 === null || this.state.bay2Text2Scouting59 === "") {
-    
-                        this.setState({ bay2Text2Scouting59: '0' })
-    
-                        this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting59", '0')
-    
-                    }
-    
-                    if (this.state.bay3Text2Scouting59 === null || this.state.bay3Text2Scouting59 === "") {
-    
-                        this.setState({ bay3Text2Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting59", '0')
-            
-                    }
-    
-                    if (this.state.bay4Text2Scouting59 === null || this.state.bay4Text2Scouting59 === "") {
-    
-                        this.setState({ bay4Text2Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting59", '0')
-            
-                    }
-    
-                    if (this.state.bay5Text2Scouting59 === null || this.state.bay5Text2Scouting59 === "") {
-    
-                        this.setState({ bay5Text2Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting59", '0')
-            
-                    }
-    
-                    if (this.state.bay6Text2Scouting59 === null || this.state.bay6Text2Scouting59 === "") {
-    
-                        this.setState({ bay6Text2Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting59", '0')
-            
-                    }
-    
-                    if (this.state.bay7Text2Scouting59 === null || this.state.bay7Text2Scouting59 === "") {
-    
-                        this.setState({ bay7Text2Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting59", '0')
-            
-                    }
-    
-                    if (this.state.bay8Text2Scouting59 === null || this.state.bay8Text2Scouting59 === "") {
-    
-                        this.setState({ bay8Text2Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting59", '0')
-            
-                    }
-    
-                    if (this.state.bay9Text2Scouting59 === null || this.state.bay9Text2Scouting59 === "") {
-    
-                        this.setState({ bay9Text2Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting59", '0')
-            
-                    }
-    
-                    if (this.state.bay10Text2Scouting59 === null || this.state.bay10Text2Scouting59 === "") {
-    
-                        this.setState({ bay10Text2Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting59", '0')
-            
-                    }
-    
-                    if (this.state.bay11Text2Scouting59 === null || this.state.bay11Text2Scouting59 === "") {
-    
-                        this.setState({ bay11Text2Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting59", '0')
-            
-                    }
-        
-                    if (this.state.bay1Text3Scouting59 === null || this.state.bay1Text3Scouting59 === "") {
+                            this.setState({ bay1Text1Scouting59: '0' })
 
-                        this.setState({ bay1Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting59", '0')
-            
+                            this.setItem(this.state.Scouting59Type + "" + "bay1Text1Scouting59", '0')
+
+                        }
                     }
 
-                    if (this.state.bay2Text3Scouting59 === null || this.state.bay2Text3Scouting59 === "") {
+                    if (bay2 !== '') {
+                        if (this.state.bay2Text1Scouting59 === null || this.state.bay2Text1Scouting59 === "") {
 
-                        this.setState({ bay2Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting59", '0')
-            
+                            this.setState({ bay2Text1Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay2Text1Scouting59", '0')
+
+                        }
+
                     }
 
-                    if (this.state.bay3Text3Scouting59 === null || this.state.bay3Text3Scouting59 === "") {
+                    if (bay3 !== '') {
+                        if (this.state.bay3Text1Scouting59 === null || this.state.bay3Text1Scouting59 === "") {
 
-                        this.setState({ bay3Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting59", '0')
-            
+                            this.setState({ bay3Text1Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay3Text1Scouting59", '0')
+
+                        }
                     }
 
-                    if (this.state.bay4Text3Scouting59 === null || this.state.bay4Text3Scouting59 === "") {
+                    if (bay4 !== '') {
+                        if (this.state.bay4Text1Scouting59 === null || this.state.bay4Text1Scouting59 === "") {
 
-                        this.setState({ bay4Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting59", '0')
-            
+                            this.setState({ bay4Text1Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay4Text1Scouting59", '0')
+
+                        }
                     }
 
-                    if (this.state.bay5Text3Scouting59 === null || this.state.bay5Text3Scouting59 === "") {
+                    if (bay5 !== '') {
+                        if (this.state.bay5Text1Scouting59 === null || this.state.bay5Text1Scouting59 === "") {
 
-                        this.setState({ bay5Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting59", '0')
-            
+                            this.setState({ bay5Text1Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay5Text1Scouting59", '0')
+
+                        }
                     }
 
-                    if (this.state.bay6Text3Scouting59 === null || this.state.bay6Text3Scouting59 === "") {
+                    if (bay6 !== '') {
+                        if (this.state.bay6Text1Scouting59 === null || this.state.bay6Text1Scouting59 === "") {
 
-                        this.setState({ bay6Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting59", '0')
-            
+                            this.setState({ bay6Text1Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay6Text1Scouting59", '0')
+
+                        }
+
                     }
 
-                    if (this.state.bay7Text3Scouting59 === null || this.state.bay7Text3Scouting59 === "") {
 
-                        this.setState({ bay7Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting59", '0')
-            
+                    if (bay7 !== '') {
+                        if (this.state.bay7Text1Scouting59 === null || this.state.bay7Text1Scouting59 === "") {
+
+                            this.setState({ bay7Text1Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay7Text1Scouting59", '0')
+
+                        }
                     }
 
-                    if (this.state.bay8Text3Scouting59 === null || this.state.bay8Text3Scouting59 === "") {
+                    if (bay8 !== '') {
+                        if (this.state.bay8Text1Scouting59 === null || this.state.bay8Text1Scouting59 === "") {
 
-                        this.setState({ bay8Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting59", '0')
-            
+                            this.setState({ bay8Text1Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay8Text1Scouting59", '0')
+
+                        }
                     }
 
-                    if (this.state.bay9Text3Scouting59 === null || this.state.bay9Text3Scouting59 === "") {
+                    if (bay9 !== '') {
+                        if (this.state.bay9Text1Scouting59 === null || this.state.bay9Text1Scouting59 === "") {
 
-                        this.setState({ bay9Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting59", '0')
-            
+                            this.setState({ bay9Text1Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay9Text1Scouting59", '0')
+
+                        }
                     }
 
-                    if (this.state.bay10Text3Scouting59 === null || this.state.bay10Text3Scouting59 === "") {
+                    if (bay10 !== '') {
+                        if (this.state.bay10Text1Scouting59 === null || this.state.bay10Text1Scouting59 === "") {
 
-                        this.setState({ bay10Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting59", '0')
-            
+                            this.setState({ bay10Text1Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay10Text1Scouting59", '0')
+
+                        }
                     }
 
-                    if (this.state.bay11Text3Scouting59 === null || this.state.bay11Text3Scouting59 === "") {
+                    if (bay11 !== '') {
+                        if (this.state.bay11Text1Scouting59 === null || this.state.bay11Text1Scouting59 === "") {
 
-                        this.setState({ bay11Text3Scouting59: '0' })
-            
-                        this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting59", '0')
-            
+                            this.setState({ bay11Text1Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay11Text1Scouting59", '0')
+
+                        }
                     }
-            
+
+                    if (bay1 !== '') {
+                        if (this.state.bay1Text2Scouting59 === null || this.state.bay1Text2Scouting59 === "") {
+
+                            this.setState({ bay1Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay1Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay2 !== '') {
+                        if (this.state.bay2Text2Scouting59 === null || this.state.bay2Text2Scouting59 === "") {
+
+                            this.setState({ bay2Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay2Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay3 !== '') {
+                        if (this.state.bay3Text2Scouting59 === null || this.state.bay3Text2Scouting59 === "") {
+
+                            this.setState({ bay3Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay3Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay4 !== '') {
+                        if (this.state.bay4Text2Scouting59 === null || this.state.bay4Text2Scouting59 === "") {
+
+                            this.setState({ bay4Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay4Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay5 !== '') {
+                        if (this.state.bay5Text2Scouting59 === null || this.state.bay5Text2Scouting59 === "") {
+
+                            this.setState({ bay5Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay5Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay6 !== '') {
+                        if (this.state.bay6Text2Scouting59 === null || this.state.bay6Text2Scouting59 === "") {
+
+                            this.setState({ bay6Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay6Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay7 !== '') {
+                        if (this.state.bay7Text2Scouting59 === null || this.state.bay7Text2Scouting59 === "") {
+
+                            this.setState({ bay7Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay7Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay8 !== '') {
+                        if (this.state.bay8Text2Scouting59 === null || this.state.bay8Text2Scouting59 === "") {
+
+                            this.setState({ bay8Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay8Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay9 !== '') {
+                        if (this.state.bay9Text2Scouting59 === null || this.state.bay9Text2Scouting59 === "") {
+
+                            this.setState({ bay9Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay9Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay10 !== '') {
+                        if (this.state.bay10Text2Scouting59 === null || this.state.bay10Text2Scouting59 === "") {
+
+                            this.setState({ bay10Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay10Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay11 !== '') {
+                        if (this.state.bay11Text2Scouting59 === null || this.state.bay11Text2Scouting59 === "") {
+
+                            this.setState({ bay11Text2Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay11Text2Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay1 !== '') {
+                        if (this.state.bay1Text3Scouting59 === null || this.state.bay1Text3Scouting59 === "") {
+
+                            this.setState({ bay1Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay1Text3Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay2 !== '') {
+                        if (this.state.bay2Text3Scouting59 === null || this.state.bay2Text3Scouting59 === "") {
+
+                            this.setState({ bay2Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay2Text3Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay3 !== '') {
+                        if (this.state.bay3Text3Scouting59 === null || this.state.bay3Text3Scouting59 === "") {
+
+                            this.setState({ bay3Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay3Text3Scouting59", '0')
+
+                        }
+
+                    }
+
+                    if (bay4 !== '') {
+                        if (this.state.bay4Text3Scouting59 === null || this.state.bay4Text3Scouting59 === "") {
+
+                            this.setState({ bay4Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay4Text3Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay5 !== '') {
+                        if (this.state.bay5Text3Scouting59 === null || this.state.bay5Text3Scouting59 === "") {
+
+                            this.setState({ bay5Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay5Text3Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay6 !== '') {
+                        if (this.state.bay6Text3Scouting59 === null || this.state.bay6Text3Scouting59 === "") {
+
+                            this.setState({ bay6Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay6Text3Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay7 !== '') {
+                        if (this.state.bay7Text3Scouting59 === null || this.state.bay7Text3Scouting59 === "") {
+
+                            this.setState({ bay7Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay7Text3Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay8 !== '') {
+                        if (this.state.bay8Text3Scouting59 === null || this.state.bay8Text3Scouting59 === "") {
+
+                            this.setState({ bay8Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay8Text3Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay9 !== '') {
+                        if (this.state.bay9Text3Scouting59 === null || this.state.bay9Text3Scouting59 === "") {
+
+                            this.setState({ bay9Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay9Text3Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay10 !== '') {
+                        if (this.state.bay10Text3Scouting59 === null || this.state.bay10Text3Scouting59 === "") {
+
+                            this.setState({ bay10Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay10Text3Scouting59", '0')
+
+                        }
+                    }
+
+                    if (bay11 !== '') {
+                        if (this.state.bay11Text3Scouting59 === null || this.state.bay11Text3Scouting59 === "") {
+
+                            this.setState({ bay11Text3Scouting59: '0' })
+
+                            this.setItem(this.state.Scouting59Type + "" + "bay11Text3Scouting59", '0')
+
+                        }
+                    }
+
 
                 } else {
 
@@ -1827,357 +2187,444 @@ export default class Scouting59 extends Component {
 
                         console.log("Header 1, Header 2, Header 3 & Header 4");
 
-                        if (this.state.bay1Text1Scouting59 === null || this.state.bay1Text1Scouting59 === "") {
+                        if (bay1 !== '') {
+                            if (this.state.bay1Text1Scouting59 === null || this.state.bay1Text1Scouting59 === "") {
 
-                            this.setState({ bay1Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay1Text1Scouting59", '0')
-            
-                        }
-            
-                        if (this.state.bay2Text1Scouting59 === null || this.state.bay2Text1Scouting59 === "") {
-            
-                            this.setState({ bay2Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay2Text1Scouting59", '0')
-            
-                        }
-            
-                        if (this.state.bay3Text1Scouting59 === null || this.state.bay3Text1Scouting59 === "") {
-            
-                            this.setState({ bay3Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay3Text1Scouting59", '0')
-            
-                        }
-            
-                        if (this.state.bay4Text1Scouting59 === null || this.state.bay4Text1Scouting59 === "") {
-            
-                            this.setState({ bay4Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay4Text1Scouting59", '0')
-            
-                        }
-            
-                        if (this.state.bay5Text1Scouting59 === null || this.state.bay5Text1Scouting59 === "") {
-            
-                            this.setState({ bay5Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay5Text1Scouting59", '0')
-            
-                        }
-            
-                        if (this.state.bay6Text1Scouting59 === null || this.state.bay6Text1Scouting59 === "") {
-            
-                            this.setState({ bay6Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay6Text1Scouting59", '0')
-            
-                        }
-            
-                        if (this.state.bay7Text1Scouting59 === null || this.state.bay7Text1Scouting59 === "") {
-            
-                            this.setState({ bay7Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay7Text1Scouting59", '0')
-            
-                        }
-            
-                        if (this.state.bay8Text1Scouting59 === null || this.state.bay8Text1Scouting59 === "") {
-            
-                            this.setState({ bay8Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay8Text1Scouting59", '0')
-            
-                        }
-            
-                        if (this.state.bay9Text1Scouting59 === null || this.state.bay9Text1Scouting59 === "") {
-            
-                            this.setState({ bay9Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay9Text1Scouting59", '0')
-            
-                        }
-            
-                        if (this.state.bay10Text1Scouting59 === null || this.state.bay10Text1Scouting59 === "") {
-            
-                            this.setState({ bay10Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay10Text1Scouting59", '0')
-            
-                        }
-            
-                        if (this.state.bay11Text1Scouting59 === null || this.state.bay11Text1Scouting59 === "") {
-            
-                            this.setState({ bay11Text1Scouting59: '0' })
-            
-                            this.setItem(this.state.scoutingType + "" + "bay11Text1Scouting59", '0')
-            
-                        }
-        
-                        if (this.state.bay1Text2Scouting59 === null || this.state.bay1Text2Scouting59 === "") {
-        
-                            this.setState({ bay1Text2Scouting59: '0' })
-        
-                            this.setItem(this.state.scoutingType + "" + "bay1Text2Scouting59", '0')
-        
-                        }
-        
-        
-                        if (this.state.bay2Text2Scouting59 === null || this.state.bay2Text2Scouting59 === "") {
-        
-                            this.setState({ bay2Text2Scouting59: '0' })
-        
-                            this.setItem(this.state.scoutingType + "" + "bay2Text2Scouting59", '0')
-        
-                        }
-        
-                        if (this.state.bay3Text2Scouting59 === null || this.state.bay3Text2Scouting59 === "") {
-        
-                            this.setState({ bay3Text2Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay3Text2Scouting59", '0')
-                
-                        }
-        
-                        if (this.state.bay4Text2Scouting59 === null || this.state.bay4Text2Scouting59 === "") {
-        
-                            this.setState({ bay4Text2Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay4Text2Scouting59", '0')
-                
-                        }
-        
-                        if (this.state.bay5Text2Scouting59 === null || this.state.bay5Text2Scouting59 === "") {
-        
-                            this.setState({ bay5Text2Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay5Text2Scouting59", '0')
-                
-                        }
-        
-                        if (this.state.bay6Text2Scouting59 === null || this.state.bay6Text2Scouting59 === "") {
-        
-                            this.setState({ bay6Text2Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay6Text2Scouting59", '0')
-                
-                        }
-        
-                        if (this.state.bay7Text2Scouting59 === null || this.state.bay7Text2Scouting59 === "") {
-        
-                            this.setState({ bay7Text2Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay7Text2Scouting59", '0')
-                
-                        }
-        
-                        if (this.state.bay8Text2Scouting59 === null || this.state.bay8Text2Scouting59 === "") {
-        
-                            this.setState({ bay8Text2Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay8Text2Scouting59", '0')
-                
-                        }
-        
-                        if (this.state.bay9Text2Scouting59 === null || this.state.bay9Text2Scouting59 === "") {
-        
-                            this.setState({ bay9Text2Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay9Text2Scouting59", '0')
-                
-                        }
-        
-                        if (this.state.bay10Text2Scouting59 === null || this.state.bay10Text2Scouting59 === "") {
-        
-                            this.setState({ bay10Text2Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay10Text2Scouting59", '0')
-                
-                        }
-        
-                        if (this.state.bay11Text2Scouting59 === null || this.state.bay11Text2Scouting59 === "") {
-        
-                            this.setState({ bay11Text2Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay11Text2Scouting59", '0')
-                
-                        }
-            
-                        if (this.state.bay1Text3Scouting59 === null || this.state.bay1Text3Scouting59 === "") {
-    
-                            this.setState({ bay1Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay1Text3Scouting59", '0')
-                
-                        }
-    
-                        if (this.state.bay2Text3Scouting59 === null || this.state.bay2Text3Scouting59 === "") {
-    
-                            this.setState({ bay2Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay2Text3Scouting59", '0')
-                
-                        }
-    
-                        if (this.state.bay3Text3Scouting59 === null || this.state.bay3Text3Scouting59 === "") {
-    
-                            this.setState({ bay3Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay3Text3Scouting59", '0')
-                
-                        }
-    
-                        if (this.state.bay4Text3Scouting59 === null || this.state.bay4Text3Scouting59 === "") {
-    
-                            this.setState({ bay4Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay4Text3Scouting59", '0')
-                
-                        }
-    
-                        if (this.state.bay5Text3Scouting59 === null || this.state.bay5Text3Scouting59 === "") {
-    
-                            this.setState({ bay5Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay5Text3Scouting59", '0')
-                
-                        }
-    
-                        if (this.state.bay6Text3Scouting59 === null || this.state.bay6Text3Scouting59 === "") {
-    
-                            this.setState({ bay6Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay6Text3Scouting59", '0')
-                
-                        }
-    
-                        if (this.state.bay7Text3Scouting59 === null || this.state.bay7Text3Scouting59 === "") {
-    
-                            this.setState({ bay7Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay7Text3Scouting59", '0')
-                
-                        }
-    
-                        if (this.state.bay8Text3Scouting59 === null || this.state.bay8Text3Scouting59 === "") {
-    
-                            this.setState({ bay8Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay8Text3Scouting59", '0')
-                
-                        }
-    
-                        if (this.state.bay9Text3Scouting59 === null || this.state.bay9Text3Scouting59 === "") {
-    
-                            this.setState({ bay9Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay9Text3Scouting59", '0')
-                
-                        }
-    
-                        if (this.state.bay10Text3Scouting59 === null || this.state.bay10Text3Scouting59 === "") {
-    
-                            this.setState({ bay10Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay10Text3Scouting59", '0')
-                
-                        }
-    
-                        if (this.state.bay11Text3Scouting59 === null || this.state.bay11Text3Scouting59 === "") {
-    
-                            this.setState({ bay11Text3Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay11Text3Scouting59", '0')
-                
+                                this.setState({ bay1Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay1Text1Scouting59", '0')
+
+                            }
                         }
 
-                        if (this.state.bay1Text4Scouting59 === null || this.state.bay1Text4Scouting59 === "") {
+                        if (bay2 !== '') {
+                            if (this.state.bay2Text1Scouting59 === null || this.state.bay2Text1Scouting59 === "") {
 
-                            this.setState({ bay1Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay1Text4Scouting59", '0')
-                
+                                this.setState({ bay2Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay2Text1Scouting59", '0')
+
+                            }
                         }
 
-                        if (this.state.bay2Text4Scouting59 === null || this.state.bay2Text4Scouting59 === "") {
+                        if (bay3 !== '') {
+                            if (this.state.bay3Text1Scouting59 === null || this.state.bay3Text1Scouting59 === "") {
 
-                            this.setState({ bay2Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay2Text4Scouting59", '0')
-                
+                                this.setState({ bay3Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay3Text1Scouting59", '0')
+
+                            }
                         }
 
-                        if (this.state.bay3Text4Scouting59 === null || this.state.bay3Text4Scouting59 === "") {
+                        if (bay4 !== '') {
+                            if (this.state.bay4Text1Scouting59 === null || this.state.bay4Text1Scouting59 === "") {
 
-                            this.setState({ bay3Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay3Text4Scouting59", '0')
-                
+                                this.setState({ bay4Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay4Text1Scouting59", '0')
+
+                            }
                         }
 
-                        if (this.state.bay4Text4Scouting59 === null || this.state.bay4Text4Scouting59 === "") {
+                        if (bay5 !== '') {
+                            if (this.state.bay5Text1Scouting59 === null || this.state.bay5Text1Scouting59 === "") {
 
-                            this.setState({ bay4Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay4Text4Scouting59", '0')
-                
+                                this.setState({ bay5Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay5Text1Scouting59", '0')
+
+                            }
                         }
 
-                        if (this.state.bay5Text4Scouting59 === null || this.state.bay5Text4Scouting59 === "") {
+                        if (bay6 !== '') {
+                            if (this.state.bay6Text1Scouting59 === null || this.state.bay6Text1Scouting59 === "") {
 
-                            this.setState({ bay5Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay5Text4Scouting59", '0')
-                
+                                this.setState({ bay6Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay6Text1Scouting59", '0')
+
+                            }
                         }
 
-                        if (this.state.bay6Text4Scouting59 === null || this.state.bay6Text4Scouting59 === "") {
+                        if (bay7 !== '') {
+                            if (this.state.bay7Text1Scouting59 === null || this.state.bay7Text1Scouting59 === "") {
 
-                            this.setState({ bay6Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay6Text4Scouting59", '0')
-                
+                                this.setState({ bay7Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay7Text1Scouting59", '0')
+
+                            }
                         }
 
-                        if (this.state.bay7Text4Scouting59 === null || this.state.bay7Text4Scouting59 === "") {
+                        if (bay8 !== '') {
+                            if (this.state.bay8Text1Scouting59 === null || this.state.bay8Text1Scouting59 === "") {
 
-                            this.setState({ bay7Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay7Text4Scouting59", '0')
-                
+                                this.setState({ bay8Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay8Text1Scouting59", '0')
+
+                            }
                         }
 
-                        if (this.state.bay8Text4Scouting59 === null || this.state.bay8Text4Scouting59 === "") {
+                        if (bay9 !== '') {
+                            if (this.state.bay9Text1Scouting59 === null || this.state.bay9Text1Scouting59 === "") {
 
-                            this.setState({ bay8Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.ScoutingType + "" + "bay8Text4Scouting59", '0')
-                
+                                this.setState({ bay9Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay9Text1Scouting59", '0')
+
+                            }
                         }
 
-                        if (this.state.bay9Text4Scouting59 === null || this.state.bay9Text4Scouting59 === "") {
+                        if (bay10 !== '') {
+                            if (this.state.bay10Text1Scouting59 === null || this.state.bay10Text1Scouting59 === "") {
 
-                            this.setState({ bay9Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay9Text4Scouting59", '0')
-                
+                                this.setState({ bay10Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay10Text1Scouting59", '0')
+
+                            }
                         }
-                
-                        if (this.state.bay10Text4Scouting59 === null || this.state.bay10Text4Scouting59 === "") {
-                
-                            this.setState({ bay10Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay10Text4Scouting59", '0')
-                
+
+                        if (bay11 !== '') {
+                            if (this.state.bay11Text1Scouting59 === null || this.state.bay11Text1Scouting59 === "") {
+
+                                this.setState({ bay11Text1Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay11Text1Scouting59", '0')
+
+                            }
                         }
-                
-                        if (this.state.bay11Text4Scouting59 === null || this.state.bay11Text4Scouting59 === "") {
-                
-                            this.setState({ bay11Text4Scouting59: '0' })
-                
-                            this.setItem(this.state.scoutingType + "" + "bay11Text4Scouting59", '0')
-                
+
+                        if (bay1 !== '') {
+                            if (this.state.bay1Text2Scouting59 === null || this.state.bay1Text2Scouting59 === "") {
+
+                                this.setState({ bay1Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay1Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay2 !== '') {
+                            if (this.state.bay2Text2Scouting59 === null || this.state.bay2Text2Scouting59 === "") {
+
+                                this.setState({ bay2Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay2Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay3 !== '') {
+                            if (this.state.bay3Text2Scouting59 === null || this.state.bay3Text2Scouting59 === "") {
+
+                                this.setState({ bay3Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay3Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay4 !== '') {
+                            if (this.state.bay4Text2Scouting59 === null || this.state.bay4Text2Scouting59 === "") {
+
+                                this.setState({ bay4Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay4Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay5 !== '') {
+                            if (this.state.bay5Text2Scouting59 === null || this.state.bay5Text2Scouting59 === "") {
+
+                                this.setState({ bay5Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay5Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay6 !== '') {
+                            if (this.state.bay6Text2Scouting59 === null || this.state.bay6Text2Scouting59 === "") {
+
+                                this.setState({ bay6Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay6Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay7 !== '') {
+                            if (this.state.bay7Text2Scouting59 === null || this.state.bay7Text2Scouting59 === "") {
+
+                                this.setState({ bay7Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay7Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay8 !== '') {
+                            if (this.state.bay8Text2Scouting59 === null || this.state.bay8Text2Scouting59 === "") {
+
+                                this.setState({ bay8Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay8Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay9 !== '') {
+                            if (this.state.bay9Text2Scouting59 === null || this.state.bay9Text2Scouting59 === "") {
+
+                                this.setState({ bay9Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay9Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay10 !== '') {
+                            if (this.state.bay10Text2Scouting59 === null || this.state.bay10Text2Scouting59 === "") {
+
+                                this.setState({ bay10Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay10Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay11 !== '') {
+                            if (this.state.bay11Text2Scouting59 === null || this.state.bay11Text2Scouting59 === "") {
+
+                                this.setState({ bay11Text2Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay11Text2Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay1 !== '') {
+                            if (this.state.bay1Text3Scouting59 === null || this.state.bay1Text3Scouting59 === "") {
+
+                                this.setState({ bay1Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay1Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay2 !== '') {
+                            if (this.state.bay2Text3Scouting59 === null || this.state.bay2Text3Scouting59 === "") {
+
+                                this.setState({ bay2Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay2Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay3 !== '') {
+                            if (this.state.bay3Text3Scouting59 === null || this.state.bay3Text3Scouting59 === "") {
+
+                                this.setState({ bay3Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay3Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay4 !== '') {
+                            if (this.state.bay4Text3Scouting59 === null || this.state.bay4Text3Scouting59 === "") {
+
+                                this.setState({ bay4Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay4Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay5 !== '') {
+                            if (this.state.bay5Text3Scouting59 === null || this.state.bay5Text3Scouting59 === "") {
+
+                                this.setState({ bay5Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay5Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay6 !== '') {
+                            if (this.state.bay6Text3Scouting59 === null || this.state.bay6Text3Scouting59 === "") {
+
+                                this.setState({ bay6Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay6Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay7 !== '') {
+                            if (this.state.bay7Text3Scouting59 === null || this.state.bay7Text3Scouting59 === "") {
+
+                                this.setState({ bay7Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay7Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay8 !== '') {
+                            if (this.state.bay8Text3Scouting59 === null || this.state.bay8Text3Scouting59 === "") {
+
+                                this.setState({ bay8Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay8Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay9 !== '') {
+                            if (this.state.bay9Text3Scouting59 === null || this.state.bay9Text3Scouting59 === "") {
+
+                                this.setState({ bay9Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay9Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay10 !== '') {
+                            if (this.state.bay10Text3Scouting59 === null || this.state.bay10Text3Scouting59 === "") {
+
+                                this.setState({ bay10Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay10Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay11 !== '') {
+                            if (this.state.bay11Text3Scouting59 === null || this.state.bay11Text3Scouting59 === "") {
+
+                                this.setState({ bay11Text3Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay11Text3Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay1 !== '') {
+                            if (this.state.bay1Text4Scouting59 === null || this.state.bay1Text4Scouting59 === "") {
+
+                                this.setState({ bay1Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay1Text4Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay2 !== '') {
+                            if (this.state.bay2Text4Scouting59 === null || this.state.bay2Text4Scouting59 === "") {
+
+                                this.setState({ bay2Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay2Text4Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay2 !== '') {
+                            if (this.state.bay3Text4Scouting59 === null || this.state.bay3Text4Scouting59 === "") {
+
+                                this.setState({ bay3Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay3Text4Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay4 !== '') {
+                            if (this.state.bay4Text4Scouting59 === null || this.state.bay4Text4Scouting59 === "") {
+
+                                this.setState({ bay4Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay4Text4Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay5 !== '') {
+                            if (this.state.bay5Text4Scouting59 === null || this.state.bay5Text4Scouting59 === "") {
+
+                                this.setState({ bay5Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay5Text4Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay6 !== '') {
+                            if (this.state.bay6Text4Scouting59 === null || this.state.bay6Text4Scouting59 === "") {
+
+                                this.setState({ bay6Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay6Text4Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay7 !== '') {
+                            if (this.state.bay7Text4Scouting59 === null || this.state.bay7Text4Scouting59 === "") {
+
+                                this.setState({ bay7Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay7Text4Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay8 !== '') {
+                            if (this.state.bay8Text4Scouting59 === null || this.state.bay8Text4Scouting59 === "") {
+
+                                this.setState({ bay8Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay8Text4Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay9 !== '') {
+                            if (this.state.bay9Text4Scouting59 === null || this.state.bay9Text4Scouting59 === "") {
+
+                                this.setState({ bay9Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay9Text4Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay10 !== '') {
+                            if (this.state.bay10Text4Scouting59 === null || this.state.bay10Text4Scouting59 === "") {
+
+                                this.setState({ bay10Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay10Text4Scouting59", '0')
+
+                            }
+                        }
+
+                        if (bay11 !== '') {
+                            if (this.state.bay11Text4Scouting59 === null || this.state.bay11Text4Scouting59 === "") {
+
+                                this.setState({ bay11Text4Scouting59: '0' })
+
+                                this.setItem(this.state.Scouting59Type + "" + "bay11Text4Scouting59", '0')
+
+                            }
                         }
 
                     } else {
@@ -2190,6 +2637,8 @@ export default class Scouting59 extends Component {
             }
 
         }
+
+
     }
 
     
@@ -2248,7 +2697,7 @@ export default class Scouting59 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
                 }
 
@@ -2297,7 +2746,7 @@ export default class Scouting59 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
                 }
 
@@ -2346,7 +2795,7 @@ export default class Scouting59 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
                 }
 
@@ -2396,7 +2845,7 @@ export default class Scouting59 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
                 }
 
@@ -2445,7 +2894,7 @@ export default class Scouting59 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
                 }
 
@@ -2495,7 +2944,7 @@ export default class Scouting59 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
                 }
 
@@ -2545,7 +2994,7 @@ export default class Scouting59 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
                 }
 
@@ -2594,7 +3043,7 @@ export default class Scouting59 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
                 }
 
@@ -2643,7 +3092,7 @@ export default class Scouting59 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
                 }
 
@@ -2693,7 +3142,7 @@ export default class Scouting59 extends Component {
 
                 } else {
 
-                    this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                    this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
                 }
 
@@ -2737,7 +3186,7 @@ export default class Scouting59 extends Component {
 
                 console.log(result);
 
-                this.props.navigation.navigate('Scouting60', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
+                this.props.navigation.navigate('Scouting590', { startNumber2: this.state.rowNumberScouting59, inter2: this.state.intervals })
 
 
             })
@@ -2885,9 +3334,9 @@ export default class Scouting59 extends Component {
                                 }}></View>
 
 
-                                <View style={styles.tableRow}>
+<View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>A</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay1Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -2978,7 +3427,7 @@ export default class Scouting59 extends Component {
 
                                 <View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>B-D</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay2Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -3068,7 +3517,7 @@ export default class Scouting59 extends Component {
 
                                 <View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>E-G</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay3Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -3160,7 +3609,7 @@ export default class Scouting59 extends Component {
 
                                 <View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>H-J</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay4Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -3252,7 +3701,7 @@ export default class Scouting59 extends Component {
 
                                 <View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>K-M</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay5Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -3343,7 +3792,7 @@ export default class Scouting59 extends Component {
 
                                 <View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>N-P</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay6Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -3435,7 +3884,7 @@ export default class Scouting59 extends Component {
 
                                 <View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>Q-T</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay7Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -3528,7 +3977,7 @@ export default class Scouting59 extends Component {
 
                                 <View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>U-V</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay8Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -3619,7 +4068,7 @@ export default class Scouting59 extends Component {
 
                                 <View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>W</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay9Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -3711,7 +4160,7 @@ export default class Scouting59 extends Component {
 
                                 <View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>X</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay10Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -3800,7 +4249,7 @@ export default class Scouting59 extends Component {
 
                                 <View style={styles.tableRow}>
                                     <View style={styles.tableColumnClockInOutTimes}>
-                                        <Text style={styles.textLineItemGreen}>Y-Z</Text>
+                                        <Text style={styles.textLineItemGreen}>{this.state.miniBay11Scouting59}</Text>
                                     </View>
 
                                     <View style={{
@@ -3883,7 +4332,6 @@ export default class Scouting59 extends Component {
                             </View>
 
                             <View style={styles.marginBetweenTop}></View>
-
                             <TouchableOpacity  onPress={() => this.handleEmptyCells()}>
                                 <Text style={styles.copyText}>Click here to set empty cells with 0(zero)</Text>
                             </TouchableOpacity>
@@ -3925,6 +4373,14 @@ const styles = StyleSheet.create({
         color: "#000000",
     },
 
+    copyText: {
+
+        alignSelf: 'center',
+        fontSize: 18,
+        color: '#ff0000',
+
+    },
+
     textLineItemIOS: {
 
         color: "#000000",
@@ -3936,14 +4392,6 @@ const styles = StyleSheet.create({
         flexShrink: 1,
         fontWeight: 'bold',
         textAlign: 'center',
-    },
-
-    copyText: {
-
-        alignSelf: 'center',
-        fontSize: 18,
-        color: '#ff0000',
-
     },
 
     textLineItemGreenIOS: {
@@ -4021,11 +4469,6 @@ const styles = StyleSheet.create({
 
     },
 
-    marginContainerBottom: {
-
-        marginBottom: 95,
-
-    },
 
     titleHeadingTextIOS: {
 
@@ -4091,6 +4534,12 @@ const styles = StyleSheet.create({
         backgroundColor: "transparent",
         
 
+
+    },
+
+    marginContainerBottom: {
+
+        marginBottom: 95,
 
     },
 

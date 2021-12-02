@@ -87,7 +87,7 @@ function MainStackNavigator() {
 
 
             <Stack.Navigator
-                initialRouteName='Home'
+                initialRouteName='SiteSelection'
 
 
                 screenOptions={{
