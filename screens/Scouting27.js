@@ -127,6 +127,7 @@ export default class Scouting27 extends Component {
             scoutersName: '',
             location: '',
             weekNum: '',
+            siteName: '',
             dataEntered: '',
 
 
@@ -187,6 +188,19 @@ export default class Scouting27 extends Component {
 
             }).done();
         } catch (error) {
+        }
+
+        try {
+            AsyncStorage.getItem('house').then((siteee) => {
+                houseSelected = JSON.parse(siteee);
+                this.setState({ siteName: houseSelected });
+
+                console.log("HOUSE : " + this.state.siteName);
+
+            }).done();
+        } catch (error) {
+
+
         }
 
         try {
@@ -2669,7 +2683,7 @@ export default class Scouting27 extends Component {
             let data = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
@@ -2718,7 +2732,7 @@ export default class Scouting27 extends Component {
             let data2 = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
@@ -2767,7 +2781,7 @@ export default class Scouting27 extends Component {
             let data3 = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
@@ -2817,7 +2831,7 @@ export default class Scouting27 extends Component {
             let data4 = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
@@ -2866,7 +2880,7 @@ export default class Scouting27 extends Component {
             let data5 = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
@@ -2916,7 +2930,7 @@ export default class Scouting27 extends Component {
             let data6 = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
@@ -2966,7 +2980,7 @@ export default class Scouting27 extends Component {
             let data7 = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
@@ -3015,7 +3029,7 @@ export default class Scouting27 extends Component {
             let data8 = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
@@ -3064,7 +3078,7 @@ export default class Scouting27 extends Component {
             let data9 = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
@@ -3114,7 +3128,7 @@ export default class Scouting27 extends Component {
             let data10 = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
@@ -3164,7 +3178,7 @@ export default class Scouting27 extends Component {
             let data11 = {
                 weekNumber: this.state.weekNum,
                 scouterName: this.state.scoutersName,
-                siteName: 'REP',
+                siteName: this.state.siteName,
                 location: this.state.location,
                 scoutType: this.state.scoutingType,
                 rowNumber: this.state.rowNumberScouting27,
